@@ -1,0 +1,99 @@
+{
+  "rooms": 4,
+  "startHour": "07:00",
+  "endHour": "20:00",
+  "timeStep": "00:15",
+  "courseTimeUnit": "00:45",
+  "groups": [
+    {
+      "id": 1,
+      "name": "Group 1",
+      "courses": [
+        {
+          "courseId": 2,
+          "teacherId": 3,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 1,
+          "teacherId": 4,
+          "timeUnits": 6
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Group 2",
+      "courses": [
+        {
+          "courseId": 2,
+          "teacherId": 1,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 3,
+          "teacherId": 3,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 4,
+          "teacherId": 2,
+          "timeUnits": 6
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Group 3",
+      "courses": [
+        {
+          "courseId": 1,
+          "teacherId": 2,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 2,
+          "teacherId": 2,
+          "timeUnits": 3
+        },
+        {
+          "courseId": 3,
+          "teacherId": 3,
+          "timeUnits": 12
+        }
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "id": 1,
+      "name": "Teacher 1"
+    },
+    {
+      "id": 2,
+      "name": "Teacher 2"
+    },
+    {
+      "id": 3,
+      "name": "Teacher 3"
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "name": "Course 1"
+    },
+    {
+      "id": 2,
+      "name": "Course 2"
+    },
+    {
+      "id": 3,
+      "name": "Course 3"
+    },
+    {
+      "id": 4,
+      "name": "Course 4"
+    }
+  ]
+}
