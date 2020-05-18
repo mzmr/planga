@@ -1,4 +1,4 @@
-package pl.znamirowski.planga;
+package pl.znamirowski.planga.generator;
 
 import java.time.LocalTime;
 import java.util.List;

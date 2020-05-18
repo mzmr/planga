@@ -1,4 +1,4 @@
-package pl.znamirowski.planga;
+package pl.znamirowski.planga.generator;
 
 import org.apache.commons.lang3.tuple.Pair;
 
@@ -38,10 +38,12 @@ public class TimetableGenerator {
         appSettings = new AppSettings(inputSettings);
     }
 
-    public void generateTimetable() {
+    public Genotype generateTimetable() {
         List<Genotype> population = initializePopulation();
         List<Pair<Genotype, Double>> assessedPopulation = assessPopulation(population);
         assessedPopulation.sort(comparingDouble(Pair::getRight));
+
+        return assessedPopulation.get(0).getLeft();
     }
 
     private List<Genotype> initializePopulation() {

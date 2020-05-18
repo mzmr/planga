@@ -1,6 +1,6 @@
-package pl.znamirowski.planga;
+package pl.znamirowski.planga.generator;
 
-public class Teacher {
+public class Course {
     private int id;
     private String name;
 
