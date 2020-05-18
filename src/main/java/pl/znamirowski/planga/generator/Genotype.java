@@ -20,6 +20,10 @@ public class Genotype {
         return genotype;
     }
 
+    public AppSettings getSettings() {
+        return appSettings;
+    }
+
     public void fillRandomlyWithLessons() {
         List<LessonTuple> lessons = appSettings.getLessonTuples();
         for (int i = 0; i < lessons.size(); i++) {
