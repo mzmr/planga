@@ -20,7 +20,7 @@ public class PlangaApplication {
                 (JsonDeserializer<LocalTime>) (json, type, jsonDeserializationContext) ->
                         LocalTime.parse(json.getAsJsonPrimitive().getAsString(), DateTimeFormatter.ofPattern("HH:mm"))).create();
 
-        var inputSettings = gson.fromJson(fileContent, Settings.class);
+        var inputSettings = gson.fromJson(fileContent, InputSettings.class);
         new TimetableGenerator(inputSettings).generateTimetable();
     }
 

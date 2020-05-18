@@ -31,47 +31,29 @@ public class TimetableGenerator {
 
      */
 
-    private final Settings settings;
+    private final AppSettings appSettings;
 
-    public TimetableGenerator(Settings settings) {
-        this.settings = settings;
+    public TimetableGenerator(InputSettings inputSettings) {
+        appSettings = new AppSettings(inputSettings);
     }
 
     public void generateTimetable() {
-        TimeSettings timeSettings = new TimeSettings(settings);
-        List<LessonTuple> lessonTuples = createLessonTuples();
-        List<Genotype> population = initializePopulation(lessonTuples, timeSettings);
-        List<Pair<Genotype, Double>> assessedPopulation = assessPopulation(population, lessonTuples, timeSettings);
+        List<Genotype> population = initializePopulation();
+        List<Pair<Genotype, Double>> assessedPopulation = assessPopulation(population);
     }
 
-    private List<LessonTuple> createLessonTuples() {
-        List<LessonTuple> lessonTuples = new ArrayList<>();
-//        int currentId = 0;
-        for (Group group : settings.getGroups()) {
-            for (CourseSettings course : group.getCourses()) {
-                LessonTuple lessonTuple = new LessonTuple();
-//                lessonTuple.setId(currentId++);
-                lessonTuple.setGroupId(group.getId());
-                lessonTuple.setCourseId(course.getCourseId());
-                lessonTuple.setTeacherId(course.getTeacherId());
-                lessonTuple.setTimeUnits(course.getTimeUnits());
-                lessonTuples.add(lessonTuple);
-            }
-        }
-        return lessonTuples;
-    }
 
-    private List<Genotype> initializePopulation(List<LessonTuple> lessonTuples, TimeSettings timeSettings) {
+
+    private List<Genotype> initializePopulation() {
         List<Genotype> population = new ArrayList<>();
         for (int i = 0; i < POPULATION_SIZE; i++) {
-            population.add(new Genotype(settings.getNumberOfRooms(), timeSettings, lessonTuples));
+            population.add(new Genotype(appSettings));
         }
         return population;
     }
 
-    private List<Pair<Genotype, Double>> assessPopulation(List<Genotype> population, List<LessonTuple> lessonTuples,
-                                                          TimeSettings timeSettings) {
-        GenotypeAssessor assessor = new GenotypeAssessor(lessonTuples, settings, timeSettings);
+    private List<Pair<Genotype, Double>> assessPopulation(List<Genotype> population) {
+        GenotypeAssessor assessor = new GenotypeAssessor(appSettings);
         return population.stream()
                 .map(genotype -> Pair.of(genotype, assessor.assessGenotype(genotype)))
                 .collect(toList());

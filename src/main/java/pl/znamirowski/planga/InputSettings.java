@@ -3,7 +3,7 @@ package pl.znamirowski.planga;
 import java.time.LocalTime;
 import java.util.List;
 
-public class Settings {
+public class InputSettings {
     private int numberOfRooms;
     private LocalTime startHour;
     private LocalTime endHour;

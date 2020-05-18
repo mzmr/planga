@@ -6,40 +6,41 @@ import java.util.List;
 import java.util.Random;
 
 public class Genotype {
-    private final TimeSettings timeSettings;
+    private final AppSettings appSettings;
     private final Random random;
     private int[] genotype;
 
-    public Genotype(int numberOfRooms, TimeSettings timeSettings, List<LessonTuple> lessonTuples) {
+    public Genotype(AppSettings appSettings) {
         this.random = new Random();
-        this.timeSettings = timeSettings;
-        int[] emptyGenotype = initializeGenotypeArray(numberOfRooms);
-        genotype = fillRandomlyWithLessons(emptyGenotype, lessonTuples, numberOfRooms);
+        this.appSettings = appSettings;
+        int[] emptyGenotype = initializeGenotypeArray();
+        genotype = fillRandomlyWithLessons(emptyGenotype);
     }
 
     public int[] getGenotype() {
         return genotype;
     }
 
-    private int[] initializeGenotypeArray(int numberOfRooms) {
-        int[] genotype = new int[numberOfRooms * timeSettings.getTimeWindowsPerWeek()];
+    private int[] initializeGenotypeArray() {
+        int[] genotype = new int[appSettings.getNumberOfRooms() * appSettings.getTimeWindowsPerWeek()];
         Arrays.fill(genotype, -1);
         return genotype;
     }
 
-    private int[] fillRandomlyWithLessons(int[] genotype, List<LessonTuple> lessonTuples, int numberOfRooms) {
+    private int[] fillRandomlyWithLessons(int[] genotype) {
+        List<LessonTuple> lessonTuples = appSettings.getLessonTuples();
         for (int i = 0; i < lessonTuples.size(); i++) {
             LessonTuple lessonTuple = lessonTuples.get(i);
-            int emptyPosition = findRandomEmptyValidPosition(genotype, lessonTuple, lessonTuples, numberOfRooms);
+            int emptyPosition = findRandomEmptyValidPosition(genotype, lessonTuple, lessonTuples);
             Arrays.fill(genotype, emptyPosition, emptyPosition + lessonTuple.getTimeUnits(), i);
         }
         return genotype;
     }
 
-    private int findRandomEmptyValidPosition(int[] genotype, LessonTuple lessonTuple, List<LessonTuple> lessonTuples,
-                                             int numberOfRooms) {
+    private int findRandomEmptyValidPosition(int[] genotype, LessonTuple lessonTuple, List<LessonTuple> lessonTuples) {
         List<Integer> emptyPositions = new ArrayList<>();
-        int timeWindowsPerDay = timeSettings.getTimeWindowsPerDay();
+        int timeWindowsPerDay = appSettings.getTimeWindowsPerDay();
+        int numberOfRooms = appSettings.getNumberOfRooms();
         int numberOfDays = genotype.length / timeWindowsPerDay / numberOfRooms;
 
         for (int dayNumber = 0; dayNumber < numberOfDays; dayNumber++) {
@@ -73,7 +74,7 @@ public class Genotype {
 
         if (emptyPositions.size() == 0) {
             System.out.println("WARNING: Generating timetable can't be finished because of unfortunate lesson positions");
-            return findRandomEmptyValidPosition(genotype, lessonTuple, lessonTuples, numberOfRooms);
+            return findRandomEmptyValidPosition(genotype, lessonTuple, lessonTuples);
         }
         return emptyPositions.get(random.nextInt(emptyPositions.size()));
     }
@@ -89,6 +90,6 @@ public class Genotype {
     }
 
     private int createIndex(int dayNumber, int numberOfTimeWindow, int roomNumber, int numberOfRooms) {
-        return (dayNumber * numberOfRooms + roomNumber) * timeSettings.getTimeWindowsPerDay() + numberOfTimeWindow;
+        return (dayNumber * numberOfRooms + roomNumber) * appSettings.getTimeWindowsPerDay() + numberOfTimeWindow;
     }
 }
