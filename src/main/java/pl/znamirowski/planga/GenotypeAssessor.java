@@ -32,50 +32,46 @@ public class GenotypeAssessor {
     }
 
     public double assessGenotype(Genotype genotype) {
-        int[] genotypeArray = genotype.getGenotype();
         double assessment = 0;
-        assessment += GROUP_BREAKS_WEIGHT * calculatePenaltyForGroupBreaks(genotypeArray);
+        assessment += GROUP_BREAKS_WEIGHT * calculatePenaltyForGroupBreaks(genotype);
         return assessment;
     }
 
-    private double calculatePenaltyForGroupBreaks(int[] genotype) {
+    private double calculatePenaltyForGroupBreaks(Genotype genotype) {
         int totalPenaltyValue = 0;
         int numberOfRooms = appSettings.getNumberOfRooms();
 
-        Map<Integer, Boolean> wasSomeLessonBeforeThisDayForGroups = appSettings.getGroups().stream().collect(toMap(Group::getId, g -> false));
-        Map<Integer, Integer> numberOfBreakWindowsForGroups = appSettings.getGroups().stream().collect(toMap(Group::getId, g -> 0));
-        Map<Integer, Integer> numberOfBreaksAtCurrentWindowForGroups = appSettings.getGroups().stream().collect(toMap(Group::getId, g -> 0));
+        Map<Integer, Boolean> groupIdToDidThisGroupAppearThisDay = appSettings.getGroups().stream().collect(toMap(Group::getId, g -> false));
+        Map<Integer, Integer> groupIdToNumberOfBreakWindows = appSettings.getGroups().stream().collect(toMap(Group::getId, g -> 0));
+        Map<Integer, Integer> groupIdToNumberOfBreaksAtCurrentWindow = appSettings.getGroups().stream().collect(toMap(Group::getId, g -> 0));
 
         for (int dayNumber = 0; dayNumber < appSettings.getDaysPerWeek(); dayNumber++) {
-            wasSomeLessonBeforeThisDayForGroups.replaceAll((key, value) -> false);
+            groupIdToDidThisGroupAppearThisDay.replaceAll((key, value) -> false);
 
             for (int timeWindowInDay = 0; timeWindowInDay < appSettings.getTimeWindowsPerDay(); timeWindowInDay++) {
-                numberOfBreaksAtCurrentWindowForGroups.replaceAll((key, value) -> 0);
+                groupIdToNumberOfBreaksAtCurrentWindow.replaceAll((key, value) -> 0);
 
                 for (int roomNumber = 0; roomNumber < numberOfRooms; roomNumber++) {
-                    int genotypeIndex = dayNumber * numberOfRooms * appSettings.getTimeWindowsPerDay()
-                            + roomNumber * appSettings.getTimeWindowsPerDay()
-                            + timeWindowInDay;
-                    int lessonTupleIndex = genotype[genotypeIndex];
-                    if (lessonTupleIndex == -1) {
-                        incrementAll(numberOfBreaksAtCurrentWindowForGroups);
+                    int lessonIndex = genotype.getLessonIndexAt(dayNumber, timeWindowInDay, roomNumber);
+                    if (lessonIndex == -1) {
+                        incrementAll(groupIdToNumberOfBreaksAtCurrentWindow);
                     } else {
-                        int groupId = appSettings.getLessonTuples().get(lessonTupleIndex).getGroupId();
-                        incrementAll(numberOfBreaksAtCurrentWindowForGroups);
-                        numberOfBreaksAtCurrentWindowForGroups.replace(groupId, numberOfBreaksAtCurrentWindowForGroups.get(groupId) - 1);
-                        wasSomeLessonBeforeThisDayForGroups.replace(groupId, true);
+                        int groupId = appSettings.getLessonTuples().get(lessonIndex).getGroupId();
+                        incrementAll(groupIdToNumberOfBreaksAtCurrentWindow);
+                        addValueToEntry(groupIdToNumberOfBreaksAtCurrentWindow, groupId, -1);
+                        groupIdToDidThisGroupAppearThisDay.replace(groupId, true);
 
-                        Integer breakWindows = numberOfBreakWindowsForGroups.get(groupId);
+                        int breakWindows = groupIdToNumberOfBreakWindows.get(groupId);
                         if (breakWindows > 0) {
-                            totalPenaltyValue += getPenaltyForBreak(appSettings.getMinutesPerTimeWindow() * breakWindows);
+                            totalPenaltyValue += getPenaltyForBreak(breakWindows);
                         }
                     }
                 }
 
-                for (Integer groupId : wasSomeLessonBeforeThisDayForGroups.keySet()) {
-                    if (wasSomeLessonBeforeThisDayForGroups.get(groupId) &&
-                            numberOfBreaksAtCurrentWindowForGroups.get(groupId) == numberOfRooms) {
-                        numberOfBreakWindowsForGroups.replace(groupId, numberOfBreakWindowsForGroups.get(groupId) + 1);
+                for (Integer groupId : groupIdToDidThisGroupAppearThisDay.keySet()) {
+                    if (groupIdToDidThisGroupAppearThisDay.get(groupId) &&
+                            groupIdToNumberOfBreaksAtCurrentWindow.get(groupId) == numberOfRooms) {
+                        addValueToEntry(groupIdToNumberOfBreakWindows, groupId, 1);
                     }
                 }
             }
@@ -83,17 +79,22 @@ public class GenotypeAssessor {
         return totalPenaltyValue;
     }
 
+    private void addValueToEntry(Map<Integer, Integer> map, int key, int valueToAdd) {
+        map.replace(key, map.get(key) + valueToAdd);
+    }
+
     private void incrementAll(Map<Integer, Integer> map) {
         map.replaceAll((key, value) -> value + 1);
     }
 
-    private double getPenaltyForBreak(int breakLengthInMinutes) {
-        if (breakLengthInMinutes == 0) {
+    private double getPenaltyForBreak(int numberOfBreakWindows) {
+        if (numberOfBreakWindows == 0) {
             return 1;
         }
-        if (breakLengthInMinutes == appSettings.getMinutesPerTimeWindow()) {
+        if (numberOfBreakWindows == 1) {
             return 0;
         }
+        int breakLengthInMinutes = appSettings.getMinutesPerTimeWindow() * numberOfBreakWindows;
         if (breakLengthInMinutes <= 150) {
             return breakLengthInMinutes / 15.0;
         }

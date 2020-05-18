@@ -5,6 +5,7 @@ import org.apache.commons.lang3.tuple.Pair;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.util.Comparator.comparingDouble;
 import static java.util.stream.Collectors.toList;
 
 public class TimetableGenerator {
@@ -40,14 +41,15 @@ public class TimetableGenerator {
     public void generateTimetable() {
         List<Genotype> population = initializePopulation();
         List<Pair<Genotype, Double>> assessedPopulation = assessPopulation(population);
+        assessedPopulation.sort(comparingDouble(Pair::getRight));
     }
-
-
 
     private List<Genotype> initializePopulation() {
         List<Genotype> population = new ArrayList<>();
         for (int i = 0; i < POPULATION_SIZE; i++) {
-            population.add(new Genotype(appSettings));
+            Genotype genotype = new Genotype(appSettings);
+            genotype.fillRandomlyWithLessons();
+            population.add(genotype);
         }
         return population;
     }
