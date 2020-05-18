@@ -21,7 +21,7 @@ public class PlangaApplication {
                         LocalTime.parse(json.getAsJsonPrimitive().getAsString(), DateTimeFormatter.ofPattern("HH:mm"))).create();
 
         var inputSettings = gson.fromJson(fileContent, Settings.class);
-        new TimetableGenerator().generateTimetable(inputSettings);
+        new TimetableGenerator(inputSettings).generateTimetable();
     }
 
     private String readFile(String fileName) throws IOException {

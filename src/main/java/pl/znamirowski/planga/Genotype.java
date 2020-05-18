@@ -6,49 +6,89 @@ import java.util.List;
 import java.util.Random;
 
 public class Genotype {
-    private final int timeWindowsPerDay;
+    private final TimeSettings timeSettings;
     private final Random random;
     private int[] genotype;
 
-    public Genotype(int numberOfRooms, int timeWindowsPerWeek, int timeWindowsPerDay, List<LessonTuple> lessonTuples) {
+    public Genotype(int numberOfRooms, TimeSettings timeSettings, List<LessonTuple> lessonTuples) {
         this.random = new Random();
-        this.timeWindowsPerDay = timeWindowsPerDay;
-        int[] emptyGenotype = initializeGenotypeArray(numberOfRooms, timeWindowsPerWeek);
-        genotype = fillRandomlyAllowingInvalidConfig(emptyGenotype, lessonTuples);
+        this.timeSettings = timeSettings;
+        int[] emptyGenotype = initializeGenotypeArray(numberOfRooms);
+        genotype = fillRandomlyWithLessons(emptyGenotype, lessonTuples, numberOfRooms);
     }
 
-    private int[] initializeGenotypeArray(int numberOfRooms, int timeWindowsPerWeek) {
-        int[] genotype = new int[numberOfRooms * timeWindowsPerWeek];
+    public int[] getGenotype() {
+        return genotype;
+    }
+
+    private int[] initializeGenotypeArray(int numberOfRooms) {
+        int[] genotype = new int[numberOfRooms * timeSettings.getTimeWindowsPerWeek()];
         Arrays.fill(genotype, -1);
         return genotype;
     }
 
-    private int[] fillRandomlyAllowingInvalidConfig(int[] genotype, List<LessonTuple> lessonTuples) {
+    private int[] fillRandomlyWithLessons(int[] genotype, List<LessonTuple> lessonTuples, int numberOfRooms) {
         for (int i = 0; i < lessonTuples.size(); i++) {
-            int timeWindows = lessonTuples.get(i).getTimeUnits();
-            int emptyPosition = findRandomEmptyPosition(genotype, timeWindows);
-            Arrays.fill(genotype, emptyPosition, emptyPosition + timeWindows, i);
+            LessonTuple lessonTuple = lessonTuples.get(i);
+            int emptyPosition = findRandomEmptyValidPosition(genotype, lessonTuple, lessonTuples, numberOfRooms);
+            Arrays.fill(genotype, emptyPosition, emptyPosition + lessonTuple.getTimeUnits(), i);
         }
         return genotype;
     }
 
-    private int findRandomEmptyPosition(int[] genotype, int timeWindowsNeeded) {
+    private int findRandomEmptyValidPosition(int[] genotype, LessonTuple lessonTuple, List<LessonTuple> lessonTuples,
+                                             int numberOfRooms) {
         List<Integer> emptyPositions = new ArrayList<>();
-        int numberOfDays = genotype.length / timeWindowsPerDay;
+        int timeWindowsPerDay = timeSettings.getTimeWindowsPerDay();
+        int numberOfDays = genotype.length / timeWindowsPerDay / numberOfRooms;
+
         for (int dayNumber = 0; dayNumber < numberOfDays; dayNumber++) {
-            int numberOfEmpty = 0;
+            int[] numberOfEmptyInEachRoom = new int[numberOfRooms];
+
             for (int numberOfTimeWindow = 0; numberOfTimeWindow < timeWindowsPerDay; numberOfTimeWindow++) {
-                int index = dayNumber * timeWindowsPerDay + numberOfTimeWindow;
-                if (genotype[index] == -1) {
-                    numberOfEmpty++;
-                    if (numberOfEmpty >= timeWindowsNeeded) {
-                        emptyPositions.add(index - timeWindowsNeeded + 1);
+                List<Integer> temporaryEmptyPositions = new ArrayList<>(numberOfRooms);
+                boolean hasAnyRoomLessonWithTeacherOrGroupAsNewLesson = false;
+
+                for (int roomNumber = 0; roomNumber < numberOfRooms; roomNumber++) {
+                    int index = createIndex(dayNumber, numberOfTimeWindow, roomNumber, numberOfRooms);
+                    int lessonTupleIndex = genotype[index];
+
+                    if (lessonTupleIndex == -1) {
+                        if (++numberOfEmptyInEachRoom[roomNumber] >= lessonTuple.getTimeUnits()) {
+                            temporaryEmptyPositions.add(index - lessonTuple.getTimeUnits() + 1);
+                        }
+                    } else if (hasLessonSameTeacherOrGroupAsNewLesson(lessonTuples.get(lessonTupleIndex), lessonTuple)) {
+                        hasAnyRoomLessonWithTeacherOrGroupAsNewLesson = true;
+                        break;
                     }
+                }
+
+                if (hasAnyRoomLessonWithTeacherOrGroupAsNewLesson) {
+                    Arrays.fill(numberOfEmptyInEachRoom, 0);
                 } else {
-                    numberOfEmpty = 0;
+                    emptyPositions.addAll(temporaryEmptyPositions);
                 }
             }
         }
+
+        if (emptyPositions.size() == 0) {
+            System.out.println("WARNING: Generating timetable can't be finished because of unfortunate lesson positions");
+            return findRandomEmptyValidPosition(genotype, lessonTuple, lessonTuples, numberOfRooms);
+        }
         return emptyPositions.get(random.nextInt(emptyPositions.size()));
+    }
+
+    private boolean hasLessonSameTeacherOrGroupAsNewLesson(LessonTuple existingLesson, LessonTuple newLesson) {
+        if (existingLesson.getTeacherId() == newLesson.getTeacherId()) {
+            return true;
+        }
+        if (existingLesson.getGroupId() == newLesson.getGroupId()) {
+            return true;
+        }
+        return false;
+    }
+
+    private int createIndex(int dayNumber, int numberOfTimeWindow, int roomNumber, int numberOfRooms) {
+        return (dayNumber * numberOfRooms + roomNumber) * timeSettings.getTimeWindowsPerDay() + numberOfTimeWindow;
     }
 }

@@ -4,21 +4,22 @@ import java.time.LocalTime;
 import java.util.List;
 
 public class Settings {
-    private int rooms;
+    private int numberOfRooms;
     private LocalTime startHour;
     private LocalTime endHour;
     private LocalTime timeStep;
     private LocalTime courseTimeUnit;
+    private int daysInWeek;
     private List<Group> groups;
     private List<Teacher> teachers;
     private List<Course> courses;
 
-    public int getRooms() {
-        return rooms;
+    public int getNumberOfRooms() {
+        return numberOfRooms;
     }
 
-    public void setRooms(int rooms) {
-        this.rooms = rooms;
+    public void setNumberOfRooms(int numberOfRooms) {
+        this.numberOfRooms = numberOfRooms;
     }
 
     public LocalTime getStartHour() {
@@ -51,6 +52,14 @@ public class Settings {
 
     public void setCourseTimeUnit(LocalTime courseTimeUnit) {
         this.courseTimeUnit = courseTimeUnit;
+    }
+
+    public int getDaysInWeek() {
+        return daysInWeek;
+    }
+
+    public void setDaysInWeek(int daysInWeek) {
+        this.daysInWeek = daysInWeek;
     }
 
     public List<Group> getGroups() {

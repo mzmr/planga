@@ -1,10 +1,11 @@
 package pl.znamirowski.planga;
 
-import java.time.LocalTime;
+import org.apache.commons.lang3.tuple.Pair;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import static java.time.temporal.ChronoUnit.MINUTES;
+import static java.util.stream.Collectors.toList;
 
 public class TimetableGenerator {
     private static final int POPULATION_SIZE = 100;
@@ -30,19 +31,26 @@ public class TimetableGenerator {
 
      */
 
+    private final Settings settings;
 
-    public void generateTimetable(Settings settings) {
-        List<LessonTuple> lessonTuples = createLessonTuples(settings);
-        initializePopulation(settings, lessonTuples);
+    public TimetableGenerator(Settings settings) {
+        this.settings = settings;
     }
 
-    private List<LessonTuple> createLessonTuples(Settings settings) {
+    public void generateTimetable() {
+        TimeSettings timeSettings = new TimeSettings(settings);
+        List<LessonTuple> lessonTuples = createLessonTuples();
+        List<Genotype> population = initializePopulation(lessonTuples, timeSettings);
+        List<Pair<Genotype, Double>> assessedPopulation = assessPopulation(population, lessonTuples, timeSettings);
+    }
+
+    private List<LessonTuple> createLessonTuples() {
         List<LessonTuple> lessonTuples = new ArrayList<>();
-        int currentId = 0;
+//        int currentId = 0;
         for (Group group : settings.getGroups()) {
             for (CourseSettings course : group.getCourses()) {
                 LessonTuple lessonTuple = new LessonTuple();
-                lessonTuple.setId(currentId++);
+//                lessonTuple.setId(currentId++);
                 lessonTuple.setGroupId(group.getId());
                 lessonTuple.setCourseId(course.getCourseId());
                 lessonTuple.setTeacherId(course.getTeacherId());
@@ -53,17 +61,19 @@ public class TimetableGenerator {
         return lessonTuples;
     }
 
-    private List<Genotype> initializePopulation(Settings settings, List<LessonTuple> lessonTuples) {
-        int daysInWeek = 2;
-        long minutesInDay = MINUTES.between(settings.getStartHour(), settings.getEndHour());
-        long minutesInTimeStep = MINUTES.between(LocalTime.parse("00:00"), settings.getTimeStep());
-        int timeWindowsPerDay = (int) (minutesInDay / minutesInTimeStep);
-        int timeWindowsPerWeek = timeWindowsPerDay * daysInWeek;
-
+    private List<Genotype> initializePopulation(List<LessonTuple> lessonTuples, TimeSettings timeSettings) {
         List<Genotype> population = new ArrayList<>();
         for (int i = 0; i < POPULATION_SIZE; i++) {
-            population.add(new Genotype(settings.getRooms(), timeWindowsPerWeek, timeWindowsPerDay, lessonTuples));
+            population.add(new Genotype(settings.getNumberOfRooms(), timeSettings, lessonTuples));
         }
         return population;
+    }
+
+    private List<Pair<Genotype, Double>> assessPopulation(List<Genotype> population, List<LessonTuple> lessonTuples,
+                                                          TimeSettings timeSettings) {
+        GenotypeAssessor assessor = new GenotypeAssessor(lessonTuples, settings, timeSettings);
+        return population.stream()
+                .map(genotype -> Pair.of(genotype, assessor.assessGenotype(genotype)))
+                .collect(toList());
     }
 }

@@ -1,9 +1,10 @@
 {
-  "rooms": 4,
+  "numberOfRooms": 4,
   "startHour": "07:00",
   "endHour": "20:00",
   "timeStep": "00:15",
   "courseTimeUnit": "00:45",
+  "daysInWeek": 2,
   "groups": [
     {
       "id": 1,
