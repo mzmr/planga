@@ -3,15 +3,22 @@ package pl.znamirowski.planga.generator;
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Random;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
-import static java.util.Comparator.comparingDouble;
+import static java.lang.Math.ceil;
+import static java.lang.Math.pow;
+import static java.lang.Math.sqrt;
 import static java.util.stream.Collectors.toList;
 
 public class TimetableGenerator {
     private static final int POPULATION_SIZE = 100;
     private static final double CROSSOVER_PROBABILITY = 0.75;
     private static final double MUTATION_PROBABILITY = 0.02;
+    private static final int NUMBER_OF_GENERATIONS = 1;
 
     /*
 
@@ -33,17 +40,77 @@ public class TimetableGenerator {
      */
 
     private final AppSettings appSettings;
+    private final Random random;
+    private final GenotypeAssessor genotypeAssessor;
+    private final CrossoverPerformer crossoverPerformer;
 
     public TimetableGenerator(InputSettings inputSettings) {
         appSettings = new AppSettings(inputSettings);
+        random = new Random();
+        genotypeAssessor = new GenotypeAssessor(appSettings);
+        crossoverPerformer = new CrossoverPerformer(appSettings);
     }
 
     public Genotype generateTimetable() {
         List<Genotype> population = initializePopulation();
-        List<Pair<Genotype, Double>> assessedPopulation = assessPopulation(population);
-        assessedPopulation.sort(comparingDouble(Pair::getRight));
-
+        List<Pair<Genotype, Double>> assessedPopulation = genotypeAssessor.assessPopulation(population);
+        for (int generationNumber = 1; generationNumber < NUMBER_OF_GENERATIONS; generationNumber++) {
+            List<Genotype> parents = chooseParents(assessedPopulation);
+            List<Pair<Genotype, Genotype>> pairs = pairParents(parents);
+            List<Genotype> newGenotypes = crossoverPerformer.performCrossover(pairs);
+            population = createNewGeneration(assessedPopulation, newGenotypes);
+            assessedPopulation = genotypeAssessor.assessPopulation(population);
+        }
         return assessedPopulation.get(0).getLeft();
+    }
+
+    private List<Genotype> createNewGeneration(List<Pair<Genotype, Double>> assessedPopulation,
+                                               List<Genotype> newGenotypes) {
+        int numberOfBestGenotypesToSurvive = (int) ceil(assessedPopulation.size() * 0.01);
+        Stream<Genotype> bestOldies = assessedPopulation
+                .subList(0, numberOfBestGenotypesToSurvive)
+                .stream()
+                .map(Pair::getLeft);
+        return Stream.concat(bestOldies, newGenotypes.stream()).collect(toList());
+    }
+
+    private List<Pair<Genotype, Genotype>> pairParents(List<Genotype> parents) {
+        List<Pair<Genotype, Genotype>> pairs = new ArrayList<>();
+        List<Integer> indexes = IntStream.range(0, pairs.size()).boxed().collect(toList());
+        Collections.shuffle(indexes);
+        for (int i = 0; i < indexes.size(); i += 2) {
+            pairs.add(Pair.of(parents.get(i), parents.get(i + 1)));
+        }
+        return pairs;
+    }
+
+    private List<Genotype> chooseParents(List<Pair<Genotype, Double>> assessedPopulation) {
+        List<Genotype> parents = new ArrayList<>();
+        int populationSize = assessedPopulation.size();
+        for (int i = 0; i < populationSize; i++) {
+            double selectionRate = calculateSelectionRate(i, populationSize);
+            double chanceOfBecomingAParent = calculateChanceOfBecomingAParent(selectionRate, populationSize);
+            boolean willItBecomeAParent = calculateIfGenotypeWillBecomeAParent(chanceOfBecomingAParent);
+            if (willItBecomeAParent) {
+                parents.add(assessedPopulation.get(i).getLeft());
+            }
+        }
+        if (parents.size() % 2 == 1) {
+            parents.remove(parents.size() - 1);
+        }
+        return parents;
+    }
+
+    private boolean calculateIfGenotypeWillBecomeAParent(double chanceOfBecomingAParent) {
+        return random.nextDouble() < chanceOfBecomingAParent;
+    }
+
+    private double calculateChanceOfBecomingAParent(double selectionRate, int populationSize) {
+        return selectionRate / pow(populationSize, 1.5);
+    }
+
+    private double calculateSelectionRate(int genotypeRankingPosition, int populationSize) {
+        return sqrt(pow(populationSize - genotypeRankingPosition, 3));
     }
 
     private List<Genotype> initializePopulation() {
@@ -54,12 +121,5 @@ public class TimetableGenerator {
             population.add(genotype);
         }
         return population;
-    }
-
-    private List<Pair<Genotype, Double>> assessPopulation(List<Genotype> population) {
-        GenotypeAssessor assessor = new GenotypeAssessor(appSettings);
-        return population.stream()
-                .map(genotype -> Pair.of(genotype, assessor.assessGenotype(genotype)))
-                .collect(toList());
     }
 }

@@ -1,7 +1,12 @@
 package pl.znamirowski.planga.generator;
 
+import org.apache.commons.lang3.tuple.Pair;
+
+import java.util.List;
 import java.util.Map;
 
+import static java.util.Comparator.comparingDouble;
+import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toMap;
 
 public class GenotypeAssessor {
@@ -31,7 +36,14 @@ public class GenotypeAssessor {
         this.appSettings = appSettings;
     }
 
-    public double assessGenotype(Genotype genotype) {
+    public List<Pair<Genotype, Double>> assessPopulation(List<Genotype> population) {
+        return population.stream()
+                .map(genotype -> Pair.of(genotype, assessGenotype(genotype)))
+                .sorted(comparingDouble(Pair::getRight))
+                .collect(toList());
+    }
+
+    private double assessGenotype(Genotype genotype) {
         double assessment = 0;
         assessment += GROUP_BREAKS_WEIGHT * calculatePenaltyForGroupBreaks(genotype);
         return assessment;
@@ -39,7 +51,6 @@ public class GenotypeAssessor {
 
     private double calculatePenaltyForGroupBreaks(Genotype genotype) {
         int totalPenaltyValue = 0;
-        int numberOfRooms = appSettings.getNumberOfRooms();
 
         Map<Integer, Boolean> groupIdToDidThisGroupAppearThisDay = appSettings.getGroups().stream().collect(toMap(Group::getId, g -> false));
         Map<Integer, Integer> groupIdToNumberOfBreakWindows = appSettings.getGroups().stream().collect(toMap(Group::getId, g -> 0));
@@ -51,7 +62,7 @@ public class GenotypeAssessor {
             for (int timeWindowInDay = 0; timeWindowInDay < appSettings.getTimeWindowsPerDay(); timeWindowInDay++) {
                 groupIdToNumberOfBreaksAtCurrentWindow.replaceAll((key, value) -> 0);
 
-                for (int roomNumber = 0; roomNumber < numberOfRooms; roomNumber++) {
+                for (int roomNumber = 0; roomNumber < appSettings.getNumberOfRooms(); roomNumber++) {
                     int lessonIndex = genotype.getLessonIndexAt(dayNumber, timeWindowInDay, roomNumber);
                     if (lessonIndex == -1) {
                         incrementAll(groupIdToNumberOfBreaksAtCurrentWindow);
@@ -65,12 +76,13 @@ public class GenotypeAssessor {
                         if (breakWindows > 0) {
                             totalPenaltyValue += getPenaltyForBreak(breakWindows);
                         }
+                        groupIdToNumberOfBreakWindows.replace(groupId, 0);
                     }
                 }
 
                 for (Integer groupId : groupIdToDidThisGroupAppearThisDay.keySet()) {
                     if (groupIdToDidThisGroupAppearThisDay.get(groupId) &&
-                            groupIdToNumberOfBreaksAtCurrentWindow.get(groupId) == numberOfRooms) {
+                            groupIdToNumberOfBreaksAtCurrentWindow.get(groupId) == appSettings.getNumberOfRooms()) {
                         addValueToEntry(groupIdToNumberOfBreakWindows, groupId, 1);
                     }
                 }
