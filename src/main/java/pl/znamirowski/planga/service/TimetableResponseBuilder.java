@@ -28,6 +28,6 @@ public class TimetableResponseBuilder {
                 }
             }
         }
-        return new TimetableResponse(settings.getStartHour(), settings.getEndHour(), lessons);
+        return new TimetableResponse(settings, lessons);
     }
 }

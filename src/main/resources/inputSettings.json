@@ -4,7 +4,7 @@
   "endHour": "20:00",
   "timeStep": "00:15",
   "courseTimeUnit": "00:45",
-  "daysInWeek": 2,
+  "daysInWeek": 5,
   "groups": [
     {
       "id": 1,

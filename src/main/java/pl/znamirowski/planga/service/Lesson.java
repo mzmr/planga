@@ -1,5 +1,6 @@
 package pl.znamirowski.planga.service;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import pl.znamirowski.planga.generator.AppSettings;
 import pl.znamirowski.planga.generator.LessonTuple;
 
@@ -11,8 +12,10 @@ public class Lesson {
     private final int courseId;
     private final int durationInTimeWindows;
     private final int dayNumber;
-    private final LocalTime startTime;
     private final int roomNumber;
+
+    @JsonFormat(pattern="HH:mm")
+    private final LocalTime startTime;
 
     public Lesson(LessonTuple lessonTuple, int dayNumber, int windowNumber, int roomNumber, AppSettings settings) {
         this.groupId = lessonTuple.getGroupId();
