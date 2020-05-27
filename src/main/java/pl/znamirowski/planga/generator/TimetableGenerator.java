@@ -9,7 +9,6 @@ import java.util.Random;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-import static java.lang.Math.ceil;
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
 import static java.util.stream.Collectors.toList;
@@ -18,7 +17,7 @@ public class TimetableGenerator {
     private static final int POPULATION_SIZE = 100;
     private static final double CROSSOVER_PROBABILITY = 0.75;
     private static final double MUTATION_PROBABILITY = 0.02;
-    private static final int NUMBER_OF_GENERATIONS = 1;
+    private static final int NUMBER_OF_GENERATIONS = 10;
 
     /*
 
@@ -33,9 +32,6 @@ public class TimetableGenerator {
     7. dla każdej pary, która będzie krzyżowana, losujemy miejsca krzyżowania (podziału chromosomów)
     8. krzyżujemy pary, otrzymując dla każdej dwóch potomków
     9. dla każdego osobnika losujemy liczbę 0-1 -> jeśli jest mniejsza niż prawdopodobieństwo mutacji, to mutujemy
-
-    10. uwaga: nowe osobniki całkowicie zastępują stare, poza pozostawionym 1% najlepszych
-    (zostawienie jednego najlepszego osobnika to strategia elitarna)
 
      */
 
@@ -54,29 +50,28 @@ public class TimetableGenerator {
     public Genotype generateTimetable() {
         List<Genotype> population = initializePopulation();
         List<Pair<Genotype, Double>> assessedPopulation = genotypeAssessor.assessPopulation(population);
-        for (int generationNumber = 1; generationNumber < NUMBER_OF_GENERATIONS; generationNumber++) {
+        System.out.println("population size: " + population.size());
+        for (int generationNumber = 0; generationNumber < NUMBER_OF_GENERATIONS; generationNumber++) {
             List<Genotype> parents = chooseParents(assessedPopulation);
             List<Pair<Genotype, Genotype>> pairs = pairParents(parents);
             List<Genotype> newGenotypes = crossoverPerformer.performCrossover(pairs);
             population = createNewGeneration(assessedPopulation, newGenotypes);
             assessedPopulation = genotypeAssessor.assessPopulation(population);
+            assessedPopulation = assessedPopulation.subList(0, Math.min(POPULATION_SIZE, assessedPopulation.size()));
+            System.out.println("generation " + generationNumber + ", best rate: " + assessedPopulation.get(0).getRight());
         }
         return assessedPopulation.get(0).getLeft();
     }
 
     private List<Genotype> createNewGeneration(List<Pair<Genotype, Double>> assessedPopulation,
                                                List<Genotype> newGenotypes) {
-        int numberOfBestGenotypesToSurvive = (int) ceil(assessedPopulation.size() * 0.01);
-        Stream<Genotype> bestOldies = assessedPopulation
-                .subList(0, numberOfBestGenotypesToSurvive)
-                .stream()
-                .map(Pair::getLeft);
-        return Stream.concat(bestOldies, newGenotypes.stream()).collect(toList());
+        Stream<Genotype> oldies = assessedPopulation.stream().map(Pair::getLeft);
+        return Stream.concat(oldies, newGenotypes.stream()).collect(toList());
     }
 
     private List<Pair<Genotype, Genotype>> pairParents(List<Genotype> parents) {
         List<Pair<Genotype, Genotype>> pairs = new ArrayList<>();
-        List<Integer> indexes = IntStream.range(0, pairs.size()).boxed().collect(toList());
+        List<Integer> indexes = IntStream.range(0, parents.size()).boxed().collect(toList());
         Collections.shuffle(indexes);
         for (int i = 0; i < indexes.size(); i += 2) {
             pairs.add(Pair.of(parents.get(i), parents.get(i + 1)));
