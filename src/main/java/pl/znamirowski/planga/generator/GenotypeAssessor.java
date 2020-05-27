@@ -2,9 +2,11 @@ package pl.znamirowski.planga.generator;
 
 import org.apache.commons.lang3.tuple.Pair;
 
+import java.time.LocalTime;
 import java.util.List;
 import java.util.Map;
 
+import static java.time.temporal.ChronoUnit.MINUTES;
 import static java.util.Comparator.comparingDouble;
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toMap;
@@ -31,9 +33,12 @@ public class GenotypeAssessor {
     private static final double TEACHER_BREAKS_WEIGHT = 1;
     private static final double TEACHER_LESSONS_A_DAY_WEIGHT = 1;
     private final AppSettings appSettings;
+    private final int bestTimeWindowToStart;
 
     public GenotypeAssessor(AppSettings appSettings) {
         this.appSettings = appSettings;
+        this.bestTimeWindowToStart = (int) MINUTES.between(LocalTime.parse("08:00"), appSettings.getStartHour())
+                / appSettings.getMinutesPerTimeWindow();
     }
 
     public List<Pair<Genotype, Double>> assessPopulation(List<Genotype> population) {
@@ -46,7 +51,32 @@ public class GenotypeAssessor {
     private double assessGenotype(Genotype genotype) {
         double assessment = 0;
         assessment += GROUP_BREAKS_WEIGHT * calculatePenaltyForGroupBreaks(genotype);
+        assessment += GROUP_STARTING_HOUR_WEIGHT * calculatePenaltyForGroupStartingHours(genotype);
         return assessment;
+    }
+
+    private double calculatePenaltyForGroupStartingHours(Genotype genotype) {
+        int totalPenaltyValue = 0;
+        Map<Integer, Boolean> groupIdToDidThisGroupAppearThisDay = appSettings.getGroups().stream().collect(toMap(Group::getId, g -> false));
+
+        for (int dayNumber = 0; dayNumber < appSettings.getDaysPerWeek(); dayNumber++) {
+            groupIdToDidThisGroupAppearThisDay.replaceAll((key, value) -> false);
+
+            for (int timeWindowInDay = 0; timeWindowInDay < appSettings.getTimeWindowsPerDay(); timeWindowInDay++) {
+                for (int roomNumber = 0; roomNumber < appSettings.getNumberOfRooms(); roomNumber++) {
+                    int lessonIndex = genotype.getLessonIndexAt(dayNumber, timeWindowInDay, roomNumber);
+                    if (lessonIndex != -1) {
+                        int groupId = appSettings.getLessonTuples().get(lessonIndex).getGroupId();
+                        if (!groupIdToDidThisGroupAppearThisDay.get(groupId)) {
+                            groupIdToDidThisGroupAppearThisDay.put(groupId, true);
+                            totalPenaltyValue += Math.abs(timeWindowInDay - bestTimeWindowToStart);
+                        }
+                    }
+                }
+            }
+        }
+
+        return totalPenaltyValue;
     }
 
     private double calculatePenaltyForGroupBreaks(Genotype genotype) {
