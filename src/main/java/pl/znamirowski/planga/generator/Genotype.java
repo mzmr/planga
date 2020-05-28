@@ -91,6 +91,63 @@ public class Genotype {
         writeLessonAt(dayNumber, roomNumber, timeWindowNumber, lessonNumber);
     }
 
+    public List<Integer> findValidPositionsForLesson(LessonTuple lesson) {
+        List<Integer> emptyPositions = new ArrayList<>();
+        int numberOfRooms = appSettings.getNumberOfRooms();
+
+        for (int dayNumber = 0; dayNumber < appSettings.getDaysPerWeek(); dayNumber++) {
+            int[] numberOfEmptyInEachRoom = new int[numberOfRooms];
+
+            for (int numberOfTimeWindow = 0; numberOfTimeWindow < appSettings.getTimeWindowsPerDay(); numberOfTimeWindow++) {
+                List<Integer> temporaryEmptyPositions = new ArrayList<>(numberOfRooms);
+                boolean hasAnyRoomLessonWithTeacherOrGroupAsNewLesson = false;
+
+                for (int roomNumber = 0; roomNumber < numberOfRooms; roomNumber++) {
+                    int index = createIndex(dayNumber, numberOfTimeWindow, roomNumber);
+                    int lessonIndex = genotype[index];
+
+                    if (lessonIndex == -1) {
+                        numberOfEmptyInEachRoom[roomNumber]++;
+                        if (numberOfEmptyInEachRoom[roomNumber] >= lesson.getTimeUnits()) {
+                            temporaryEmptyPositions.add(index - lesson.getTimeUnits() + 1);
+                        }
+                    } else {
+                        numberOfEmptyInEachRoom[roomNumber] = 0;
+                        if (hasLessonWithIndexSameTeacherOrGroupAsNewLesson(lessonIndex, lesson)) {
+                            hasAnyRoomLessonWithTeacherOrGroupAsNewLesson = true;
+                            break;
+                        }
+                    }
+                }
+
+                if (hasAnyRoomLessonWithTeacherOrGroupAsNewLesson) {
+                    Arrays.fill(numberOfEmptyInEachRoom, 0);
+                } else {
+                    emptyPositions.addAll(temporaryEmptyPositions);
+                }
+            }
+        }
+
+        if (emptyPositions.size() == 0) {
+            System.out.println("WARNING: Generating timetable can't be finished because of unfortunate lesson positions");
+            throw new RuntimeException("WARNING: Generating timetable can't be finished because of unfortunate lesson positions");
+        }
+        return emptyPositions;
+    }
+
+    public int deleteLesson(int lessonIndex) {
+        int startIndex = -1;
+        for (int i = 0; i < genotype.length; i++) {
+            if (genotype[i] == lessonIndex) {
+                genotype[i] = -1;
+                if (startIndex == -1) {
+                    startIndex = i;
+                }
+            }
+        }
+        return startIndex;
+    }
+
     private int createIndex(int dayNumber, int numberOfTimeWindow, int roomNumber) {
         return (dayNumber * appSettings.getNumberOfRooms() + roomNumber) * appSettings.getTimeWindowsPerDay()
                 + numberOfTimeWindow;
@@ -247,50 +304,6 @@ public class Genotype {
         int[] genotype = new int[appSettings.getNumberOfRooms() * appSettings.getTimeWindowsPerWeek()];
         Arrays.fill(genotype, -1);
         return genotype;
-    }
-
-    private List<Integer> findValidPositionsForLesson(LessonTuple lesson) {
-        List<Integer> emptyPositions = new ArrayList<>();
-        int numberOfRooms = appSettings.getNumberOfRooms();
-
-        for (int dayNumber = 0; dayNumber < appSettings.getDaysPerWeek(); dayNumber++) {
-            int[] numberOfEmptyInEachRoom = new int[numberOfRooms];
-
-            for (int numberOfTimeWindow = 0; numberOfTimeWindow < appSettings.getTimeWindowsPerDay(); numberOfTimeWindow++) {
-                List<Integer> temporaryEmptyPositions = new ArrayList<>(numberOfRooms);
-                boolean hasAnyRoomLessonWithTeacherOrGroupAsNewLesson = false;
-
-                for (int roomNumber = 0; roomNumber < numberOfRooms; roomNumber++) {
-                    int index = createIndex(dayNumber, numberOfTimeWindow, roomNumber);
-                    int lessonIndex = genotype[index];
-
-                    if (lessonIndex == -1) {
-                        numberOfEmptyInEachRoom[roomNumber]++;
-                        if (numberOfEmptyInEachRoom[roomNumber] >= lesson.getTimeUnits()) {
-                            temporaryEmptyPositions.add(index - lesson.getTimeUnits() + 1);
-                        }
-                    } else {
-                        numberOfEmptyInEachRoom[roomNumber] = 0;
-                        if (hasLessonWithIndexSameTeacherOrGroupAsNewLesson(lessonIndex, lesson)) {
-                            hasAnyRoomLessonWithTeacherOrGroupAsNewLesson = true;
-                            break;
-                        }
-                    }
-                }
-
-                if (hasAnyRoomLessonWithTeacherOrGroupAsNewLesson) {
-                    Arrays.fill(numberOfEmptyInEachRoom, 0);
-                } else {
-                    emptyPositions.addAll(temporaryEmptyPositions);
-                }
-            }
-        }
-
-        if (emptyPositions.size() == 0) {
-            System.out.println("WARNING: Generating timetable can't be finished because of unfortunate lesson positions");
-            throw new RuntimeException("WARNING: Generating timetable can't be finished because of unfortunate lesson positions");
-        }
-        return emptyPositions;
     }
 
     private boolean hasLessonWithIndexSameTeacherOrGroupAsNewLesson(int existingLessonIndex, LessonTuple newLesson) {
