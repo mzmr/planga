@@ -8,6 +8,8 @@ import java.util.Map;
 
 import static java.time.temporal.ChronoUnit.MINUTES;
 import static java.util.Comparator.comparingDouble;
+import static java.util.stream.Collectors.groupingBy;
+import static java.util.stream.Collectors.summingInt;
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toMap;
 
@@ -52,7 +54,38 @@ public class GenotypeAssessor {
         double assessment = 0;
         assessment += GROUP_BREAKS_WEIGHT * calculatePenaltyForGroupBreaks(genotype);
         assessment += GROUP_STARTING_HOUR_WEIGHT * calculatePenaltyForGroupStartingHours(genotype);
+        assessment += GROUP_REGULAR_LESSONS_WEIGHT * calculatePenaltyForNonRegularLessons(genotype);
         return assessment;
+    }
+
+    private double calculatePenaltyForNonRegularLessons(Genotype genotype) {
+        int totalPenaltyValue = 0;
+        Map<Integer, Integer> groupIdToNumberOfLessonWindowsInWeek = appSettings.getLessonTuples().stream()
+                .collect(groupingBy(LessonTuple::getGroupId, summingInt(LessonTuple::getTimeUnits)));
+        Map<Integer, Integer> groupIdToNumberOfLessonsInDay = appSettings.getGroups().stream()
+                .collect(toMap(Group::getId, g -> 0));
+
+        for (int dayNumber = 0; dayNumber < appSettings.getDaysPerWeek(); dayNumber++) {
+            groupIdToNumberOfLessonsInDay.replaceAll((key, value) -> 0);
+
+            for (int timeWindowInDay = 0; timeWindowInDay < appSettings.getTimeWindowsPerDay(); timeWindowInDay++) {
+                for (int roomNumber = 0; roomNumber < appSettings.getNumberOfRooms(); roomNumber++) {
+                    int lessonIndex = genotype.getLessonIndexAt(dayNumber, timeWindowInDay, roomNumber);
+                    if (lessonIndex != -1) {
+                        int groupId = appSettings.getLessonTuples().get(lessonIndex).getGroupId();
+                        groupIdToNumberOfLessonsInDay.put(groupId, groupIdToNumberOfLessonsInDay.get(groupId) + 1);
+                    }
+                }
+            }
+
+            for (Map.Entry<Integer, Integer> groupLessons : groupIdToNumberOfLessonsInDay.entrySet()) {
+                double dailyMean = ((double) groupIdToNumberOfLessonWindowsInWeek.get(groupLessons.getKey()))
+                        / appSettings.getDaysPerWeek();
+                totalPenaltyValue += Math.abs(groupLessons.getValue() - dailyMean);
+            }
+        }
+
+        return totalPenaltyValue;
     }
 
     private double calculatePenaltyForGroupStartingHours(Genotype genotype) {
