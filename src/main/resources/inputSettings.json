@@ -5,31 +5,20 @@
   "timeStep": "00:15",
   "courseTimeUnit": "00:45",
   "daysInWeek": 5,
-  "groups": [
+  "subjectGroups": [
     {
       "id": 1,
-      "name": "Group 1",
+      "name": "Automatyka i Robotyka - Cyber-physical systems - S2",
       "courses": [
-        {
-          "courseId": 2,
-          "teacherId": 3,
-          "timeUnits": 6
-        },
         {
           "courseId": 1,
-          "teacherId": 4,
-          "timeUnits": 6
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Group 2",
-      "courses": [
-        {
-          "courseId": 2,
           "teacherId": 1,
           "timeUnits": 9
+        },
+        {
+          "courseId": 2,
+          "teacherId": 2,
+          "timeUnits": 6
         },
         {
           "courseId": 3,
@@ -38,29 +27,76 @@
         },
         {
           "courseId": 4,
-          "teacherId": 2,
+          "teacherId": 4,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 5,
+          "teacherId": 5,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 6,
+          "teacherId": 6,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 7,
+          "teacherId": 7,
           "timeUnits": 6
         }
       ]
-    },
+    }
+  ],
+  "auditoryGroups": [
     {
-      "id": 3,
-      "name": "Group 3",
+      "id": 1,
+      "subjectGroupId": 1,
+      "numberOfGroupsInSubject": 1,
       "courses": [
         {
           "courseId": 1,
+          "teacherId": 1,
+          "timeUnits": 12
+        }
+      ]
+    }
+  ],
+  "laboratoryGroups": [
+    {
+      "id": 1,
+      "auditoryGroupId": 1,
+      "numberOfGroupsInAuditory": 2,
+      "courses": [
+        {
+          "courseId": 2,
           "teacherId": 2,
           "timeUnits": 6
         },
         {
-          "courseId": 2,
-          "teacherId": 2,
-          "timeUnits": 3
+          "courseId": 7,
+          "teacherId": 7,
+          "timeUnits": 6
         },
         {
           "courseId": 3,
-          "teacherId": 3,
-          "timeUnits": 12
+          "teacherId": 8,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 8,
+          "teacherId": 6,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 6,
+          "teacherId": 9,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 4,
+          "teacherId": 4,
+          "timeUnits": 6
         }
       ]
     }
@@ -68,33 +104,115 @@
   "teachers": [
     {
       "id": 1,
-      "name": "Teacher 1"
+      "name": "Adam Kowalewski, prof. dr hab. inż."
     },
     {
       "id": 2,
-      "name": "Teacher 2"
+      "name": "Andrzej Maciej Skulimowski, prof. dr hab. inż."
     },
     {
       "id": 3,
-      "name": "Teacher 3"
+      "name": "Maciej Rosół, dr inż."
+    },
+    {
+      "id": 4,
+      "name": "Joanna Jaworek-Korjakowska, dr hab. inż."
+    },
+    {
+      "id": 5,
+      "name": "Paweł Piątek, dr inż."
+    },
+    {
+      "id": 6,
+      "name": "Andrzej Tutaj, dr inż."
+    },
+    {
+      "id": 7,
+      "name": "Paweł Skruch, dr hab. inż."
+    },
+    {
+      "id": 8,
+      "name": "Łukasz Więckowski, dr inż."
+    },
+    {
+      "id": 9,
+      "name": "Klaudia Dziedzic, mgr inż."
     }
   ],
   "courses": [
     {
       "id": 1,
-      "name": "Course 1"
+      "name": "Adaptive and Predictive Control"
     },
     {
       "id": 2,
-      "name": "Course 2"
+      "name": "Multicriteria Optimization"
     },
     {
       "id": 3,
-      "name": "Course 3"
+      "name": "Internet of Things and Wireless Sensor Networks"
     },
     {
       "id": 4,
-      "name": "Course 4"
+      "name": "Machine Learning"
+    },
+    {
+      "id": 5,
+      "name": "Embedded systems II"
+    },
+    {
+      "id": 6,
+      "name": "Process Control"
+    },
+    {
+      "id": 7,
+      "name": "Model Based and Test Driven Development"
+    },
+    {
+      "id": 8,
+      "name": "Capstone project I"
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "name": "B-1 316"
+    },
+    {
+      "id": 2,
+      "name": "B-4 H113"
+    },
+    {
+      "id": 3,
+      "name": "C-3 14"
+    },
+    {
+      "id": 4,
+      "name": "B-1 010"
+    },
+    {
+      "id": 5,
+      "name": "C-3 101"
+    },
+    {
+      "id": 6,
+      "name": "B-1 111"
+    },
+    {
+      "id": 7,
+      "name": "B-1 110"
+    },
+    {
+      "id": 8,
+      "name": "B-1 317a"
+    },
+    {
+      "id": 9,
+      "name": "B-1 317b"
+    },
+    {
+      "id": 10,
+      "name": "C-3 201"
     }
   ]
 }
