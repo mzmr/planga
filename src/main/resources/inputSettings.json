@@ -5,11 +5,13 @@
   "timeStep": "00:15",
   "courseTimeUnit": "00:45",
   "daysInWeek": 5,
-  "subjectGroups": [
+  "groups": [
     {
       "id": 1,
       "name": "Automatyka i Robotyka - Cyber-physical systems - S2",
-      "courses": [
+      "auditoryGroupsPerLectureGroup": 1,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
         {
           "courseId": 1,
           "teacherId": 1,
@@ -45,29 +47,15 @@
           "teacherId": 7,
           "timeUnits": 6
         }
-      ]
-    }
-  ],
-  "auditoryGroups": [
-    {
-      "id": 1,
-      "subjectGroupId": 1,
-      "numberOfGroupsInSubject": 1,
-      "courses": [
+      ],
+      "auditoryClasses": [
         {
           "courseId": 1,
           "teacherId": 1,
           "timeUnits": 12
         }
-      ]
-    }
-  ],
-  "laboratoryGroups": [
-    {
-      "id": 1,
-      "auditoryGroupId": 1,
-      "numberOfGroupsInAuditory": 2,
-      "courses": [
+      ],
+      "laboratoryClasses": [
         {
           "courseId": 2,
           "teacherId": 2,
@@ -96,6 +84,78 @@
         {
           "courseId": 4,
           "teacherId": 4,
+          "timeUnits": 6
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Automatyka i Robotyka - Informatyka w sterowaniu i zarządzaniu - S2",
+      "auditoryGroupsPerLectureGroup": 1,
+      "laboratoryGroupsPerAuditoryGroup": 1,
+      "lectures": [
+        {
+          "courseId": 9,
+          "teacherId": 10,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 10,
+          "teacherId": 11,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 12,
+          "teacherId": 13,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 11,
+          "teacherId": 12,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 14,
+          "teacherId": 2,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 16,
+          "teacherId": 17,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 15,
+          "teacherId": 16,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 10,
+          "teacherId": 11,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 11,
+          "teacherId": 12,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 13,
+          "teacherId": 14,
+          "timeUnits": 12
+        },
+        {
+          "courseId": 12,
+          "teacherId": 15,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 14,
+          "teacherId": 2,
           "timeUnits": 6
         }
       ]
@@ -137,6 +197,38 @@
     {
       "id": 9,
       "name": "Klaudia Dziedzic, mgr inż."
+    },
+    {
+      "id": 10,
+      "name": "Joanna Kwiecień, dr hab. inż."
+    },
+    {
+      "id": 11,
+      "name": "Edyta Kucharska, dr inż."
+    },
+    {
+      "id": 12,
+      "name": "Wojciech Chmiel, dr inż."
+    },
+    {
+      "id": 13,
+      "name": "Leszek Kotulski, prof. dr hab."
+    },
+    {
+      "id": 14,
+      "name": "Antoni Ligęza, prof. dr hab. inż."
+    },
+    {
+      "id": 15,
+      "name": "Adam Sędziwy, dr hab."
+    },
+    {
+      "id": 16,
+      "name": "Marta Kraszewska, dr inż."
+    },
+    {
+      "id": 17,
+      "name": "Tomasz Szmuc, prof. dr hab. inż."
     }
   ],
   "courses": [
@@ -171,6 +263,38 @@
     {
       "id": 8,
       "name": "Capstone project I"
+    },
+    {
+      "id": 9,
+      "name": "Modele kolejkowe w IT"
+    },
+    {
+      "id": 10,
+      "name": "Informatyczne aspekty rachunkowości i finansów"
+    },
+    {
+      "id": 11,
+      "name": "C# i platforma .NET"
+    },
+    {
+      "id": 12,
+      "name": "Inteligencja biznesowa - hurtownie danych"
+    },
+    {
+      "id": 13,
+      "name": "Laboratorium specjalizacyjne"
+    },
+    {
+      "id": 14,
+      "name": "Optymalizacja wielokryterialna"
+    },
+    {
+      "id": 15,
+      "name": "Zarządzanie projektami informatycznymi"
+    },
+    {
+      "id": 16,
+      "name": "Specyfikacja i systemy wspomagania projektowania oprogramowania"
     }
   ],
   "rooms": [
@@ -213,6 +337,26 @@
     {
       "id": 10,
       "name": "C-3 201"
+    },
+    {
+      "id": 11,
+      "name": "B-5 212"
+    },
+    {
+      "id": 12,
+      "name": "C-3 217"
+    },
+    {
+      "id": 13,
+      "name": "C-2 431"
+    },
+    {
+      "id": 14,
+      "name": "B-4 H113"
+    },
+    {
+      "id": 15,
+      "name": "B-1 014"
     }
   ]
 }
