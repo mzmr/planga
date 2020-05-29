@@ -293,6 +293,88 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 5,
+      "name": "Automatyka i Robotyka - S1",
+      "auditoryGroupsPerLectureGroup": 5,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 30,
+          "teacherId": 11,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 31,
+          "teacherId": 31,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 33,
+          "teacherId": 32,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 34,
+          "teacherId": 26,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 35,
+          "teacherId": 39,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 36,
+          "teacherId": 38,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 37,
+          "teacherId": 29,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 33,
+          "teacherId": 32,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 33,
+          "teacherId": 33,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 31,
+          "teacherId": 34,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 36,
+          "teacherId": 38,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 37,
+          "teacherId": 29,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 30,
+          "teacherId": 11,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 35,
+          "teacherId": 36,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -407,6 +489,58 @@
     {
       "id": 28,
       "name": "Andrzej Latocha, dr inż."
+    },
+    {
+      "id": 29,
+      "name": "Piotr Pawlik, dr inż."
+    },
+    {
+      "id": 30,
+      "name": "Rafał Mularczyk"
+    },
+    {
+      "id": 31,
+      "name": "Jacek Nizioł, dr"
+    },
+    {
+      "id": 32,
+      "name": "Adam Ćmiel, dr inż."
+    },
+    {
+      "id": 33,
+      "name": "Anna Wach-Michalik, dr"
+    },
+    {
+      "id": 34,
+      "name": "Paweł Armatys, dr inż."
+    },
+    {
+      "id": 35,
+      "name": "Krzysztof Kosała, dr hab. inż."
+    },
+    {
+      "id": 36,
+      "name": "Łukasz Gorazd, dr inż."
+    },
+    {
+      "id": 37,
+      "name": "Radosław Marczuk, dr inż"
+    },
+    {
+      "id": 38,
+      "name": "Michał Góra, dr"
+    },
+    {
+      "id": 39,
+      "name": "Ryszard Olszewski, dr inż"
+    },
+    {
+      "id": 40,
+      "name": "Anna Gryboś, dr"
+    },
+    {
+      "id": 41,
+      "name": "Lesia Matsiuk, dr"
     }
   ],
   "courses": [
@@ -525,6 +659,38 @@
     {
       "id": 29,
       "name": "Niezawodność i jakość w systemach sterowania"
+    },
+    {
+      "id": 30,
+      "name": "Eksploracja danych"
+    },
+    {
+      "id": 31,
+      "name": "Fizyka 1"
+    },
+    {
+      "id": 32,
+      "name": "Wychowanie fizyczne 1"
+    },
+    {
+      "id": 33,
+      "name": "Analiza matematyczna"
+    },
+    {
+      "id": 34,
+      "name": "Wprowadzenie do automatyki i robotyki"
+    },
+    {
+      "id": 35,
+      "name": "Projektowanie konstrukcji z rysunkiem technicznym"
+    },
+    {
+      "id": 36,
+      "name": "Algebra liniowa"
+    },
+    {
+      "id": 37,
+      "name": "Wstęp do informatyki"
     }
   ],
   "rooms": [
@@ -599,6 +765,70 @@
     {
       "id": 18,
       "name": "A-3/A-4 403"
+    },
+    {
+      "id": 19,
+      "name": "C-2 224"
+    },
+    {
+      "id": 20,
+      "name": "C-3 201a"
+    },
+    {
+      "id": 21,
+      "name": "D-10 B"
+    },
+    {
+      "id": 22,
+      "name": "B-1 121"
+    },
+    {
+      "id": 23,
+      "name": "D-8 502"
+    },
+    {
+      "id": 24,
+      "name": "D-10 319"
+    },
+    {
+      "id": 25,
+      "name": "D-8 526"
+    },
+    {
+      "id": 26,
+      "name": "D-1 119"
+    },
+    {
+      "id": 27,
+      "name": "B-2 320"
+    },
+    {
+      "id": 28,
+      "name": "B-2 322"
+    },
+    {
+      "id": 29,
+      "name": "D-8 402"
+    },
+    {
+      "id": 30,
+      "name": "D-10 108"
+    },
+    {
+      "id": 31,
+      "name": "D-8 429"
+    },
+    {
+      "id": 32,
+      "name": "B-2 123"
+    },
+    {
+      "id": 33,
+      "name": "B-1 102"
+    },
+    {
+      "id": 34,
+      "name": "B-1 H24"
     }
   ]
 }
