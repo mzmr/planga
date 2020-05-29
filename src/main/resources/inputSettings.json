@@ -159,6 +159,78 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 3,
+      "name": "Automatyka i Robotyka - Inteligentne systemy sterowania - S2",
+      "auditoryGroupsPerLectureGroup": 1,
+      "laboratoryGroupsPerAuditoryGroup": 1,
+      "lectures": [
+        {
+          "courseId": 17,
+          "teacherId": 18,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 18,
+          "teacherId": 19,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 19,
+          "teacherId": 20,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 20,
+          "teacherId": 22,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 22,
+          "teacherId": 22,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 21,
+          "teacherId": 4,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 20,
+          "teacherId": 21,
+          "timeUnits": 9
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 17,
+          "teacherId": 18,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 18,
+          "teacherId": 19,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 21,
+          "teacherId": 4,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 22,
+          "teacherId": 22,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 23,
+          "teacherId": 23,
+          "timeUnits": 9
+        }
+      ]
     }
   ],
   "teachers": [
@@ -229,6 +301,30 @@
     {
       "id": 17,
       "name": "Tomasz Szmuc, prof. dr hab. inż."
+    },
+    {
+      "id": 18,
+      "name": "Zbigniew Bubliński, dr inż."
+    },
+    {
+      "id": 19,
+      "name": "Mirosław Jabłoński, dr inż."
+    },
+    {
+      "id": 20,
+      "name": "Piotr Kadłuczka, dr inż."
+    },
+    {
+      "id": 21,
+      "name": "Tomasz Pięciak, dr inż."
+    },
+    {
+      "id": 22,
+      "name": "Joanna Grabska-Chrząstowska, dr inż."
+    },
+    {
+      "id": 23,
+      "name": "Piotr Bania, dr hab. inż."
     }
   ],
   "courses": [
@@ -295,6 +391,34 @@
     {
       "id": 16,
       "name": "Specyfikacja i systemy wspomagania projektowania oprogramowania"
+    },
+    {
+      "id": 17,
+      "name": "Wbudowane systemy wizyjne"
+    },
+    {
+      "id": 18,
+      "name": "Akceleracja algorytmów wizyjnych w GPU i OpenCL"
+    },
+    {
+      "id": 19,
+      "name": "Inteligencja obliczeniowa"
+    },
+    {
+      "id": 20,
+      "name": "Elektroniczne systemy diagnostyki medycznej i terapii"
+    },
+    {
+      "id": 21,
+      "name": "Przetwarzanie i analiza obrazów medycznych"
+    },
+    {
+      "id": 22,
+      "name": "Sieci neuronowe"
+    },
+    {
+      "id": 23,
+      "name": "Laboratorium problemowe 2"
     }
   ],
   "rooms": [
@@ -357,6 +481,18 @@
     {
       "id": 15,
       "name": "B-1 014"
+    },
+    {
+      "id": 16,
+      "name": "C-3 107"
+    },
+    {
+      "id": 17,
+      "name": "C-3 112"
+    },
+    {
+      "id": 18,
+      "name": "A-3/A-4 403"
     }
   ]
 }
