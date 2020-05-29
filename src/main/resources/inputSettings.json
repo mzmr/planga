@@ -231,6 +231,68 @@
           "timeUnits": 9
         }
       ]
+    },
+    {
+      "id": 4,
+      "name": "Automatyka i Robotyka - Komputerowe systemy sterowania - S2",
+      "auditoryGroupsPerLectureGroup": 1,
+      "laboratoryGroupsPerAuditoryGroup": 1,
+      "lectures": [
+        {
+          "courseId": 24,
+          "teacherId": 5,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 25,
+          "teacherId": 26,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 26,
+          "teacherId": 24,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 27,
+          "teacherId": 27,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 29,
+          "teacherId": 20,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 28,
+          "teacherId": 28,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 23,
+          "teacherId": 24,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 24,
+          "teacherId": 25,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 27,
+          "teacherId": 6,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 26,
+          "teacherId": 24,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -325,6 +387,26 @@
     {
       "id": 23,
       "name": "Piotr Bania, dr hab. inż."
+    },
+    {
+      "id": 24,
+      "name": "Adam Piłat, dr hab. inż."
+    },
+    {
+      "id": 25,
+      "name": "Mariusz Pauluk, dr inż."
+    },
+    {
+      "id": 26,
+      "name": "Witold Byrski, prof. dr hab. inż."
+    },
+    {
+      "id": 27,
+      "name": "Krzysztof Kołek, dr inż."
+    },
+    {
+      "id": 28,
+      "name": "Andrzej Latocha, dr inż."
     }
   ],
   "courses": [
@@ -419,6 +501,30 @@
     {
       "id": 23,
       "name": "Laboratorium problemowe 2"
+    },
+    {
+      "id": 24,
+      "name": "Procesory sygnałowe i mikrokontrolery"
+    },
+    {
+      "id": 25,
+      "name": "Sterowanie adaptacyjne i estymacja"
+    },
+    {
+      "id": 26,
+      "name": "Układy sterowania inteligentnego"
+    },
+    {
+      "id": 27,
+      "name": "Integracja systemów i sterowanie rozproszone"
+    },
+    {
+      "id": 28,
+      "name": "Wielopoziomowe struktury sterowania i systemy SCADA 2"
+    },
+    {
+      "id": 29,
+      "name": "Niezawodność i jakość w systemach sterowania"
     }
   ],
   "rooms": [
