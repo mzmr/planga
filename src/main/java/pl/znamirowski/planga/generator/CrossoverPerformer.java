@@ -5,7 +5,6 @@ import org.apache.commons.lang3.tuple.Pair;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.stream.IntStream;
 
 import static java.util.Comparator.comparingInt;
 import static java.util.stream.Collectors.toList;
@@ -39,14 +38,12 @@ public class CrossoverPerformer {
 
     private Genotype generateChildUsingRegularCrossover(Genotype parent1, Genotype parent2) {
         Genotype child = new Genotype(settings);
-        List<LessonTuple> lessons = settings.getLessonTuples();
-        List<Integer> sortedLessonNumbers = IntStream.range(0, lessons.size())
-                .boxed()
-                .sorted(comparingInt(i -> -lessons.get(i).getTimeUnits()))
+        List<LessonTuple> sortedLessons = settings.getLessonTuples().values().stream()
+                .sorted(comparingInt(lesson -> -lesson.getTimeUnits()))
                 .collect(toList());
-        for (Integer lessonNumber : sortedLessonNumbers) {
-            int indexOfLesson = getIndexOfLesson(lessonNumber, random.nextBoolean() ? parent1 : parent2);
-            child.writeLessonAt(indexOfLesson, lessonNumber);
+        for (LessonTuple lesson : sortedLessons) {
+            int indexOfLesson = getIndexOfLesson(lesson.getId(), random.nextBoolean() ? parent1 : parent2);
+            child.writeLessonAt(indexOfLesson, lesson);
         }
         return child;
     }

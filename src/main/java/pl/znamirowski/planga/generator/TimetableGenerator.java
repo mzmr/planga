@@ -15,7 +15,7 @@ import static java.util.stream.Collectors.toList;
 
 public class TimetableGenerator {
     private static final int POPULATION_SIZE = 100;
-    private static final int NUMBER_OF_GENERATIONS = 10;
+    private static final int NUMBER_OF_GENERATIONS = 100;
 
     /*
 

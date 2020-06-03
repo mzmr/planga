@@ -1,7 +1,5 @@
 package pl.znamirowski.planga.generator;
 
-import org.apache.commons.lang3.tuple.Pair;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -12,6 +10,8 @@ import static java.lang.Math.abs;
 import static java.util.Collections.shuffle;
 import static java.util.Comparator.comparingInt;
 import static java.util.stream.Collectors.toList;
+import static pl.znamirowski.planga.generator.GroupType.AUDITORY;
+import static pl.znamirowski.planga.generator.GroupType.LECTURE;
 
 public class Genotype {
     private final AppSettings appSettings;
@@ -33,65 +33,62 @@ public class Genotype {
     }
 
     public void fillRandomlyWithLessons() {
-        List<LessonTuple> lessons = appSettings.getLessonTuples();
-        List<Pair<Integer, LessonTuple>> sortedLessons = IntStream.range(0, lessons.size())
-                .mapToObj(i -> Pair.of(i, lessons.get(i)))
-                .sorted(comparingInt(pair -> -pair.getRight().getTimeUnits()))
+        List<LessonTuple> lessonsSortedByDuration = appSettings.getLessonTuples().values().stream()
+                .sorted(comparingInt(lesson -> -lesson.getTimeUnits()))
                 .collect(toList());
-        for (Pair<Integer, LessonTuple> pair : sortedLessons) {
-            List<Integer> emptyPositions = findValidPositionsForLesson(pair.getRight());
+        for (LessonTuple lesson : lessonsSortedByDuration) {
+            List<Integer> emptyPositions = findValidPositionsForLesson(lesson);
             int emptyPosition = emptyPositions.get(random.nextInt(emptyPositions.size()));
-            Arrays.fill(genotype, emptyPosition, emptyPosition + pair.getRight().getTimeUnits(), pair.getLeft());
+            Arrays.fill(genotype, emptyPosition, emptyPosition + lesson.getTimeUnits(), lesson.getId());
         }
     }
 
-    public int getLessonIndexAt(int dayNumber, int timeWindowInDayNumber, int roomNumber) {
+    public int getLessonIdAt(int dayNumber, int timeWindowInDayNumber, int roomNumber) {
         return genotype[createIndex(dayNumber, timeWindowInDayNumber, roomNumber)];
     }
 
-    public void writeLessonAt(int dayNumber, int roomNumber, int timeWindowNumber, int lessonIdx) {
-        LessonTuple lesson = appSettings.getLessonTuples().get(lessonIdx);
+    public void writeLessonAt(int dayNumber, int roomNumber, int timeWindowNumber, LessonTuple lesson) {
         int timeWindowToWriteLessonAt = findTimeWindowToWriteLessonAt(lesson, timeWindowNumber);
         List<Integer> validPositionsForLesson = findValidPositionsForLesson(lesson);
 
-        if (tryToWriteLessonExactlyAt(dayNumber, roomNumber, timeWindowToWriteLessonAt, lessonIdx, lesson, validPositionsForLesson)) {
+        if (tryToWriteLessonExactlyAt(dayNumber, roomNumber, timeWindowToWriteLessonAt, lesson, validPositionsForLesson)) {
             return;
         }
-        if (tryToWriteLessonAtDayAndTime(dayNumber, roomNumber, timeWindowToWriteLessonAt, lessonIdx, lesson, validPositionsForLesson)) {
+        if (tryToWriteLessonAtDayAndTime(dayNumber, roomNumber, timeWindowToWriteLessonAt, lesson, validPositionsForLesson)) {
             return;
         }
-        if (tryToWriteLessonAtDayAndRoom(dayNumber, roomNumber, timeWindowToWriteLessonAt, lessonIdx, lesson, validPositionsForLesson)) {
+        if (tryToWriteLessonAtDayAndRoom(dayNumber, roomNumber, timeWindowToWriteLessonAt, lesson, validPositionsForLesson)) {
             return;
         }
-        if (tryToWriteLessonAtDay(dayNumber, roomNumber, timeWindowToWriteLessonAt, lessonIdx, lesson, validPositionsForLesson)) {
+        if (tryToWriteLessonAtDay(dayNumber, roomNumber, timeWindowToWriteLessonAt, lesson, validPositionsForLesson)) {
             return;
         }
-        if (tryToWriteLessonAtTimeAndRoom(dayNumber, roomNumber, timeWindowToWriteLessonAt, lessonIdx, lesson, validPositionsForLesson)) {
+        if (tryToWriteLessonAtTimeAndRoom(dayNumber, roomNumber, timeWindowToWriteLessonAt, lesson, validPositionsForLesson)) {
             return;
         }
-        if (tryToWriteLessonAtTime(timeWindowToWriteLessonAt, lessonIdx, lesson, validPositionsForLesson)) {
+        if (tryToWriteLessonAtTime(timeWindowToWriteLessonAt, lesson, validPositionsForLesson)) {
             return;
         }
-        if (tryToWriteLessonInRoom(roomNumber, timeWindowToWriteLessonAt, lessonIdx, lesson, validPositionsForLesson)) {
+        if (tryToWriteLessonInRoom(roomNumber, timeWindowToWriteLessonAt, lesson, validPositionsForLesson)) {
             return;
         }
-        if (tryToWriteLessonRandomly(lessonIdx, lesson, validPositionsForLesson)) {
+        if (tryToWriteLessonRandomly(lesson, validPositionsForLesson)) {
             return;
         }
         throw new RuntimeException("Unable to create correct genotype");
     }
 
-    public void writeLessonAt(int index, int lessonNumber) {
+    public void writeLessonAt(int index, LessonTuple lesson) {
         int windowsLeft = index;
         int dayNumber = windowsLeft / (appSettings.getTimeWindowsPerDay() * appSettings.getNumberOfRooms());
         windowsLeft -= dayNumber * appSettings.getTimeWindowsPerDay() * appSettings.getNumberOfRooms();
         int roomNumber = windowsLeft / appSettings.getTimeWindowsPerDay();
         windowsLeft -= roomNumber * appSettings.getTimeWindowsPerDay();
         int timeWindowNumber = windowsLeft;
-        writeLessonAt(dayNumber, roomNumber, timeWindowNumber, lessonNumber);
+        writeLessonAt(dayNumber, roomNumber, timeWindowNumber, lesson);
     }
 
-    public List<Integer> findValidPositionsForLesson(LessonTuple lesson) {
+    public List<Integer> findValidPositionsForLesson(LessonTuple newLesson) {
         List<Integer> emptyPositions = new ArrayList<>();
         int numberOfRooms = appSettings.getNumberOfRooms();
 
@@ -100,27 +97,27 @@ public class Genotype {
 
             for (int numberOfTimeWindow = 0; numberOfTimeWindow < appSettings.getTimeWindowsPerDay(); numberOfTimeWindow++) {
                 List<Integer> temporaryEmptyPositions = new ArrayList<>(numberOfRooms);
-                boolean hasAnyRoomLessonWithTeacherOrGroupAsNewLesson = false;
+                boolean hasAnyRoomLessonWhichIsBlockingNewLesson = false;
 
                 for (int roomNumber = 0; roomNumber < numberOfRooms; roomNumber++) {
                     int index = createIndex(dayNumber, numberOfTimeWindow, roomNumber);
-                    int lessonIndex = genotype[index];
+                    int existingLessonId = genotype[index];
 
-                    if (lessonIndex == -1) {
+                    if (existingLessonId == -1) {
                         numberOfEmptyInEachRoom[roomNumber]++;
-                        if (numberOfEmptyInEachRoom[roomNumber] >= lesson.getTimeUnits()) {
-                            temporaryEmptyPositions.add(index - lesson.getTimeUnits() + 1);
+                        if (numberOfEmptyInEachRoom[roomNumber] >= newLesson.getTimeUnits()) {
+                            temporaryEmptyPositions.add(index - newLesson.getTimeUnits() + 1);
                         }
                     } else {
                         numberOfEmptyInEachRoom[roomNumber] = 0;
-                        if (hasLessonWithIndexSameTeacherOrGroupAsNewLesson(lessonIndex, lesson)) {
-                            hasAnyRoomLessonWithTeacherOrGroupAsNewLesson = true;
+                        if (doesExistingLessonBlockNewLesson(existingLessonId, newLesson)) {
+                            hasAnyRoomLessonWhichIsBlockingNewLesson = true;
                             break;
                         }
                     }
                 }
 
-                if (hasAnyRoomLessonWithTeacherOrGroupAsNewLesson) {
+                if (hasAnyRoomLessonWhichIsBlockingNewLesson) {
                     Arrays.fill(numberOfEmptyInEachRoom, 0);
                 } else {
                     emptyPositions.addAll(temporaryEmptyPositions);
@@ -153,26 +150,26 @@ public class Genotype {
                 + numberOfTimeWindow;
     }
 
-    private boolean tryToWriteLessonRandomly(int lessonIdx, LessonTuple lesson, List<Integer> validPositions) {
+    private boolean tryToWriteLessonRandomly(LessonTuple lesson, List<Integer> validPositions) {
         int validPositionForLesson = validPositions.get(random.nextInt(validPositions.size()));
-        writeLessonAndOverride(validPositionForLesson, lessonIdx, lesson.getTimeUnits());
+        writeLessonAndOverride(validPositionForLesson, lesson.getId(), lesson.getTimeUnits());
         return true;
     }
 
-    private boolean tryToWriteLessonInRoom(int roomNumber, int timeWindowNumber, int lessonIdx, LessonTuple lesson, List<Integer> validPositions) {
+    private boolean tryToWriteLessonInRoom(int roomNumber, int timeWindowNumber, LessonTuple lesson, List<Integer> validPositions) {
         List<Integer> daysToCheck = IntStream.range(0, appSettings.getDaysPerWeek())
                 .boxed()
                 .collect(toList());
         shuffle(daysToCheck);
         for (int day : daysToCheck) {
-            if (tryToWriteLessonAtDayAndRoom(day, roomNumber, timeWindowNumber, lessonIdx, lesson, validPositions)) {
+            if (tryToWriteLessonAtDayAndRoom(day, roomNumber, timeWindowNumber, lesson, validPositions)) {
                 return true;
             }
         }
         return false;
     }
 
-    private boolean tryToWriteLessonAtTime(int timeWindowNumber, int lessonIdx, LessonTuple lesson, List<Integer> validPositions) {
+    private boolean tryToWriteLessonAtTime(int timeWindowNumber, LessonTuple lesson, List<Integer> validPositions) {
         List<Integer> daysToCheck = IntStream.range(0, appSettings.getDaysPerWeek())
                 .boxed()
                 .collect(toList());
@@ -183,7 +180,7 @@ public class Genotype {
         shuffle(roomsToCheck);
         for (int room : roomsToCheck) {
             for (int day : daysToCheck) {
-                if (tryToWriteLessonExactlyAt(day, room, timeWindowNumber, lessonIdx, lesson, validPositions)) {
+                if (tryToWriteLessonExactlyAt(day, room, timeWindowNumber, lesson, validPositions)) {
                     return true;
                 }
             }
@@ -192,21 +189,21 @@ public class Genotype {
     }
 
     private boolean tryToWriteLessonAtTimeAndRoom(int dayNumberToAvoid, int roomNumber, int timeWindowNumber,
-                                                  int lessonIdx, LessonTuple lesson, List<Integer> validPositions) {
+                                                  LessonTuple lesson, List<Integer> validPositions) {
         List<Integer> daysToCheck = IntStream.range(0, appSettings.getDaysPerWeek())
                 .filter(dayNumber -> dayNumber != dayNumberToAvoid)
                 .boxed()
                 .collect(toList());
         shuffle(daysToCheck);
         for (int dayNumber : daysToCheck) {
-            if (tryToWriteLessonAtDayAndRoom(dayNumber, roomNumber, timeWindowNumber, lessonIdx, lesson, validPositions)) {
+            if (tryToWriteLessonAtDayAndRoom(dayNumber, roomNumber, timeWindowNumber, lesson, validPositions)) {
                 return true;
             }
         }
         return false;
     }
 
-    private boolean tryToWriteLessonAtDay(int dayNumber, int roomNumberToAvoid, int timeWindowNumber, int lessonIdx,
+    private boolean tryToWriteLessonAtDay(int dayNumber, int roomNumberToAvoid, int timeWindowNumber,
                                           LessonTuple lesson, List<Integer> validPositions) {
         List<Integer> roomsToCheck = IntStream.range(0, appSettings.getNumberOfRooms())
                 .filter(roomNumber -> roomNumber != roomNumberToAvoid)
@@ -214,14 +211,14 @@ public class Genotype {
                 .collect(toList());
         shuffle(roomsToCheck);
         for (int roomNumber : roomsToCheck) {
-            if (tryToWriteLessonAtDayAndRoom(dayNumber, roomNumber, timeWindowNumber, lessonIdx, lesson, validPositions)) {
+            if (tryToWriteLessonAtDayAndRoom(dayNumber, roomNumber, timeWindowNumber, lesson, validPositions)) {
                 return true;
             }
         }
         return false;
     }
 
-    private boolean tryToWriteLessonAtDayAndRoom(int dayNumber, int roomNumber, int timeWindowToStickTo, int lessonIdx,
+    private boolean tryToWriteLessonAtDayAndRoom(int dayNumber, int roomNumber, int timeWindowToStickTo,
                                                  LessonTuple lesson, List<Integer> validPositions) {
         int startIndex = createIndex(dayNumber, 0, roomNumber);
         List<Integer> availablePositions = new ArrayList<>();
@@ -240,29 +237,29 @@ public class Genotype {
         if (availablePositions.size() > 0) {
             availablePositions.sort(comparingInt(o -> abs(o - timeWindowToStickTo)));
             int timeWindow = availablePositions.get(0);
-            writeLessonAndOverride(startIndex + timeWindow, lessonIdx, lesson.getTimeUnits());
+            writeLessonAndOverride(startIndex + timeWindow, lesson.getId(), lesson.getTimeUnits());
             return true;
         }
         return false;
     }
 
     private boolean tryToWriteLessonAtDayAndTime(int dayNumber, int roomNumberToAvoid, int timeWindowNumber,
-                                                 int lessonIdx, LessonTuple lesson, List<Integer> validPositions) {
+                                                 LessonTuple lesson, List<Integer> validPositions) {
         List<Integer> roomsToCheck = IntStream.range(0, appSettings.getNumberOfRooms())
                 .filter(roomNumber -> roomNumber != roomNumberToAvoid)
                 .boxed()
                 .collect(toList());
         shuffle(roomsToCheck);
         for (int roomNumber : roomsToCheck) {
-            if (tryToWriteLessonExactlyAt(dayNumber, roomNumber, timeWindowNumber, lessonIdx, lesson, validPositions)) {
+            if (tryToWriteLessonExactlyAt(dayNumber, roomNumber, timeWindowNumber, lesson, validPositions)) {
                 return true;
             }
         }
         return false;
     }
 
-    private boolean tryToWriteLessonExactlyAt(int dayNumber, int roomNumber, int timeWindowNumber, int lessonIdx,
-                                              LessonTuple lesson, List<Integer> validPositions) {
+    private boolean tryToWriteLessonExactlyAt(int dayNumber, int roomNumber, int timeWindowNumber, LessonTuple lesson,
+                                              List<Integer> validPositions) {
         int numberOfAvailableCells = 0;
         int startingIndex = createIndex(dayNumber, timeWindowNumber, roomNumber);
         if (!validPositions.contains(startingIndex)) {
@@ -281,7 +278,7 @@ public class Genotype {
             }
         }
         if (numberOfAvailableCells >= lesson.getTimeUnits()) {
-            writeLessonAndOverride(startingIndex, lessonIdx, lesson.getTimeUnits());
+            writeLessonAndOverride(startingIndex, lesson.getId(), lesson.getTimeUnits());
             return true;
         }
         return false;
@@ -306,10 +303,27 @@ public class Genotype {
         return genotype;
     }
 
-    private boolean hasLessonWithIndexSameTeacherOrGroupAsNewLesson(int existingLessonIndex, LessonTuple newLesson) {
-        LessonTuple existingLesson = appSettings.getLessonTuples().get(existingLessonIndex);
-        return (existingLesson.getGroupId() == newLesson.getGroupId())
-                || (existingLesson.getTeacherId() == newLesson.getTeacherId());
+    private boolean doesExistingLessonBlockNewLesson(int existingLessonId, LessonTuple newLesson) {
+        LessonTuple existingLesson = appSettings.getLessonTuples().get(existingLessonId);
+        if (existingLesson.getTeacherId() == newLesson.getTeacherId()) {
+            return true;
+        }
+        if (existingLesson.getLectureGroupId() != newLesson.getLectureGroupId()) {
+            return false;
+        }
+        if (existingLesson.getGroupType() == LECTURE || newLesson.getGroupType() == LECTURE) {
+            return true;
+        }
+        if (existingLesson.getAuditoryGroupId() != newLesson.getAuditoryGroupId()) {
+            return false;
+        }
+        if (existingLesson.getGroupType() == AUDITORY || newLesson.getGroupType() == AUDITORY) {
+            return true;
+        }
+        if (existingLesson.getLaboratoryGroupId() != newLesson.getLaboratoryGroupId()) {
+            return false;
+        }
+        return true;
     }
 
     @Override

@@ -4,7 +4,6 @@ import java.time.LocalTime;
 import java.util.List;
 
 public class InputSettings {
-    private int numberOfRooms;
     private LocalTime startHour;
     private LocalTime endHour;
     private LocalTime timeStep;
@@ -13,14 +12,7 @@ public class InputSettings {
     private List<Group> groups;
     private List<Teacher> teachers;
     private List<Course> courses;
-
-    public int getNumberOfRooms() {
-        return numberOfRooms;
-    }
-
-    public void setNumberOfRooms(int numberOfRooms) {
-        this.numberOfRooms = numberOfRooms;
-    }
+    private List<Room> rooms;
 
     public LocalTime getStartHour() {
         return startHour;
@@ -84,5 +76,13 @@ public class InputSettings {
 
     public void setCourses(List<Course> courses) {
         this.courses = courses;
+    }
+
+    public List<Room> getRooms() {
+        return rooms;
+    }
+
+    public void setRooms(List<Room> rooms) {
+        this.rooms = rooms;
     }
 }

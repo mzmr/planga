@@ -2,23 +2,30 @@ package pl.znamirowski.planga.service;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import pl.znamirowski.planga.generator.AppSettings;
+import pl.znamirowski.planga.generator.GroupType;
 import pl.znamirowski.planga.generator.LessonTuple;
 
 import java.time.LocalTime;
 
 public class Lesson {
-    private final int groupId;
+    private final int lectureGroupId;
+    private final int auditoryGroupId;
+    private final int laboratoryGroupId;
     private final int teacherId;
     private final int courseId;
     private final int durationInTimeWindows;
     private final int dayNumber;
     private final int roomNumber;
+    private final GroupType groupType;
 
     @JsonFormat(pattern="HH:mm")
     private final LocalTime startTime;
 
     public Lesson(LessonTuple lessonTuple, int dayNumber, int windowNumber, int roomNumber, AppSettings settings) {
-        this.groupId = lessonTuple.getGroupId();
+        this.groupType = lessonTuple.getGroupType();
+        this.lectureGroupId = lessonTuple.getLectureGroupId();
+        this.auditoryGroupId = lessonTuple.getAuditoryGroupId();
+        this.laboratoryGroupId = lessonTuple.getLaboratoryGroupId();
         this.teacherId = lessonTuple.getTeacherId();
         this.courseId = lessonTuple.getCourseId();
         this.durationInTimeWindows = lessonTuple.getTimeUnits();
@@ -27,8 +34,20 @@ public class Lesson {
         this.roomNumber = roomNumber;
     }
 
-    public int getGroupId() {
-        return groupId;
+    public GroupType getGroupType() {
+        return groupType;
+    }
+
+    public int getLectureGroupId() {
+        return lectureGroupId;
+    }
+
+    public int getAuditoryGroupId() {
+        return auditoryGroupId;
+    }
+
+    public int getLaboratoryGroupId() {
+        return laboratoryGroupId;
     }
 
     public int getTeacherId() {

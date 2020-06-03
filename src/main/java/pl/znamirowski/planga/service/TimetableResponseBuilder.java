@@ -6,25 +6,26 @@ import pl.znamirowski.planga.generator.LessonTuple;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class TimetableResponseBuilder {
 
     public TimetableResponse buildResponse(Genotype genotype) {
         AppSettings settings = genotype.getSettings();
-        List<LessonTuple> lessonTuples = settings.getLessonTuples();
+        Map<Integer, LessonTuple> lessonTuples = settings.getLessonTuples();
         List<Lesson> lessons = new ArrayList<>(lessonTuples.size());
         for (int dayNumber = 0; dayNumber < settings.getDaysPerWeek(); dayNumber++) {
             for (int roomNumber = 0; roomNumber < settings.getNumberOfRooms(); roomNumber++) {
-                int previousLessonIndex = -1;
+                int previousLessonId = -1;
 
                 for (int windowNumber = 0; windowNumber < settings.getTimeWindowsPerDay(); windowNumber++) {
-                    int lessonIndex = genotype.getLessonIndexAt(dayNumber, windowNumber, roomNumber);
-                    if (lessonIndex != -1 && previousLessonIndex != lessonIndex) {
-                        LessonTuple lessonTuple = lessonTuples.get(lessonIndex);
+                    int lessonId = genotype.getLessonIdAt(dayNumber, windowNumber, roomNumber);
+                    if (lessonId != -1 && previousLessonId != lessonId) {
+                        LessonTuple lessonTuple = lessonTuples.get(lessonId);
                         Lesson lesson = new Lesson(lessonTuple, dayNumber, windowNumber, roomNumber, settings);
                         lessons.add(lesson);
                     }
-                    previousLessonIndex = lessonIndex;
+                    previousLessonId = lessonId;
                 }
             }
         }
