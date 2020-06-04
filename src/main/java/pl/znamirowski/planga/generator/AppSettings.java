@@ -2,9 +2,14 @@ package pl.znamirowski.planga.generator;
 
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static java.time.temporal.ChronoUnit.MINUTES;
+import static pl.znamirowski.planga.generator.GroupType.AUDITORY;
+import static pl.znamirowski.planga.generator.GroupType.LABORATORY;
+import static pl.znamirowski.planga.generator.GroupType.LECTURE;
 
 public class AppSettings {
     private final int numberOfRooms;
@@ -21,10 +26,11 @@ public class AppSettings {
     private final int minutesPerTimeWindow;
     private final int minutesPerDay;
 
-    private final List<LessonTuple> lessonTuples;
+    private Map<Integer, LessonTuple> lessonTuples;
+    private List<GroupTuple> groupTuples;
 
     public AppSettings(InputSettings inputSettings) {
-        numberOfRooms = inputSettings.getNumberOfRooms();
+        numberOfRooms = inputSettings.getRooms().size();
         startHour = inputSettings.getStartHour();
         endHour = inputSettings.getEndHour();
         courseTimeUnit = inputSettings.getCourseTimeUnit();
@@ -38,24 +44,43 @@ public class AppSettings {
         timeWindowsPerWeek = timeWindowsPerDay * inputSettings.getDaysInWeek();
         daysPerWeek = inputSettings.getDaysInWeek();
 
-        lessonTuples = createLessonTuples(inputSettings.getGroups());
+        createLessonAndGroupTuples(inputSettings.getGroups());
     }
 
-    private List<LessonTuple> createLessonTuples(List<Group> groups) {
-        List<LessonTuple> lessonTuples = new ArrayList<>();
-//        int currentId = 0;
+    private void createLessonAndGroupTuples(List<Group> groups) {
+        Map<Integer, LessonTuple> lessonTuples = new HashMap<>();
+        List<GroupTuple> groupTuples = new ArrayList<>();
+        int tupleId = 5;
         for (Group group : groups) {
-            for (CourseSettings course : group.getCourses()) {
-                LessonTuple lessonTuple = new LessonTuple();
-//                lessonTuple.setId(currentId++);
-                lessonTuple.setGroupId(group.getId());
-                lessonTuple.setCourseId(course.getCourseId());
-                lessonTuple.setTeacherId(course.getTeacherId());
-                lessonTuple.setTimeUnits(course.getTimeUnits());
-                lessonTuples.add(lessonTuple);
+            GroupTuple lectureGroupTuple = new GroupTuple(LECTURE, group.getId(), -1, -1);
+            groupTuples.add(lectureGroupTuple);
+            for (CourseSettings lecture : group.getLectures()) {
+                lessonTuples.put(tupleId, new LessonTuple(tupleId, lectureGroupTuple, lecture.getCourseId(),
+                        lecture.getTeacherId(), lecture.getTimeUnits()));
+                tupleId++;
             }
+            for (int auditoryGroupId = 0; auditoryGroupId < group.getAuditoryGroupsPerLectureGroup(); auditoryGroupId++) {
+                GroupTuple auditoryGroupTuple = new GroupTuple(AUDITORY, group.getId(), auditoryGroupId, -1);
+                groupTuples.add(auditoryGroupTuple);
+                for (CourseSettings auditory : group.getAuditoryClasses()) {
+                    lessonTuples.put(tupleId, new LessonTuple(tupleId, auditoryGroupTuple, auditory.getCourseId(),
+                            auditory.getTeacherId(), auditory.getTimeUnits()));
+                    tupleId++;
+                }
+                for (int laboratoryGroupId = 0; laboratoryGroupId < group.getLaboratoryGroupsPerAuditoryGroup(); laboratoryGroupId++) {
+                    GroupTuple laboratoryGroupTuple = new GroupTuple(LABORATORY, group.getId(), auditoryGroupId, laboratoryGroupId);
+                    groupTuples.add(laboratoryGroupTuple);
+                    for (CourseSettings laboratory : group.getLaboratoryClasses()) {
+                        lessonTuples.put(tupleId, new LessonTuple(tupleId, laboratoryGroupTuple,
+                                laboratory.getCourseId(), laboratory.getTeacherId(), laboratory.getTimeUnits()));
+                        tupleId++;
+                    }
+                }
+            }
+
         }
-        return lessonTuples;
+        this.lessonTuples = lessonTuples;
+        this.groupTuples = groupTuples;
     }
 
     public int getNumberOfRooms() {
@@ -106,7 +131,11 @@ public class AppSettings {
         return minutesPerDay;
     }
 
-    public List<LessonTuple> getLessonTuples() {
+    public Map<Integer, LessonTuple> getLessonTuples() {
         return lessonTuples;
+    }
+
+    public List<GroupTuple> getGroupTuples() {
+        return groupTuples;
     }
 }

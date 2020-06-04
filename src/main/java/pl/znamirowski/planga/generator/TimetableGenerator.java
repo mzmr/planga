@@ -15,9 +15,7 @@ import static java.util.stream.Collectors.toList;
 
 public class TimetableGenerator {
     private static final int POPULATION_SIZE = 100;
-    private static final double CROSSOVER_PROBABILITY = 0.75;
-    private static final double MUTATION_PROBABILITY = 0.02;
-    private static final int NUMBER_OF_GENERATIONS = 10;
+    private static final int NUMBER_OF_GENERATIONS = 100;
 
     /*
 
@@ -39,12 +37,14 @@ public class TimetableGenerator {
     private final Random random;
     private final GenotypeAssessor genotypeAssessor;
     private final CrossoverPerformer crossoverPerformer;
+    private final MutationPerformer mutationPerformer;
 
     public TimetableGenerator(InputSettings inputSettings) {
         appSettings = new AppSettings(inputSettings);
         random = new Random();
         genotypeAssessor = new GenotypeAssessor(appSettings);
         crossoverPerformer = new CrossoverPerformer(appSettings);
+        mutationPerformer = new MutationPerformer(appSettings);
     }
 
     public Genotype generateTimetable() {
@@ -56,6 +56,7 @@ public class TimetableGenerator {
             List<Pair<Genotype, Genotype>> pairs = pairParents(parents);
             List<Genotype> newGenotypes = crossoverPerformer.performCrossover(pairs);
             population = createNewGeneration(assessedPopulation, newGenotypes);
+            mutationPerformer.performMutation(population);
             assessedPopulation = genotypeAssessor.assessPopulation(population);
             assessedPopulation = assessedPopulation.subList(0, Math.min(POPULATION_SIZE, assessedPopulation.size()));
             System.out.println("generation " + generationNumber + ", best rate: " + assessedPopulation.get(0).getRight());

@@ -8,28 +8,19 @@
   "groups": [
     {
       "id": 1,
-      "name": "Group 1",
-      "courses": [
-        {
-          "courseId": 2,
-          "teacherId": 3,
-          "timeUnits": 6
-        },
+      "name": "Automatyka i Robotyka - Cyber-physical systems - S2",
+      "auditoryGroupsPerLectureGroup": 1,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
         {
           "courseId": 1,
-          "teacherId": 4,
-          "timeUnits": 6
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Group 2",
-      "courses": [
-        {
-          "courseId": 2,
           "teacherId": 1,
           "timeUnits": 9
+        },
+        {
+          "courseId": 2,
+          "teacherId": 2,
+          "timeUnits": 6
         },
         {
           "courseId": 3,
@@ -38,6 +29,132 @@
         },
         {
           "courseId": 4,
+          "teacherId": 4,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 5,
+          "teacherId": 5,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 6,
+          "teacherId": 6,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 7,
+          "teacherId": 7,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 1,
+          "teacherId": 1,
+          "timeUnits": 12
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 2,
+          "teacherId": 2,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 7,
+          "teacherId": 7,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 3,
+          "teacherId": 8,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 8,
+          "teacherId": 6,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 6,
+          "teacherId": 9,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 4,
+          "teacherId": 4,
+          "timeUnits": 6
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Automatyka i Robotyka - Informatyka w sterowaniu i zarządzaniu - S2",
+      "auditoryGroupsPerLectureGroup": 1,
+      "laboratoryGroupsPerAuditoryGroup": 1,
+      "lectures": [
+        {
+          "courseId": 9,
+          "teacherId": 10,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 10,
+          "teacherId": 11,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 12,
+          "teacherId": 13,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 11,
+          "teacherId": 12,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 14,
+          "teacherId": 2,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 16,
+          "teacherId": 17,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 15,
+          "teacherId": 16,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 10,
+          "teacherId": 11,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 11,
+          "teacherId": 12,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 13,
+          "teacherId": 14,
+          "timeUnits": 12
+        },
+        {
+          "courseId": 12,
+          "teacherId": 15,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 14,
           "teacherId": 2,
           "timeUnits": 6
         }
@@ -45,22 +162,217 @@
     },
     {
       "id": 3,
-      "name": "Group 3",
-      "courses": [
+      "name": "Automatyka i Robotyka - Inteligentne systemy sterowania - S2",
+      "auditoryGroupsPerLectureGroup": 1,
+      "laboratoryGroupsPerAuditoryGroup": 1,
+      "lectures": [
         {
-          "courseId": 1,
-          "teacherId": 2,
+          "courseId": 17,
+          "teacherId": 18,
           "timeUnits": 6
         },
         {
-          "courseId": 2,
-          "teacherId": 2,
-          "timeUnits": 3
+          "courseId": 18,
+          "teacherId": 19,
+          "timeUnits": 6
         },
         {
-          "courseId": 3,
-          "teacherId": 3,
-          "timeUnits": 12
+          "courseId": 19,
+          "teacherId": 20,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 20,
+          "teacherId": 22,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 22,
+          "teacherId": 22,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 21,
+          "teacherId": 4,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 20,
+          "teacherId": 21,
+          "timeUnits": 9
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 17,
+          "teacherId": 18,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 18,
+          "teacherId": 19,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 21,
+          "teacherId": 4,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 22,
+          "teacherId": 22,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 23,
+          "teacherId": 23,
+          "timeUnits": 9
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Automatyka i Robotyka - Komputerowe systemy sterowania - S2",
+      "auditoryGroupsPerLectureGroup": 1,
+      "laboratoryGroupsPerAuditoryGroup": 1,
+      "lectures": [
+        {
+          "courseId": 24,
+          "teacherId": 5,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 25,
+          "teacherId": 26,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 26,
+          "teacherId": 24,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 27,
+          "teacherId": 27,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 29,
+          "teacherId": 20,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 28,
+          "teacherId": 28,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 23,
+          "teacherId": 24,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 24,
+          "teacherId": 25,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 27,
+          "teacherId": 6,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 26,
+          "teacherId": 24,
+          "timeUnits": 6
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Automatyka i Robotyka - S1",
+      "auditoryGroupsPerLectureGroup": 5,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 30,
+          "teacherId": 11,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 31,
+          "teacherId": 31,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 33,
+          "teacherId": 32,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 34,
+          "teacherId": 26,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 35,
+          "teacherId": 39,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 36,
+          "teacherId": 38,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 37,
+          "teacherId": 29,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 33,
+          "teacherId": 32,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 33,
+          "teacherId": 33,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 31,
+          "teacherId": 34,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 36,
+          "teacherId": 38,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 37,
+          "teacherId": 29,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 30,
+          "teacherId": 11,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 35,
+          "teacherId": 36,
+          "timeUnits": 6
         }
       ]
     }
@@ -68,33 +380,455 @@
   "teachers": [
     {
       "id": 1,
-      "name": "Teacher 1"
+      "name": "Adam Kowalewski, prof. dr hab. inż."
     },
     {
       "id": 2,
-      "name": "Teacher 2"
+      "name": "Andrzej Maciej Skulimowski, prof. dr hab. inż."
     },
     {
       "id": 3,
-      "name": "Teacher 3"
+      "name": "Maciej Rosół, dr inż."
+    },
+    {
+      "id": 4,
+      "name": "Joanna Jaworek-Korjakowska, dr hab. inż."
+    },
+    {
+      "id": 5,
+      "name": "Paweł Piątek, dr inż."
+    },
+    {
+      "id": 6,
+      "name": "Andrzej Tutaj, dr inż."
+    },
+    {
+      "id": 7,
+      "name": "Paweł Skruch, dr hab. inż."
+    },
+    {
+      "id": 8,
+      "name": "Łukasz Więckowski, dr inż."
+    },
+    {
+      "id": 9,
+      "name": "Klaudia Dziedzic, mgr inż."
+    },
+    {
+      "id": 10,
+      "name": "Joanna Kwiecień, dr hab. inż."
+    },
+    {
+      "id": 11,
+      "name": "Edyta Kucharska, dr inż."
+    },
+    {
+      "id": 12,
+      "name": "Wojciech Chmiel, dr inż."
+    },
+    {
+      "id": 13,
+      "name": "Leszek Kotulski, prof. dr hab."
+    },
+    {
+      "id": 14,
+      "name": "Antoni Ligęza, prof. dr hab. inż."
+    },
+    {
+      "id": 15,
+      "name": "Adam Sędziwy, dr hab."
+    },
+    {
+      "id": 16,
+      "name": "Marta Kraszewska, dr inż."
+    },
+    {
+      "id": 17,
+      "name": "Tomasz Szmuc, prof. dr hab. inż."
+    },
+    {
+      "id": 18,
+      "name": "Zbigniew Bubliński, dr inż."
+    },
+    {
+      "id": 19,
+      "name": "Mirosław Jabłoński, dr inż."
+    },
+    {
+      "id": 20,
+      "name": "Piotr Kadłuczka, dr inż."
+    },
+    {
+      "id": 21,
+      "name": "Tomasz Pięciak, dr inż."
+    },
+    {
+      "id": 22,
+      "name": "Joanna Grabska-Chrząstowska, dr inż."
+    },
+    {
+      "id": 23,
+      "name": "Piotr Bania, dr hab. inż."
+    },
+    {
+      "id": 24,
+      "name": "Adam Piłat, dr hab. inż."
+    },
+    {
+      "id": 25,
+      "name": "Mariusz Pauluk, dr inż."
+    },
+    {
+      "id": 26,
+      "name": "Witold Byrski, prof. dr hab. inż."
+    },
+    {
+      "id": 27,
+      "name": "Krzysztof Kołek, dr inż."
+    },
+    {
+      "id": 28,
+      "name": "Andrzej Latocha, dr inż."
+    },
+    {
+      "id": 29,
+      "name": "Piotr Pawlik, dr inż."
+    },
+    {
+      "id": 30,
+      "name": "Rafał Mularczyk"
+    },
+    {
+      "id": 31,
+      "name": "Jacek Nizioł, dr"
+    },
+    {
+      "id": 32,
+      "name": "Adam Ćmiel, dr inż."
+    },
+    {
+      "id": 33,
+      "name": "Anna Wach-Michalik, dr"
+    },
+    {
+      "id": 34,
+      "name": "Paweł Armatys, dr inż."
+    },
+    {
+      "id": 35,
+      "name": "Krzysztof Kosała, dr hab. inż."
+    },
+    {
+      "id": 36,
+      "name": "Łukasz Gorazd, dr inż."
+    },
+    {
+      "id": 37,
+      "name": "Radosław Marczuk, dr inż"
+    },
+    {
+      "id": 38,
+      "name": "Michał Góra, dr"
+    },
+    {
+      "id": 39,
+      "name": "Ryszard Olszewski, dr inż"
+    },
+    {
+      "id": 40,
+      "name": "Anna Gryboś, dr"
+    },
+    {
+      "id": 41,
+      "name": "Lesia Matsiuk, dr"
     }
   ],
   "courses": [
     {
       "id": 1,
-      "name": "Course 1"
+      "name": "Adaptive and Predictive Control"
     },
     {
       "id": 2,
-      "name": "Course 2"
+      "name": "Multicriteria Optimization"
     },
     {
       "id": 3,
-      "name": "Course 3"
+      "name": "Internet of Things and Wireless Sensor Networks"
     },
     {
       "id": 4,
-      "name": "Course 4"
+      "name": "Machine Learning"
+    },
+    {
+      "id": 5,
+      "name": "Embedded systems II"
+    },
+    {
+      "id": 6,
+      "name": "Process Control"
+    },
+    {
+      "id": 7,
+      "name": "Model Based and Test Driven Development"
+    },
+    {
+      "id": 8,
+      "name": "Capstone project I"
+    },
+    {
+      "id": 9,
+      "name": "Modele kolejkowe w IT"
+    },
+    {
+      "id": 10,
+      "name": "Informatyczne aspekty rachunkowości i finansów"
+    },
+    {
+      "id": 11,
+      "name": "C# i platforma .NET"
+    },
+    {
+      "id": 12,
+      "name": "Inteligencja biznesowa - hurtownie danych"
+    },
+    {
+      "id": 13,
+      "name": "Laboratorium specjalizacyjne"
+    },
+    {
+      "id": 14,
+      "name": "Optymalizacja wielokryterialna"
+    },
+    {
+      "id": 15,
+      "name": "Zarządzanie projektami informatycznymi"
+    },
+    {
+      "id": 16,
+      "name": "Specyfikacja i systemy wspomagania projektowania oprogramowania"
+    },
+    {
+      "id": 17,
+      "name": "Wbudowane systemy wizyjne"
+    },
+    {
+      "id": 18,
+      "name": "Akceleracja algorytmów wizyjnych w GPU i OpenCL"
+    },
+    {
+      "id": 19,
+      "name": "Inteligencja obliczeniowa"
+    },
+    {
+      "id": 20,
+      "name": "Elektroniczne systemy diagnostyki medycznej i terapii"
+    },
+    {
+      "id": 21,
+      "name": "Przetwarzanie i analiza obrazów medycznych"
+    },
+    {
+      "id": 22,
+      "name": "Sieci neuronowe"
+    },
+    {
+      "id": 23,
+      "name": "Laboratorium problemowe 2"
+    },
+    {
+      "id": 24,
+      "name": "Procesory sygnałowe i mikrokontrolery"
+    },
+    {
+      "id": 25,
+      "name": "Sterowanie adaptacyjne i estymacja"
+    },
+    {
+      "id": 26,
+      "name": "Układy sterowania inteligentnego"
+    },
+    {
+      "id": 27,
+      "name": "Integracja systemów i sterowanie rozproszone"
+    },
+    {
+      "id": 28,
+      "name": "Wielopoziomowe struktury sterowania i systemy SCADA 2"
+    },
+    {
+      "id": 29,
+      "name": "Niezawodność i jakość w systemach sterowania"
+    },
+    {
+      "id": 30,
+      "name": "Eksploracja danych"
+    },
+    {
+      "id": 31,
+      "name": "Fizyka 1"
+    },
+    {
+      "id": 32,
+      "name": "Wychowanie fizyczne 1"
+    },
+    {
+      "id": 33,
+      "name": "Analiza matematyczna"
+    },
+    {
+      "id": 34,
+      "name": "Wprowadzenie do automatyki i robotyki"
+    },
+    {
+      "id": 35,
+      "name": "Projektowanie konstrukcji z rysunkiem technicznym"
+    },
+    {
+      "id": 36,
+      "name": "Algebra liniowa"
+    },
+    {
+      "id": 37,
+      "name": "Wstęp do informatyki"
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "name": "B-1 316"
+    },
+    {
+      "id": 2,
+      "name": "B-4 H113"
+    },
+    {
+      "id": 3,
+      "name": "C-3 14"
+    },
+    {
+      "id": 4,
+      "name": "B-1 010"
+    },
+    {
+      "id": 5,
+      "name": "C-3 101"
+    },
+    {
+      "id": 6,
+      "name": "B-1 111"
+    },
+    {
+      "id": 7,
+      "name": "B-1 110"
+    },
+    {
+      "id": 8,
+      "name": "B-1 317a"
+    },
+    {
+      "id": 9,
+      "name": "B-1 317b"
+    },
+    {
+      "id": 10,
+      "name": "C-3 201"
+    },
+    {
+      "id": 11,
+      "name": "B-5 212"
+    },
+    {
+      "id": 12,
+      "name": "C-3 217"
+    },
+    {
+      "id": 13,
+      "name": "C-2 431"
+    },
+    {
+      "id": 14,
+      "name": "B-4 H113"
+    },
+    {
+      "id": 15,
+      "name": "B-1 014"
+    },
+    {
+      "id": 16,
+      "name": "C-3 107"
+    },
+    {
+      "id": 17,
+      "name": "C-3 112"
+    },
+    {
+      "id": 18,
+      "name": "A-3/A-4 403"
+    },
+    {
+      "id": 19,
+      "name": "C-2 224"
+    },
+    {
+      "id": 20,
+      "name": "C-3 201a"
+    },
+    {
+      "id": 21,
+      "name": "D-10 B"
+    },
+    {
+      "id": 22,
+      "name": "B-1 121"
+    },
+    {
+      "id": 23,
+      "name": "D-8 502"
+    },
+    {
+      "id": 24,
+      "name": "D-10 319"
+    },
+    {
+      "id": 25,
+      "name": "D-8 526"
+    },
+    {
+      "id": 26,
+      "name": "D-1 119"
+    },
+    {
+      "id": 27,
+      "name": "B-2 320"
+    },
+    {
+      "id": 28,
+      "name": "B-2 322"
+    },
+    {
+      "id": 29,
+      "name": "D-8 402"
+    },
+    {
+      "id": 30,
+      "name": "D-10 108"
+    },
+    {
+      "id": 31,
+      "name": "D-8 429"
+    },
+    {
+      "id": 32,
+      "name": "B-2 123"
+    },
+    {
+      "id": 33,
+      "name": "B-1 102"
+    },
+    {
+      "id": 34,
+      "name": "B-1 H24"
     }
   ]
 }

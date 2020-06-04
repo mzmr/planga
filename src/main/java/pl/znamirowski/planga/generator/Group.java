@@ -5,7 +5,11 @@ import java.util.List;
 public class Group {
     private int id;
     private String name;
-    private List<CourseSettings> courses;
+    private int auditoryGroupsPerLectureGroup;
+    private int laboratoryGroupsPerAuditoryGroup;
+    private List<CourseSettings> lectures;
+    private List<CourseSettings> auditoryClasses;
+    private List<CourseSettings> laboratoryClasses;
 
     public int getId() {
         return id;
@@ -23,11 +27,43 @@ public class Group {
         this.name = name;
     }
 
-    public List<CourseSettings> getCourses() {
-        return courses;
+    public List<CourseSettings> getLectures() {
+        return lectures;
     }
 
-    public void setCourses(List<CourseSettings> courses) {
-        this.courses = courses;
+    public void setLectures(List<CourseSettings> lectures) {
+        this.lectures = lectures;
+    }
+
+    public int getAuditoryGroupsPerLectureGroup() {
+        return auditoryGroupsPerLectureGroup;
+    }
+
+    public void setAuditoryGroupsPerLectureGroup(int auditoryGroupsPerLectureGroup) {
+        this.auditoryGroupsPerLectureGroup = auditoryGroupsPerLectureGroup;
+    }
+
+    public int getLaboratoryGroupsPerAuditoryGroup() {
+        return laboratoryGroupsPerAuditoryGroup;
+    }
+
+    public void setLaboratoryGroupsPerAuditoryGroup(int laboratoryGroupsPerAuditoryGroup) {
+        this.laboratoryGroupsPerAuditoryGroup = laboratoryGroupsPerAuditoryGroup;
+    }
+
+    public List<CourseSettings> getAuditoryClasses() {
+        return auditoryClasses;
+    }
+
+    public void setAuditoryClasses(List<CourseSettings> auditoryClasses) {
+        this.auditoryClasses = auditoryClasses;
+    }
+
+    public List<CourseSettings> getLaboratoryClasses() {
+        return laboratoryClasses;
+    }
+
+    public void setLaboratoryClasses(List<CourseSettings> laboratoryClasses) {
+        this.laboratoryClasses = laboratoryClasses;
     }
 }
