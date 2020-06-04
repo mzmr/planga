@@ -18,12 +18,15 @@ public class MutationPerformer {
         this.random = new Random();
     }
 
-    public void performMutation(List<Genotype> population) {
+    public int performMutation(List<Genotype> population) {
+        int numberOfMutations = 0;
         for (Genotype genotype : population.subList(1, population.size())) {
             if (random.nextDouble() < MUTATION_PROBABILITY) {
                 mutate(genotype);
+                numberOfMutations++;
             }
         }
+        return numberOfMutations;
     }
 
     private void mutate(Genotype genotype) {

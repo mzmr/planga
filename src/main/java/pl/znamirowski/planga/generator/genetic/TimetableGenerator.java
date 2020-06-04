@@ -61,10 +61,14 @@ public class TimetableGenerator {
             List<Pair<Genotype, Genotype>> pairs = pairParents(parents);
             List<Genotype> newGenotypes = crossoverPerformer.performCrossover(pairs);
             population = createNewGeneration(assessedPopulation, newGenotypes);
-            mutationPerformer.performMutation(population);
+            int numberOfMutations = mutationPerformer.performMutation(population);
             assessedPopulation = genotypeAssessor.assessPopulation(population);
             assessedPopulation = assessedPopulation.subList(0, Math.min(POPULATION_SIZE, assessedPopulation.size()));
-            System.out.println("generation " + generationNumber + ", best rate: " + assessedPopulation.get(0).getRight());
+            System.out.println("generation " + generationNumber +
+                    ",\tbest: " + assessedPopulation.get(0).getRight() +
+                    ",\tmean: " + assessedPopulation.stream().mapToDouble(Pair::getRight).average().getAsDouble() +
+                    ",\tworst: " + assessedPopulation.get(assessedPopulation.size() - 1).getRight() +
+                    ",\tmutations: " + numberOfMutations);
         }
         return assessedPopulation.get(0).getLeft();
     }
