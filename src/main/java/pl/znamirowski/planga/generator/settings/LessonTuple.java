@@ -1,4 +1,4 @@
-package pl.znamirowski.planga.generator;
+package pl.znamirowski.planga.generator.settings;
 
 public class LessonTuple {
     private final int id;

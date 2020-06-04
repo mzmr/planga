@@ -1,7 +1,7 @@
-package pl.znamirowski.planga.service;
+package pl.znamirowski.planga.service.response;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import pl.znamirowski.planga.generator.AppSettings;
+import pl.znamirowski.planga.generator.settings.AppSettings;
 
 import java.time.LocalTime;
 import java.util.List;

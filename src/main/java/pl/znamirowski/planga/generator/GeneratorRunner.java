@@ -4,6 +4,9 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonDeserializer;
 import org.springframework.stereotype.Component;
+import pl.znamirowski.planga.generator.genetic.Genotype;
+import pl.znamirowski.planga.generator.genetic.TimetableGenerator;
+import pl.znamirowski.planga.generator.settings.input.InputSettings;
 
 import java.io.File;
 import java.io.IOException;

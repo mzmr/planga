@@ -1,6 +1,10 @@
-package pl.znamirowski.planga.generator;
+package pl.znamirowski.planga.generator.genetic.fitness;
 
 import org.apache.commons.lang3.tuple.Pair;
+import pl.znamirowski.planga.generator.genetic.Genotype;
+import pl.znamirowski.planga.generator.settings.AppSettings;
+import pl.znamirowski.planga.generator.settings.GroupTuple;
+import pl.znamirowski.planga.generator.settings.LessonTuple;
 
 import java.time.LocalTime;
 import java.util.List;
@@ -13,9 +17,9 @@ import static java.util.Comparator.comparingDouble;
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Collectors.toSet;
-import static pl.znamirowski.planga.generator.GroupType.AUDITORY;
-import static pl.znamirowski.planga.generator.GroupType.LABORATORY;
-import static pl.znamirowski.planga.generator.GroupType.LECTURE;
+import static pl.znamirowski.planga.generator.settings.GroupType.AUDITORY;
+import static pl.znamirowski.planga.generator.settings.GroupType.LABORATORY;
+import static pl.znamirowski.planga.generator.settings.GroupType.LECTURE;
 
 public class GenotypeAssessor {
     /*

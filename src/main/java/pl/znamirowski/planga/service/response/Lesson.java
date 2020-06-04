@@ -1,9 +1,9 @@
-package pl.znamirowski.planga.service;
+package pl.znamirowski.planga.service.response;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import pl.znamirowski.planga.generator.AppSettings;
-import pl.znamirowski.planga.generator.GroupType;
-import pl.znamirowski.planga.generator.LessonTuple;
+import pl.znamirowski.planga.generator.settings.AppSettings;
+import pl.znamirowski.planga.generator.settings.GroupType;
+import pl.znamirowski.planga.generator.settings.LessonTuple;
 
 import java.time.LocalTime;
 

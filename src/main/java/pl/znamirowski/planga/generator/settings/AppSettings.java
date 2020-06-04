@@ -1,4 +1,6 @@
-package pl.znamirowski.planga.generator;
+package pl.znamirowski.planga.generator.settings;
+
+import pl.znamirowski.planga.generator.settings.input.InputSettings;
 
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -7,9 +9,9 @@ import java.util.List;
 import java.util.Map;
 
 import static java.time.temporal.ChronoUnit.MINUTES;
-import static pl.znamirowski.planga.generator.GroupType.AUDITORY;
-import static pl.znamirowski.planga.generator.GroupType.LABORATORY;
-import static pl.znamirowski.planga.generator.GroupType.LECTURE;
+import static pl.znamirowski.planga.generator.settings.GroupType.AUDITORY;
+import static pl.znamirowski.planga.generator.settings.GroupType.LABORATORY;
+import static pl.znamirowski.planga.generator.settings.GroupType.LECTURE;
 
 public class AppSettings {
     private final int numberOfRooms;

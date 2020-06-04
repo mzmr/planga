@@ -1,4 +1,7 @@
-package pl.znamirowski.planga.generator;
+package pl.znamirowski.planga.generator.genetic;
+
+import pl.znamirowski.planga.generator.settings.AppSettings;
+import pl.znamirowski.planga.generator.settings.LessonTuple;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,8 +13,8 @@ import static java.lang.Math.abs;
 import static java.util.Collections.shuffle;
 import static java.util.Comparator.comparingInt;
 import static java.util.stream.Collectors.toList;
-import static pl.znamirowski.planga.generator.GroupType.AUDITORY;
-import static pl.znamirowski.planga.generator.GroupType.LECTURE;
+import static pl.znamirowski.planga.generator.settings.GroupType.AUDITORY;
+import static pl.znamirowski.planga.generator.settings.GroupType.LECTURE;
 
 public class Genotype {
     private final AppSettings appSettings;

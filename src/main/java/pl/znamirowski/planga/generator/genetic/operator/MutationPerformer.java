@@ -1,4 +1,8 @@
-package pl.znamirowski.planga.generator;
+package pl.znamirowski.planga.generator.genetic.operator;
+
+import pl.znamirowski.planga.generator.genetic.Genotype;
+import pl.znamirowski.planga.generator.settings.LessonTuple;
+import pl.znamirowski.planga.generator.settings.AppSettings;
 
 import java.util.ArrayList;
 import java.util.List;

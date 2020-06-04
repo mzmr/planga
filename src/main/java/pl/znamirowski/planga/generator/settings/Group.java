@@ -1,4 +1,4 @@
-package pl.znamirowski.planga.generator;
+package pl.znamirowski.planga.generator.settings;
 
 import java.util.List;
 

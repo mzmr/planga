@@ -6,7 +6,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pl.znamirowski.planga.generator.GeneratorRunner;
-import pl.znamirowski.planga.generator.Genotype;
+import pl.znamirowski.planga.generator.genetic.Genotype;
+import pl.znamirowski.planga.service.response.TimetableResponse;
+import pl.znamirowski.planga.service.response.TimetableResponseBuilder;
 
 import java.io.IOException;
 

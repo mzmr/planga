@@ -1,4 +1,9 @@
-package pl.znamirowski.planga.generator;
+package pl.znamirowski.planga.generator.settings.input;
+
+import pl.znamirowski.planga.generator.settings.Course;
+import pl.znamirowski.planga.generator.settings.Group;
+import pl.znamirowski.planga.generator.settings.Room;
+import pl.znamirowski.planga.generator.settings.Teacher;
 
 import java.time.LocalTime;
 import java.util.List;

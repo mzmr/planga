@@ -1,8 +1,8 @@
-package pl.znamirowski.planga.service;
+package pl.znamirowski.planga.service.response;
 
-import pl.znamirowski.planga.generator.AppSettings;
-import pl.znamirowski.planga.generator.Genotype;
-import pl.znamirowski.planga.generator.LessonTuple;
+import pl.znamirowski.planga.generator.settings.AppSettings;
+import pl.znamirowski.planga.generator.genetic.Genotype;
+import pl.znamirowski.planga.generator.settings.LessonTuple;
 
 import java.util.ArrayList;
 import java.util.List;

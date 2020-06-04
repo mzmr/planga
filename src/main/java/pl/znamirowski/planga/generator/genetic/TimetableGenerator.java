@@ -1,6 +1,11 @@
-package pl.znamirowski.planga.generator;
+package pl.znamirowski.planga.generator.genetic;
 
 import org.apache.commons.lang3.tuple.Pair;
+import pl.znamirowski.planga.generator.genetic.fitness.GenotypeAssessor;
+import pl.znamirowski.planga.generator.genetic.operator.CrossoverPerformer;
+import pl.znamirowski.planga.generator.genetic.operator.MutationPerformer;
+import pl.znamirowski.planga.generator.settings.AppSettings;
+import pl.znamirowski.planga.generator.settings.input.InputSettings;
 
 import java.util.ArrayList;
 import java.util.Collections;
