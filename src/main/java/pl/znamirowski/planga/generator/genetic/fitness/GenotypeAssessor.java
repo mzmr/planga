@@ -5,6 +5,7 @@ import pl.znamirowski.planga.generator.genetic.Genotype;
 import pl.znamirowski.planga.generator.settings.AppSettings;
 import pl.znamirowski.planga.generator.settings.GroupTuple;
 import pl.znamirowski.planga.generator.settings.LessonTuple;
+import pl.znamirowski.planga.generator.settings.Teacher;
 
 import java.time.LocalTime;
 import java.util.List;
@@ -23,8 +24,6 @@ import static pl.znamirowski.planga.generator.settings.GroupType.LECTURE;
 
 public class GenotypeAssessor {
     /*
-//    Teacher conflict - teachers can't take more than one lesson at the same time
-//    Group conflict - groups can't have more than one lesson at the same time
 
     Group breaks - groups should have 15 minutes (or 0 minutes) break between lessons
     Group starting hour - groups should start lessons at 8am
@@ -33,8 +32,6 @@ public class GenotypeAssessor {
     Teacher breaks - teachers should have 15 minutes (or 0 minutes) break between lessons
     Teacher lessons a day - teachers should not exceed the maximum number of lessons allowed per day
 
-
-    Break (?) - penalty for break >15 minutes is less if a break is very big (the worst is 2h)
     */
 
     private static final double GROUP_BREAKS_WEIGHT = 1;
@@ -66,7 +63,50 @@ public class GenotypeAssessor {
         assessment += GROUP_BREAKS_WEIGHT * calculatePenaltyForGroupBreaks(genotype, laboratoryTuples);
         assessment += GROUP_STARTING_HOUR_WEIGHT * calculatePenaltyForGroupStartingHours(genotype, laboratoryTuples);
         assessment += GROUP_REGULAR_LESSONS_WEIGHT * calculatePenaltyForNonRegularLessons(genotype, laboratoryTuples);
+        assessment += TEACHER_BREAKS_WEIGHT * calculatePenaltyForTeacherBreaks(genotype);
         return assessment;
+    }
+
+    private double calculatePenaltyForTeacherBreaks(Genotype genotype) {
+        int totalPenaltyValue = 0;
+
+        Map<Integer, Boolean> teacherIdToDidHeHaveLessonToday = appSettings.getTeachers().stream().collect(toMap(Teacher::getId, g -> false));
+        Map<Integer, Integer> teacherIdToNumberOfBreakWindows = appSettings.getTeachers().stream().collect(toMap(Teacher::getId, g -> 0));
+        Map<Integer, Integer> teacherIdToNumberOfBreaksAtCurrentWindow = appSettings.getTeachers().stream().collect(toMap(Teacher::getId, g -> 0));
+
+        for (int dayNumber = 0; dayNumber < appSettings.getDaysPerWeek(); dayNumber++) {
+            teacherIdToDidHeHaveLessonToday.replaceAll((key, value) -> false);
+
+            for (int timeWindowInDay = 0; timeWindowInDay < appSettings.getTimeWindowsPerDay(); timeWindowInDay++) {
+                teacherIdToNumberOfBreaksAtCurrentWindow.replaceAll((key, value) -> 0);
+
+                for (int roomNumber = 0; roomNumber < appSettings.getNumberOfRooms(); roomNumber++) {
+                    int lessonId = genotype.getLessonIdAt(dayNumber, timeWindowInDay, roomNumber);
+                    if (lessonId == -1) {
+                        incrementAll(teacherIdToNumberOfBreaksAtCurrentWindow);
+                    } else {
+                        int teacherId = appSettings.getLessonTuples().get(lessonId).getTeacherId();
+                        incrementAll(teacherIdToNumberOfBreaksAtCurrentWindow);
+                        addValueToEntry(teacherIdToNumberOfBreaksAtCurrentWindow, teacherId, -1);
+                        teacherIdToDidHeHaveLessonToday.replace(teacherId, true);
+
+                        int breakWindows = teacherIdToNumberOfBreakWindows.get(teacherId);
+                        if (breakWindows > 0) {
+                            totalPenaltyValue += calculatePenaltyForBreak(breakWindows);
+                        }
+                        teacherIdToNumberOfBreakWindows.replace(teacherId, 0);
+                    }
+                }
+
+                for (Integer teacherId : teacherIdToDidHeHaveLessonToday.keySet()) {
+                    if (teacherIdToDidHeHaveLessonToday.get(teacherId) &&
+                            teacherIdToNumberOfBreaksAtCurrentWindow.get(teacherId) == appSettings.getNumberOfRooms()) {
+                        addValueToEntry(teacherIdToNumberOfBreakWindows, teacherId, 1);
+                    }
+                }
+            }
+        }
+        return totalPenaltyValue;
     }
 
     private double calculatePenaltyForNonRegularLessons(Genotype genotype, List<GroupTuple> laboratoryTuples) {
@@ -192,11 +232,11 @@ public class GenotypeAssessor {
         return totalPenaltyValue;
     }
 
-    private void addValueToEntry(Map<GroupTuple, Integer> map, GroupTuple key, int valueToAdd) {
+    private <T> void addValueToEntry(Map<T, Integer> map, T key, int valueToAdd) {
         map.replace(key, map.get(key) + valueToAdd);
     }
 
-    private void incrementAll(Map<GroupTuple, Integer> map) {
+    private void incrementAll(Map<?, Integer> map) {
         map.replaceAll((key, value) -> value + 1);
     }
 
