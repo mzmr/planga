@@ -20,10 +20,10 @@ import static pl.znamirowski.planga.generator.settings.GroupType.LABORATORY;
 import static pl.znamirowski.planga.generator.settings.GroupType.LECTURE;
 
 public class AssessThread implements Callable<Double> {
-    private static final double GROUP_BREAKS_WEIGHT = 1;
+    private static final double GROUP_BREAKS_WEIGHT = 5;
     private static final double GROUP_STARTING_HOUR_WEIGHT = 1;
     private static final double GROUP_REGULAR_LESSONS_WEIGHT = 1;
-    private static final double TEACHER_BREAKS_WEIGHT = 1;
+    private static final double TEACHER_BREAKS_WEIGHT = 3;
     private static final double TEACHER_LESSONS_A_DAY_WEIGHT = 1;
     private final AppSettings appSettings;
     private final Genotype genotype;
@@ -235,15 +235,14 @@ public class AssessThread implements Callable<Double> {
     }
 
     private double calculatePenaltyForBreak(int numberOfBreakWindows) {
-        return numberOfBreakWindows - 1;
-//        if (numberOfBreakWindows == 1) {
-//            return -1;
-//        }
-//        int breakLengthInMinutes = appSettings.getMinutesPerTimeWindow() * numberOfBreakWindows;
-//        if (breakLengthInMinutes <= 150) {
-//            return breakLengthInMinutes / 15.0;
-//        }
-//        return 12 - (breakLengthInMinutes / 75.0);
+        if (numberOfBreakWindows == 1) {
+            return -1;
+        }
+        int breakLengthInMinutes = appSettings.getMinutesPerTimeWindow() * numberOfBreakWindows;
+        if (breakLengthInMinutes <= 150) {
+            return breakLengthInMinutes / 15.0;
+        }
+        return 12 - (breakLengthInMinutes / 75.0);
     }
 
     private boolean isLabGroupInGroup(GroupTuple labGroup, GroupTuple superiorGroup) {
