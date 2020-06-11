@@ -375,6 +375,93 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 6,
+      "name": "Automatyka i Robotyka - S3",
+      "auditoryGroupsPerLectureGroup": 5,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 38,
+          "teacherId": 42,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 39,
+          "teacherId": 1,
+          "timeUnits": 12
+        },
+        {
+          "courseId": 40,
+          "teacherId": 43,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 41,
+          "teacherId": 3,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 42,
+          "teacherId": 26,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 43,
+          "teacherId": 44,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 44,
+          "teacherId": 45,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 45,
+          "teacherId": 25,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 43,
+          "teacherId": 44,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 41,
+          "teacherId": 46,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 42,
+          "teacherId": 47,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 38,
+          "teacherId": 48,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 46,
+          "teacherId": 49,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 39,
+          "teacherId": 50,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 44,
+          "teacherId": 45,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -541,6 +628,42 @@
     {
       "id": 41,
       "name": "Lesia Matsiuk, dr"
+    },
+    {
+      "id": 42,
+      "name": "Jerzy Baranowski, dr hab. inż."
+    },
+    {
+      "id": 43,
+      "name": "Krzysztof Oprzędkiewicz, dr hab. inż."
+    },
+    {
+      "id": 44,
+      "name": "Przemysław Syrek, dr inż."
+    },
+    {
+      "id": 45,
+      "name": "Leszek Majkut, dr hab. inż."
+    },
+    {
+      "id": 46,
+      "name": "Dawid Knapik, mgr inż."
+    },
+    {
+      "id": 47,
+      "name": "Józef Duda, dr hab. inż."
+    },
+    {
+      "id": 48,
+      "name": "Waldemar Bauer, mgr inż."
+    },
+    {
+      "id": 49,
+      "name": "Dominika Przewłocka, mgr inż."
+    },
+    {
+      "id": 50,
+      "name": "Adam Głowacz, dr inż."
     }
   ],
   "courses": [
@@ -691,6 +814,46 @@
     {
       "id": 37,
       "name": "Wstęp do informatyki"
+    },
+    {
+      "id": 38,
+      "name": "Metody numeryczne"
+    },
+    {
+      "id": 39,
+      "name": "Przetwarzanie sygnałów cyfrowych"
+    },
+    {
+      "id": 40,
+      "name": "Podstawy automatyki 1"
+    },
+    {
+      "id": 41,
+      "name": "Teoria automatów"
+    },
+    {
+      "id": 42,
+      "name": "Modelowanie systemów dynamicznych"
+    },
+    {
+      "id": 43,
+      "name": "Elektrotechnika z napędami elektrycznymi 1"
+    },
+    {
+      "id": 44,
+      "name": "Mechanika"
+    },
+    {
+      "id": 45,
+      "name": "Elektronika w automatyce"
+    },
+    {
+      "id": 46,
+      "name": "Informatyka 2"
+    },
+    {
+      "id": 47,
+      "name": "Elektronika w automatyce"
     }
   ],
   "rooms": [
@@ -829,6 +992,34 @@
     {
       "id": 34,
       "name": "B-1 H24"
+    },
+    {
+      "id": 35,
+      "name": "D-1 109"
+    },
+    {
+      "id": 36,
+      "name": "Centrum Dydaktyki U2"
+    },
+    {
+      "id": 37,
+      "name": "B-1 301"
+    },
+    {
+      "id": 38,
+      "name": "D-1 123"
+    },
+    {
+      "id": 39,
+      "name": "C-1 511b"
+    },
+    {
+      "id": 40,
+      "name": "B-1 317c"
+    },
+    {
+      "id": 41,
+      "name": "C-2 429"
     }
   ]
 }
