@@ -20,7 +20,7 @@ import static java.util.stream.Collectors.toList;
 
 public class TimetableGenerator {
     private static final int POPULATION_SIZE = 100;
-    private static final int NUMBER_OF_GENERATIONS = 100;
+    private static final int NUMBER_OF_GENERATIONS = 400;
 
     /*
 
@@ -56,6 +56,7 @@ public class TimetableGenerator {
         List<Genotype> population = initializePopulation();
         List<Pair<Genotype, Double>> assessedPopulation = genotypeAssessor.assessPopulation(population);
         System.out.println("population size: " + population.size());
+        System.out.println("generation;best;mean;worst;mutations");
         for (int generationNumber = 0; generationNumber < NUMBER_OF_GENERATIONS; generationNumber++) {
             List<Genotype> parents = chooseParents(assessedPopulation);
             List<Pair<Genotype, Genotype>> pairs = pairParents(parents);
@@ -64,11 +65,11 @@ public class TimetableGenerator {
             int numberOfMutations = mutationPerformer.performMutation(population);
             assessedPopulation = genotypeAssessor.assessPopulation(population);
             assessedPopulation = assessedPopulation.subList(0, Math.min(POPULATION_SIZE, assessedPopulation.size()));
-            System.out.println("generation " + generationNumber +
-                    ",\tbest: " + assessedPopulation.get(0).getRight() +
-                    ",\tmean: " + assessedPopulation.stream().mapToDouble(Pair::getRight).average().getAsDouble() +
-                    ",\tworst: " + assessedPopulation.get(assessedPopulation.size() - 1).getRight() +
-                    ",\tmutations: " + numberOfMutations);
+            System.out.println(generationNumber +
+                    ";" + assessedPopulation.get(0).getRight() +
+                    ";" + assessedPopulation.stream().mapToDouble(Pair::getRight).average().getAsDouble() +
+                    ";" + assessedPopulation.get(assessedPopulation.size() - 1).getRight() +
+                    ";" + numberOfMutations);
         }
         return assessedPopulation.get(0).getLeft();
     }
