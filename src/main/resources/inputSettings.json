@@ -1643,6 +1643,88 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 21,
+      "name": "Elektrotechnika - Blok obieralny C - S5",
+      "auditoryGroupsPerLectureGroup": 1,
+      "laboratoryGroupsPerAuditoryGroup": 3,
+      "lectures": [
+        {
+          "courseId": 134,
+          "teacherId": 219,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 126,
+          "teacherId": 92,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 113,
+          "teacherId": 314,
+          "timeUnits": 12
+        },
+        {
+          "courseId": 135,
+          "teacherId": 63,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 113,
+          "teacherId": 314,
+          "timeUnits": 12
+        },
+        {
+          "courseId": 127,
+          "teacherId": 349,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 136,
+          "teacherId": 344,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 135,
+          "teacherId": 222,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 136,
+          "teacherId": 179,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 127,
+          "teacherId": 349,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 113,
+          "teacherId": 254,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 113,
+          "teacherId": 254,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 126,
+          "teacherId": 92,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 134,
+          "teacherId": 117,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -3799,6 +3881,18 @@
     {
       "id": 133,
       "name": "Projektowanie układów energoelektronicznych - wybrane zagadnienia"
+    },
+    {
+      "id": 134,
+      "name": "Podstawy techniki cyfrowej"
+    },
+    {
+      "id": 135,
+      "name": "Elektromaszynowe elementy automatyki"
+    },
+    {
+      "id": 136,
+      "name": "Urządzenia i sieci elektroenergetyczne"
     }
   ],
   "rooms": [
