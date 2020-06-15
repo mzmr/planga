@@ -897,6 +897,87 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 12,
+      "name": "Elektrotechnika - Energoelektronika i napęd elektryczny - S2",
+      "auditoryGroupsPerLectureGroup": 1,
+      "laboratoryGroupsPerAuditoryGroup": 1,
+      "lectures": [
+        {
+          "courseId": 82,
+          "teacherId": 317,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 83,
+          "teacherId": 317,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 84,
+          "teacherId": 314,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 69,
+          "teacherId": 290,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 71,
+          "teacherId": 344,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 74,
+          "teacherId": 192,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 75,
+          "teacherId": 219,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [],
+      "laboratoryClasses": [
+        {
+          "courseId": 74,
+          "teacherId": 125,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 83,
+          "teacherId": 317,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 69,
+          "teacherId": 290,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 71,
+          "teacherId": 344,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 75,
+          "teacherId": 219,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 82,
+          "teacherId": 317,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 84,
+          "teacherId": 254,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -2829,6 +2910,18 @@
     {
       "id": 81,
       "name": "Równowaga systemów elektroenergetycznych"
+    },
+    {
+      "id": 82,
+      "name": "Modelowanie układów elektromechanicznych"
+    },
+    {
+      "id": 83,
+      "name": "Trakcja elektryczna"
+    },
+    {
+      "id": 84,
+      "name": "Zaawansowane układy energoelektroniczne"
     }
   ],
   "rooms": [
