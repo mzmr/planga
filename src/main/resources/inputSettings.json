@@ -1566,6 +1566,83 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 20,
+      "name": "Elektrotechnika - Blok obieralny B - S7",
+      "auditoryGroupsPerLectureGroup": 1,
+      "laboratoryGroupsPerAuditoryGroup": 1,
+      "lectures": [
+        {
+          "courseId": 130,
+          "teacherId": 219,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 118,
+          "teacherId": 71,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 120,
+          "teacherId": 67,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 131,
+          "teacherId": 16,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 132,
+          "teacherId": 219,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 133,
+          "teacherId": 254,
+          "timeUnits": 9
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 122,
+          "teacherId": 116,
+          "timeUnits": 9
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 131,
+          "teacherId": 46,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 120,
+          "teacherId": 67,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 130,
+          "teacherId": 219,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 118,
+          "teacherId": 71,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 132,
+          "teacherId": 219,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 133,
+          "teacherId": 254,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -3706,6 +3783,22 @@
     {
       "id": 129,
       "name": "Urządzenia i sieci elektryczne"
+    },
+    {
+      "id": 130,
+      "name": "Mikrokontrolery AVR w zastosowaniach inżynierskich"
+    },
+    {
+      "id": 131,
+      "name": "Układy FPGA i analogowe procesory sygnałowe w systemach sterowania"
+    },
+    {
+      "id": 132,
+      "name": "Język C++ w programach sterowania"
+    },
+    {
+      "id": 133,
+      "name": "Projektowanie układów energoelektronicznych - wybrane zagadnienia"
     }
   ],
   "rooms": [
