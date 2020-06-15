@@ -1166,6 +1166,68 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 15,
+      "name": "Elektrotechnika - S1",
+      "auditoryGroupsPerLectureGroup": 5,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 31,
+          "teacherId": 403,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 100,
+          "teacherId": 278,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 101,
+          "teacherId": 404,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 33,
+          "teacherId": 288,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 102,
+          "teacherId": 179,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 103,
+          "teacherId": 405,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 31,
+          "teacherId": 403,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 100,
+          "teacherId": 98,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 101,
+          "teacherId": 404,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 104,
+          "teacherId": 46,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -2776,6 +2838,18 @@
     {
       "id": 402,
       "name": "Bera Piotr, dr inż."
+    },
+    {
+      "id": 403,
+      "name": "Ślęzak Tomasz, dr hab."
+    },
+    {
+      "id": 404,
+      "name": "Pilch Robert, dr hab. inż."
+    },
+    {
+      "id": 405,
+      "name": "Wegert Adam, mgr"
     }
   ],
   "courses": [
@@ -3174,6 +3248,26 @@
     {
       "id": 99,
       "name": "Supervisory systems (SCADA HMI) and industrial databases"
+    },
+    {
+      "id": 100,
+      "name": "Algebra"
+    },
+    {
+      "id": 101,
+      "name": "Geometria i grafika inżynierska"
+    },
+    {
+      "id": 102,
+      "name": "Bezpieczeństwo użytkowania urządzeń elektrycznych"
+    },
+    {
+      "id": 103,
+      "name": "Analiza matematyczna 1"
+    },
+    {
+      "id": 104,
+      "name": "Podstawy informatyki 1"
     }
   ],
   "rooms": [
