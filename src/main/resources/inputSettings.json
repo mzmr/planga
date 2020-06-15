@@ -805,6 +805,98 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 11,
+      "name": "Elektrotechnika - Elektroenergetyka - S2",
+      "auditoryGroupsPerLectureGroup": 1,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 76,
+          "teacherId": 238,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 69,
+          "teacherId": 290,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 77,
+          "teacherId": 82,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 78,
+          "teacherId": 20,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 79,
+          "teacherId": 38,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 71,
+          "teacherId": 344,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 80,
+          "teacherId": 330,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 81,
+          "teacherId": 168,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 76,
+          "teacherId": 238,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 77,
+          "teacherId": 83,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 78,
+          "teacherId": 20,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 69,
+          "teacherId": 290,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 80,
+          "teacherId": 19,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 71,
+          "teacherId": 344,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 81,
+          "teacherId": 168,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 79,
+          "teacherId": 375,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -2713,6 +2805,30 @@
     {
       "id": 75,
       "name": "Nowoczesne mikrokontrolery w zastosowaniach przemysłowych"
+    },
+    {
+      "id": 76,
+      "name": "Koordynacja izolacji"
+    },
+    {
+      "id": 77,
+      "name": "Ochrona przepięciowa instalacji i urządzeń niskiego napięcia"
+    },
+    {
+      "id": 78,
+      "name": "Projektowanie linii elektroenergetycznych"
+    },
+    {
+      "id": 79,
+      "name": "Nowoczesne układy automatyki zabezpieczeniowej"
+    },
+    {
+      "id": 80,
+      "name": "Elektroenergetyczne sieci rozdzielcze"
+    },
+    {
+      "id": 81,
+      "name": "Równowaga systemów elektroenergetycznych"
     }
   ],
   "rooms": [
