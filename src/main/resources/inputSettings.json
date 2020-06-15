@@ -1065,6 +1065,107 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 14,
+      "name": "Elektrotechnika - Smart Grids Technology Platform - S2",
+      "auditoryGroupsPerLectureGroup": 1,
+      "laboratoryGroupsPerAuditoryGroup": 1,
+      "lectures": [
+        {
+          "courseId": 92,
+          "teacherId": 263,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 93,
+          "teacherId": 22,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 94,
+          "teacherId": 219,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 69,
+          "teacherId": 290,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 95,
+          "teacherId": 255,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 96,
+          "teacherId": 255,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 97,
+          "teacherId": 374,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 98,
+          "teacherId": 344,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 99,
+          "teacherId": 117,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [],
+      "laboratoryClasses": [
+        {
+          "courseId": 93,
+          "teacherId": 22,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 94,
+          "teacherId": 125,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 69,
+          "teacherId": 290,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 98,
+          "teacherId": 344,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 99,
+          "teacherId": 117,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 96,
+          "teacherId": 255,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 95,
+          "teacherId": 255,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 97,
+          "teacherId": 374,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 92,
+          "teacherId": 263,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -3041,6 +3142,38 @@
     {
       "id": 91,
       "name": "Trendy rozwojowe w motoryzacji"
+    },
+    {
+      "id": 92,
+      "name": "Artificial Intelligence"
+    },
+    {
+      "id": 93,
+      "name": "Measurements in electric power grid"
+    },
+    {
+      "id": 94,
+      "name": "Modern microcontrollers in industrial applications"
+    },
+    {
+      "id": 95,
+      "name": "Low frequency conducted disturbances and electromagnetic compatibility"
+    },
+    {
+      "id": 96,
+      "name": "General Concepts of Power Grids"
+    },
+    {
+      "id": 97,
+      "name": "Computer Communications"
+    },
+    {
+      "id": 98,
+      "name": "Disturbances in electrical power systems"
+    },
+    {
+      "id": 99,
+      "name": "Supervisory systems (SCADA HMI) and industrial databases"
     }
   ],
   "rooms": [
