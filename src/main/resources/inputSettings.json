@@ -1402,6 +1402,88 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 18,
+      "name": "Elektrotechnika - Blok obieralny A - S7",
+      "auditoryGroupsPerLectureGroup": 2,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 116,
+          "teacherId": 19,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 117,
+          "teacherId": 179,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 118,
+          "teacherId": 71,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 119,
+          "teacherId": 391,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 120,
+          "teacherId": 67,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 121,
+          "teacherId": 82,
+          "timeUnits": 9
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 117,
+          "teacherId": 179,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 120,
+          "teacherId": 67,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 122,
+          "teacherId": 49,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 116,
+          "teacherId": 19,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 121,
+          "teacherId": 189,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 118,
+          "teacherId": 71,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 123,
+          "teacherId": 301,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 119,
+          "teacherId": 28,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -3486,6 +3568,38 @@
     {
       "id": 115,
       "name": "Urządzenia i rozdzielnie elektroenergetyczne"
+    },
+    {
+      "id": 116,
+      "name": "Elektroenergetyka przemysłowa"
+    },
+    {
+      "id": 117,
+      "name": "Projektowanie instalacji elektrycznych"
+    },
+    {
+      "id": 118,
+      "name": "Electrical engineering"
+    },
+    {
+      "id": 119,
+      "name": "Podstawy pomiarów i diagnostyki eksploatacyjnej w elektroenergetyce"
+    },
+    {
+      "id": 120,
+      "name": "Sterowniki programowalne PLC"
+    },
+    {
+      "id": 121,
+      "name": "Procesy technologiczne urządzeń elektrycznych"
+    },
+    {
+      "id": 122,
+      "name": "Seminarium dyplomowe"
+    },
+    {
+      "id": 123,
+      "name": "Fundamentals of Electroheat"
     }
   ],
   "rooms": [
