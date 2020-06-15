@@ -636,6 +636,88 @@
           "timeUnits": 9
         }
       ]
+    },
+    {
+      "id": 9,
+      "name": "Computer Science - S1",
+      "auditoryGroupsPerLectureGroup": 1,
+      "laboratoryGroupsPerAuditoryGroup": 1,
+      "lectures": [
+        {
+          "courseId": 63,
+          "teacherId": 154,
+          "timeUnits": 3
+        },
+        {
+          "courseId": 64,
+          "teacherId": 21,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 65,
+          "teacherId": 400,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 66,
+          "teacherId": 401,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 66,
+          "teacherId": 401,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 67,
+          "teacherId": 401,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 68,
+          "teacherId": 121,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 66,
+          "teacherId": 401,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 67,
+          "teacherId": 401,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 64,
+          "teacherId": 21,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 66,
+          "teacherId": 401,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 63,
+          "teacherId": 154,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 65,
+          "teacherId": 400,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 68,
+          "teacherId": 121,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -2234,6 +2316,14 @@
     {
       "id": 399,
       "name": "Kłaczyński Maciej, dr inż."
+    },
+    {
+      "id": 400,
+      "name": "Gawroński, dr hab."
+    },
+    {
+      "id": 401,
+      "name": "Boroński Jan P., dr hab."
     }
   ],
   "courses": [
@@ -2484,6 +2574,30 @@
     {
       "id": 62,
       "name": "Pracownia inżynierska dyplomowa"
+    },
+    {
+      "id": 63,
+      "name": "Introduction to Unix systems"
+    },
+    {
+      "id": 64,
+      "name": "Discrete mathematics"
+    },
+    {
+      "id": 65,
+      "name": "Programming Languages I"
+    },
+    {
+      "id": 66,
+      "name": "Mathematical Analysis"
+    },
+    {
+      "id": 67,
+      "name": "Higher algebra"
+    },
+    {
+      "id": 68,
+      "name": "Introduction to Computer Science"
     }
   ],
   "rooms": [
