@@ -1725,6 +1725,78 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 22,
+      "name": "Elektrotechnika - Blok obieralny C - S7",
+      "auditoryGroupsPerLectureGroup": 2,
+      "laboratoryGroupsPerAuditoryGroup": 1,
+      "lectures": [
+        {
+          "courseId": 130,
+          "teacherId": 219,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 118,
+          "teacherId": 71,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 136,
+          "teacherId": 299,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 131,
+          "teacherId": 16,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 132,
+          "teacherId": 219,
+          "timeUnits": 9
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 122,
+          "teacherId": 312,
+          "timeUnits": 9
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 130,
+          "teacherId": 219,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 118,
+          "teacherId": 71,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 136,
+          "teacherId": 299,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 123,
+          "teacherId": 301,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 132,
+          "teacherId": 219,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 131,
+          "teacherId": 46,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -3893,6 +3965,10 @@
     {
       "id": 136,
       "name": "Urządzenia i sieci elektroenergetyczne"
+    },
+    {
+      "id": 136,
+      "name": "Komputerowe wspomaganie procesów projektowych z wykorzystaniem oprogramowania CAD"
     }
   ],
   "rooms": [
