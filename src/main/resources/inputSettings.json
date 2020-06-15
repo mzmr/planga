@@ -14,76 +14,76 @@
       "lectures": [
         {
           "courseId": 1,
-          "teacherId": 1,
+          "teacherId": 172,
           "timeUnits": 9
         },
         {
           "courseId": 2,
-          "teacherId": 2,
+          "teacherId": 306,
           "timeUnits": 6
         },
         {
           "courseId": 3,
-          "teacherId": 3,
+          "teacherId": 286,
           "timeUnits": 6
         },
         {
           "courseId": 4,
-          "teacherId": 4,
+          "teacherId": 129,
           "timeUnits": 6
         },
         {
           "courseId": 5,
-          "teacherId": 5,
+          "teacherId": 257,
           "timeUnits": 6
         },
         {
           "courseId": 6,
-          "teacherId": 6,
+          "teacherId": 352,
           "timeUnits": 6
         },
         {
           "courseId": 7,
-          "teacherId": 7,
+          "teacherId": 304,
           "timeUnits": 6
         }
       ],
       "auditoryClasses": [
         {
           "courseId": 1,
-          "teacherId": 1,
+          "teacherId": 172,
           "timeUnits": 12
         }
       ],
       "laboratoryClasses": [
         {
           "courseId": 2,
-          "teacherId": 2,
+          "teacherId": 306,
           "timeUnits": 6
         },
         {
           "courseId": 7,
-          "teacherId": 7,
+          "teacherId": 304,
           "timeUnits": 6
         },
         {
           "courseId": 3,
-          "teacherId": 8,
+          "teacherId": 364,
           "timeUnits": 9
         },
         {
           "courseId": 8,
-          "teacherId": 6,
+          "teacherId": 352,
           "timeUnits": 9
         },
         {
           "courseId": 6,
-          "teacherId": 9,
+          "teacherId": 74,
           "timeUnits": 6
         },
         {
           "courseId": 4,
-          "teacherId": 4,
+          "teacherId": 129,
           "timeUnits": 6
         }
       ]
@@ -96,66 +96,66 @@
       "lectures": [
         {
           "courseId": 9,
-          "teacherId": 10,
+          "teacherId": 193,
           "timeUnits": 6
         },
         {
           "courseId": 10,
-          "teacherId": 11,
+          "teacherId": 186,
           "timeUnits": 6
         },
         {
           "courseId": 12,
-          "teacherId": 13,
+          "teacherId": 170,
           "timeUnits": 6
         },
         {
           "courseId": 11,
-          "teacherId": 12,
+          "teacherId": 44,
           "timeUnits": 6
         },
         {
           "courseId": 14,
-          "teacherId": 2,
+          "teacherId": 306,
           "timeUnits": 6
         },
         {
           "courseId": 16,
-          "teacherId": 17,
+          "teacherId": 328,
           "timeUnits": 6
         }
       ],
       "auditoryClasses": [
         {
           "courseId": 15,
-          "teacherId": 16,
+          "teacherId": 178,
           "timeUnits": 6
         }
       ],
       "laboratoryClasses": [
         {
           "courseId": 10,
-          "teacherId": 11,
+          "teacherId": 186,
           "timeUnits": 6
         },
         {
           "courseId": 11,
-          "teacherId": 12,
+          "teacherId": 44,
           "timeUnits": 6
         },
         {
           "courseId": 13,
-          "teacherId": 14,
+          "teacherId": 201,
           "timeUnits": 12
         },
         {
           "courseId": 12,
-          "teacherId": 15,
+          "teacherId": 294,
           "timeUnits": 6
         },
         {
           "courseId": 14,
-          "teacherId": 2,
+          "teacherId": 306,
           "timeUnits": 6
         }
       ]
@@ -168,66 +168,66 @@
       "lectures": [
         {
           "courseId": 17,
-          "teacherId": 18,
+          "teacherId": 34,
           "timeUnits": 6
         },
         {
           "courseId": 18,
-          "teacherId": 19,
+          "teacherId": 124,
           "timeUnits": 6
         },
         {
           "courseId": 19,
-          "teacherId": 20,
+          "teacherId": 138,
           "timeUnits": 6
         },
         {
           "courseId": 20,
-          "teacherId": 22,
+          "teacherId": 107,
           "timeUnits": 6
         },
         {
           "courseId": 22,
-          "teacherId": 22,
+          "teacherId": 107,
           "timeUnits": 6
         },
         {
           "courseId": 21,
-          "teacherId": 4,
+          "teacherId": 129,
           "timeUnits": 6
         }
       ],
       "auditoryClasses": [
         {
           "courseId": 20,
-          "teacherId": 21,
+          "teacherId": 260,
           "timeUnits": 9
         }
       ],
       "laboratoryClasses": [
         {
           "courseId": 17,
-          "teacherId": 18,
+          "teacherId": 34,
           "timeUnits": 6
         },
         {
           "courseId": 18,
-          "teacherId": 19,
+          "teacherId": 124,
           "timeUnits": 6
         },
         {
           "courseId": 21,
-          "teacherId": 4,
+          "teacherId": 129,
           "timeUnits": 6
         },
         {
           "courseId": 22,
-          "teacherId": 22,
+          "teacherId": 107,
           "timeUnits": 6
         },
         {
           "courseId": 23,
-          "teacherId": 23,
+          "teacherId": 9,
           "timeUnits": 9
         }
       ]
@@ -240,56 +240,56 @@
       "lectures": [
         {
           "courseId": 24,
-          "teacherId": 5,
+          "teacherId": 257,
           "timeUnits": 6
         },
         {
           "courseId": 25,
-          "teacherId": 26,
+          "teacherId": 42,
           "timeUnits": 6
         },
         {
           "courseId": 26,
-          "teacherId": 24,
+          "teacherId": 263,
           "timeUnits": 9
         },
         {
           "courseId": 27,
-          "teacherId": 27,
+          "teacherId": 162,
           "timeUnits": 6
         },
         {
           "courseId": 29,
-          "teacherId": 20,
+          "teacherId": 138,
           "timeUnits": 6
         }
       ],
       "auditoryClasses": [
         {
           "courseId": 28,
-          "teacherId": 28,
+          "teacherId": 195,
           "timeUnits": 6
         }
       ],
       "laboratoryClasses": [
         {
           "courseId": 23,
-          "teacherId": 24,
+          "teacherId": 263,
           "timeUnits": 9
         },
         {
           "courseId": 24,
-          "teacherId": 25,
+          "teacherId": 251,
           "timeUnits": 9
         },
         {
           "courseId": 27,
-          "teacherId": 6,
+          "teacherId": 352,
           "timeUnits": 6
         },
         {
           "courseId": 26,
-          "teacherId": 24,
+          "teacherId": 263,
           "timeUnits": 6
         }
       ]
@@ -302,76 +302,76 @@
       "lectures": [
         {
           "courseId": 30,
-          "teacherId": 11,
+          "teacherId": 186,
           "timeUnits": 6
         },
         {
           "courseId": 31,
-          "teacherId": 31,
+          "teacherId": 395,
           "timeUnits": 9
         },
         {
           "courseId": 33,
-          "teacherId": 32,
+          "teacherId": 53,
           "timeUnits": 6
         },
         {
           "courseId": 34,
-          "teacherId": 26,
+          "teacherId": 42,
           "timeUnits": 6
         },
         {
           "courseId": 35,
-          "teacherId": 39,
+          "teacherId": 396,
           "timeUnits": 6
         },
         {
           "courseId": 36,
-          "teacherId": 38,
+          "teacherId": 102,
           "timeUnits": 6
         },
         {
           "courseId": 37,
-          "teacherId": 29,
+          "teacherId": 252,
           "timeUnits": 6
         },
         {
           "courseId": 33,
-          "teacherId": 32,
+          "teacherId": 53,
           "timeUnits": 6
         }
       ],
       "auditoryClasses": [
         {
           "courseId": 33,
-          "teacherId": 33,
+          "teacherId": 353,
           "timeUnits": 9
         },
         {
           "courseId": 31,
-          "teacherId": 34,
+          "teacherId": 397,
           "timeUnits": 6
         },
         {
           "courseId": 36,
-          "teacherId": 38,
+          "teacherId": 102,
           "timeUnits": 6
         }
       ],
       "laboratoryClasses": [
         {
           "courseId": 37,
-          "teacherId": 29,
+          "teacherId": 252,
           "timeUnits": 6
         },
         {
           "courseId": 30,
-          "teacherId": 11,
+          "teacherId": 186,
           "timeUnits": 6
         },
         {
           "courseId": 35,
-          "teacherId": 36,
+          "teacherId": 398,
           "timeUnits": 6
         }
       ]
@@ -384,81 +384,81 @@
       "lectures": [
         {
           "courseId": 38,
-          "teacherId": 42,
+          "teacherId": 12,
           "timeUnits": 6
         },
         {
           "courseId": 39,
-          "teacherId": 1,
+          "teacherId": 172,
           "timeUnits": 12
         },
         {
           "courseId": 40,
-          "teacherId": 43,
+          "teacherId": 241,
           "timeUnits": 6
         },
         {
           "courseId": 41,
-          "teacherId": 3,
+          "teacherId": 286,
           "timeUnits": 6
         },
         {
           "courseId": 42,
-          "teacherId": 26,
+          "teacherId": 42,
           "timeUnits": 6
         },
         {
           "courseId": 43,
-          "teacherId": 44,
+          "teacherId": 322,
           "timeUnits": 6
         },
         {
           "courseId": 44,
-          "teacherId": 45,
+          "teacherId": 212,
           "timeUnits": 6
         },
         {
           "courseId": 45,
-          "teacherId": 25,
+          "teacherId": 251,
           "timeUnits": 6
         }
       ],
       "auditoryClasses": [
         {
           "courseId": 43,
-          "teacherId": 44,
+          "teacherId": 322,
           "timeUnits": 6
         }
       ],
       "laboratoryClasses": [
         {
           "courseId": 41,
-          "teacherId": 46,
+          "teacherId": 158,
           "timeUnits": 9
         },
         {
           "courseId": 42,
-          "teacherId": 47,
+          "teacherId": 65,
           "timeUnits": 6
         },
         {
           "courseId": 38,
-          "teacherId": 48,
+          "teacherId": 17,
           "timeUnits": 6
         },
         {
           "courseId": 46,
-          "teacherId": 49,
+          "teacherId": 277,
           "timeUnits": 6
         },
         {
           "courseId": 39,
-          "teacherId": 50,
+          "teacherId": 124,
           "timeUnits": 6
         },
         {
           "courseId": 44,
-          "teacherId": 45,
+          "teacherId": 399,
           "timeUnits": 6
         }
       ]
@@ -467,203 +467,1599 @@
   "teachers": [
     {
       "id": 1,
-      "name": "Adam Kowalewski, prof. dr hab. inż."
+      "name": "Adamski Andrzej, prof. dr hab. inż."
     },
     {
       "id": 2,
-      "name": "Andrzej Maciej Skulimowski, prof. dr hab. inż."
+      "name": "Adrian Marek, dr"
     },
     {
       "id": 3,
-      "name": "Maciej Rosół, dr inż."
+      "name": "Adrian Weronika Teresa, dr inż."
     },
     {
       "id": 4,
-      "name": "Joanna Jaworek-Korjakowska, dr hab. inż."
+      "name": "Argasiński Jan, dr"
     },
     {
       "id": 5,
-      "name": "Paweł Piątek, dr inż."
+      "name": "Augustyniak Piotr, prof. dr hab. inż."
     },
     {
       "id": 6,
-      "name": "Andrzej Tutaj, dr inż."
+      "name": "Azebaze Stephane, mgr inż."
     },
     {
       "id": 7,
-      "name": "Paweł Skruch, dr hab. inż."
+      "name": "Badecka Inez, mgr inż."
     },
     {
       "id": 8,
-      "name": "Łukasz Więckowski, dr inż."
+      "name": "Bandyk Elzbieta, mgr inż."
     },
     {
       "id": 9,
-      "name": "Klaudia Dziedzic, mgr inż."
+      "name": "Bania Piotr, dr hab. inż."
     },
     {
       "id": 10,
-      "name": "Joanna Kwiecień, dr hab. inż."
+      "name": "Baniewicz Jarosław, dr inż."
     },
     {
       "id": 11,
-      "name": "Edyta Kucharska, dr inż."
+      "name": "Baran Mateusz, dr inż."
     },
     {
       "id": 12,
-      "name": "Wojciech Chmiel, dr inż."
+      "name": "Baranowski Jerzy, dr hab. inż."
     },
     {
       "id": 13,
-      "name": "Leszek Kotulski, prof. dr hab."
+      "name": "Barczentewicz Szymon, dr inż."
     },
     {
       "id": 14,
-      "name": "Antoni Ligęza, prof. dr hab. inż."
+      "name": "Barczewska Katarzyna, mgr inż."
     },
     {
       "id": 15,
-      "name": "Adam Sędziwy, dr hab."
+      "name": "Basiura Artur, mgr inż."
     },
     {
       "id": 16,
-      "name": "Marta Kraszewska, dr inż."
+      "name": "Baszyński Marcin, dr hab. inż."
     },
     {
       "id": 17,
-      "name": "Tomasz Szmuc, prof. dr hab. inż."
+      "name": "Bauer Waldemar, mgr inż."
     },
     {
       "id": 18,
-      "name": "Zbigniew Bubliński, dr inż."
+      "name": "Bazior Grzegorz, mgr"
     },
     {
       "id": 19,
-      "name": "Mirosław Jabłoński, dr inż."
+      "name": "Bąchorek Wojciech, dr inż."
     },
     {
       "id": 20,
-      "name": "Piotr Kadłuczka, dr inż."
+      "name": "Benesz Mariusz, dr inż."
     },
     {
       "id": 21,
-      "name": "Tomasz Pięciak, dr inż."
+      "name": "Bielecki Andrzej, dr hab."
     },
     {
       "id": 22,
-      "name": "Joanna Grabska-Chrząstowska, dr inż."
+      "name": "Bień Andrzej, dr hab. inż."
     },
     {
       "id": 23,
-      "name": "Piotr Bania, dr hab. inż."
+      "name": "Biernacka A."
     },
     {
       "id": 24,
-      "name": "Adam Piłat, dr hab. inż."
+      "name": "Biernacki J., mgr inż."
     },
     {
       "id": 25,
-      "name": "Mariusz Pauluk, dr inż."
+      "name": "Bisztyga Barbara, dr inż."
     },
     {
       "id": 26,
-      "name": "Witold Byrski, prof. dr hab. inż."
+      "name": "Bobek Szymon, dr inż."
     },
     {
       "id": 27,
-      "name": "Krzysztof Kołek, dr inż."
+      "name": "Bombik Janina, dr"
     },
     {
       "id": 28,
-      "name": "Andrzej Latocha, dr inż."
+      "name": "Bonk Michał, mgr inż."
     },
     {
       "id": 29,
-      "name": "Piotr Pawlik, dr inż."
+      "name": "Borkowski Dariusz, dr"
     },
     {
       "id": 30,
-      "name": "Rafał Mularczyk"
+      "name": "Braś Michał, dr"
     },
     {
       "id": 31,
-      "name": "Jacek Nizioł, dr"
+      "name": "Broniec-Wójcik Anna, dr inż."
     },
     {
       "id": 32,
-      "name": "Adam Ćmiel, dr inż."
+      "name": "Brożek Janusz, dr inż."
     },
     {
       "id": 33,
-      "name": "Anna Wach-Michalik, dr"
+      "name": "Brzegowy Łukasz"
     },
     {
       "id": 34,
-      "name": "Paweł Armatys, dr inż."
+      "name": "Bubliński Zbigniew, dr inż."
     },
     {
       "id": 35,
-      "name": "Krzysztof Kosała, dr hab. inż."
+      "name": "Bujak Dorota, inż."
     },
     {
       "id": 36,
-      "name": "Łukasz Gorazd, dr inż."
+      "name": "Bułka Jarosław, dr inż."
     },
     {
       "id": 37,
-      "name": "Radosław Marczuk, dr inż"
+      "name": "Burda Ewa"
     },
     {
       "id": 38,
-      "name": "Michał Góra, dr"
+      "name": "Burek Arkadiusz, dr inż."
     },
     {
       "id": 39,
-      "name": "Ryszard Olszewski, dr inż"
+      "name": "Burgknap-Rumian Angelika, mgr"
     },
     {
       "id": 40,
-      "name": "Anna Gryboś, dr"
+      "name": "Burnos Piotr, dr inż."
     },
     {
       "id": 41,
-      "name": "Lesia Matsiuk, dr"
+      "name": "Byrski Jędrzej, dr inż."
     },
     {
       "id": 42,
-      "name": "Jerzy Baranowski, dr hab. inż."
+      "name": "Byrski Witold, prof. dr hab. inż."
     },
     {
       "id": 43,
-      "name": "Krzysztof Oprzędkiewicz, dr hab. inż."
+      "name": "Bysiewicz-Tokarz Barbara, mgr"
     },
     {
       "id": 44,
-      "name": "Przemysław Syrek, dr inż."
+      "name": "Chmiel Wojciech, dr inż."
     },
     {
       "id": 45,
-      "name": "Leszek Majkut, dr hab. inż."
+      "name": "Chmielowiec Krzysztof, mgr inż."
     },
     {
       "id": 46,
-      "name": "Dawid Knapik, mgr inż."
+      "name": "Chojowski Maciej, mgr inż."
     },
     {
       "id": 47,
-      "name": "Józef Duda, dr hab. inż."
+      "name": "Chrząstowski Piotr, dr inż."
     },
     {
       "id": 48,
-      "name": "Waldemar Bauer, mgr inż."
+      "name": "Chudyba Kazimierz, inż."
     },
     {
       "id": 49,
-      "name": "Dominika Przewłocka, mgr inż."
+      "name": "Cieśla Antoni, dr hab. inż."
     },
     {
       "id": 50,
-      "name": "Adam Głowacz, dr inż."
+      "name": "Ciurej Maciej, mgr inż."
+    },
+    {
+      "id": 51,
+      "name": "Czekoński Jarosław, mgr inż."
+    },
+    {
+      "id": 52,
+      "name": "Czosnowski Jacek, dr inż."
+    },
+    {
+      "id": 53,
+      "name": "Ćmiel Adam, dr inż."
+    },
+    {
+      "id": 54,
+      "name": "Daszczyszak Michał, dr inż."
+    },
+    {
+      "id": 55,
+      "name": "Dąbrowski Andrzej, mgr inż."
+    },
+    {
+      "id": 56,
+      "name": "Dechnik Mirosław, mgr inż."
+    },
+    {
+      "id": 57,
+      "name": "Dej Dariusz, mgr inż."
+    },
+    {
+      "id": 58,
+      "name": "Deptuch Grzegorz, dr hab. inż."
+    },
+    {
+      "id": 59,
+      "name": "Długosz Marek, dr inż."
+    },
+    {
+      "id": 60,
+      "name": "Długosz Mirosława, dr inż."
+    },
+    {
+      "id": 61,
+      "name": "Domagała Adam, mgr inż."
+    },
+    {
+      "id": 62,
+      "name": "Domka Michał, mgr inż."
+    },
+    {
+      "id": 63,
+      "name": "Drabek Tomasz, dr inż."
+    },
+    {
+      "id": 64,
+      "name": "Drapała Michał, mgr inż."
+    },
+    {
+      "id": 65,
+      "name": "Duda Józef, dr hab. inż."
+    },
+    {
+      "id": 66,
+      "name": "Duda Krzysztof, dr hab. inż."
+    },
+    {
+      "id": 67,
+      "name": "Dudek Roman, dr inż."
+    },
+    {
+      "id": 68,
+      "name": "Dudek-Dyduch Ewa, prof. dr hab. inż."
+    },
+    {
+      "id": 69,
+      "name": "Dutka Mateusz, mgr inż."
+    },
+    {
+      "id": 70,
+      "name": "Dutkiewicz Lidia, dr inż."
+    },
+    {
+      "id": 71,
+      "name": "Dybowski Paweł, dr inż."
+    },
+    {
+      "id": 72,
+      "name": "Dymek Dariusz, dr"
+    },
+    {
+      "id": 73,
+      "name": "Dziadecki Aleksander, dr inż."
+    },
+    {
+      "id": 74,
+      "name": "Dziedzic Klaudia, mgr inż."
+    },
+    {
+      "id": 75,
+      "name": "Dziwiński Tomasz, mgr inż."
+    },
+    {
+      "id": 76,
+      "name": "Ernst Sebastian, dr inż."
+    },
+    {
+      "id": 77,
+      "name": "Filipowicz Bogusław, prof. zw. dr hab. inż."
+    },
+    {
+      "id": 78,
+      "name": "Firlit Andrzej, dr inż."
+    },
+    {
+      "id": 79,
+      "name": "Fleszar Adam, mgr inż."
+    },
+    {
+      "id": 80,
+      "name": "Florkowska Barbara, prof. dr hab. inż."
+    },
+    {
+      "id": 81,
+      "name": "Fodczuk Dariusz, dr"
+    },
+    {
+      "id": 82,
+      "name": "Furgał Jakub, prof. dr hab. inż."
+    },
+    {
+      "id": 83,
+      "name": "Fuśnik Łukasz, mgr inż."
+    },
+    {
+      "id": 84,
+      "name": "Gajda Janusz, prof. dr hab. inż."
+    },
+    {
+      "id": 85,
+      "name": "Gajdzica Jakub, mgr inż."
+    },
+    {
+      "id": 86,
+      "name": "Gajer Mirosław, dr inż."
+    },
+    {
+      "id": 87,
+      "name": "Galias Zbigniew, prof. dr hab. inż."
+    },
+    {
+      "id": 88,
+      "name": "Gancarz Artur, mgr inż."
+    },
+    {
+      "id": 89,
+      "name": "Garbacz Maciej, dr inż."
+    },
+    {
+      "id": 90,
+      "name": "Garda Bartłomiej, dr inż."
+    },
+    {
+      "id": 91,
+      "name": "Gas Piotr, dr inż."
+    },
+    {
+      "id": 92,
+      "name": "Gawędzki Wacław, dr inż."
+    },
+    {
+      "id": 93,
+      "name": "Gierdziewicz Maciej, dr inż."
+    },
+    {
+      "id": 94,
+      "name": "Głowacz Adam, dr inż."
+    },
+    {
+      "id": 95,
+      "name": "Głowacz Witold, mgr inż."
+    },
+    {
+      "id": 96,
+      "name": "Głowacz Zygfryd, dr hab. inż."
+    },
+    {
+      "id": 97,
+      "name": "Goćwin Maciej, dr"
+    },
+    {
+      "id": 98,
+      "name": "Golenia Jolanta, dr"
+    },
+    {
+      "id": 99,
+      "name": "Goral Adrian, mgr inż."
+    },
+    {
+      "id": 100,
+      "name": "Gorgoń Marek, prof. dr hab. inż."
+    },
+    {
+      "id": 101,
+      "name": "Gorzkowska Aleksandra, dr"
+    },
+    {
+      "id": 102,
+      "name": "Góra Michał, dr"
+    },
+    {
+      "id": 103,
+      "name": "Górecki Henryk, prof. zw. dr inż."
+    },
+    {
+      "id": 104,
+      "name": "Górniak Katarzyna"
+    },
+    {
+      "id": 105,
+      "name": "Górska Jolanta, dr"
+    },
+    {
+      "id": 106,
+      "name": "Grabowski Piotr, dr hab. inż."
+    },
+    {
+      "id": 107,
+      "name": "Grabska-Chrząstowska Joanna, dr inż."
+    },
+    {
+      "id": 108,
+      "name": "Gracel Jarosław, mgr inż."
+    },
+    {
+      "id": 109,
+      "name": "Grega Wojciech, prof. dr hab. inż."
+    },
+    {
+      "id": 110,
+      "name": "Grela Jakub, dr inż."
+    },
+    {
+      "id": 111,
+      "name": "Grobler-Dębska Katarzyna, dr"
+    },
+    {
+      "id": 112,
+      "name": "Gryboś Paweł, prof. dr hab. inż."
+    },
+    {
+      "id": 113,
+      "name": "Grzbiela Czesław, dr inż."
+    },
+    {
+      "id": 114,
+      "name": "Grzegorski Janusz, mgr inż."
+    },
+    {
+      "id": 115,
+      "name": "Hajto Marek"
+    },
+    {
+      "id": 116,
+      "name": "Hanzelka Zbigniew, prof. dr hab. inż."
+    },
+    {
+      "id": 117,
+      "name": "Hayduk Grzegorz, dr inż."
+    },
+    {
+      "id": 118,
+      "name": "Hemmerling Daria, mgr inż."
+    },
+    {
+      "id": 119,
+      "name": "Heryan Katarzyna, mgr inż."
+    },
+    {
+      "id": 120,
+      "name": "Hojna Lucyna"
+    },
+    {
+      "id": 121,
+      "name": "Horzyk Adrian, dr hab."
+    },
+    {
+      "id": 122,
+      "name": "Idzikowska Krystyna, mgr inż."
+    },
+    {
+      "id": 123,
+      "name": "Izworski Andrzej, dr inż."
+    },
+    {
+      "id": 124,
+      "name": "Jabłoński Mirosław, dr inż."
+    },
+    {
+      "id": 125,
+      "name": "Jachimski Marcin, dr inż."
+    },
+    {
+      "id": 126,
+      "name": "Jamróz Dariusz, dr"
+    },
+    {
+      "id": 127,
+      "name": "Janus Piotr, mgr inż."
+    },
+    {
+      "id": 128,
+      "name": "Jaskierny Leszek, mgr inż."
+    },
+    {
+      "id": 129,
+      "name": "Jaworek-Korjakowska Joanna, dr hab. inż."
+    },
+    {
+      "id": 130,
+      "name": "Jażdżyński Wiesław, dr hab. inż."
+    },
+    {
+      "id": 131,
+      "name": "Jemioło Paweł"
+    },
+    {
+      "id": 132,
+      "name": "Jobczyk Krystian, dr"
+    },
+    {
+      "id": 133,
+      "name": "Jurkiewicz Jerzy, dr inż."
+    },
+    {
+      "id": 134,
+      "name": "Kachel Maciej, mgr inż."
+    },
+    {
+      "id": 135,
+      "name": "Kaczmarczyk Piotr, mgr inż."
+    },
+    {
+      "id": 136,
+      "name": "Kaczor Krzysztof, dr inż."
+    },
+    {
+      "id": 137,
+      "name": "Kadłubowski Łukasz, mgr inż."
+    },
+    {
+      "id": 138,
+      "name": "Kadłuczka Piotr, dr inż."
+    },
+    {
+      "id": 139,
+      "name": "Kaganek Dorota"
+    },
+    {
+      "id": 140,
+      "name": "Kamiński Filip, inż."
+    },
+    {
+      "id": 141,
+      "name": "Kanak Jarosław, dr inż."
+    },
+    {
+      "id": 142,
+      "name": "Kańtoch Eliasz, dr inż."
+    },
+    {
+      "id": 143,
+      "name": "Kapłański Marek, mgr inż."
+    },
+    {
+      "id": 144,
+      "name": "Kapusta Jan, mgr inż."
+    },
+    {
+      "id": 145,
+      "name": "Kapusta Mariusz, dr inż."
+    },
+    {
+      "id": 146,
+      "name": "Karatkevich Andrei, dr hab. inż. prof. n"
+    },
+    {
+      "id": 147,
+      "name": "Kasiński Krzysztof, dr hab. inż."
+    },
+    {
+      "id": 148,
+      "name": "Kiepas Patryk, mgr inż."
+    },
+    {
+      "id": 149,
+      "name": "Kieroński Roman, dr inż."
+    },
+    {
+      "id": 150,
+      "name": "Kisała Piotr, prof."
+    },
+    {
+      "id": 151,
+      "name": "Klemiato Maciej, dr inż."
+    },
+    {
+      "id": 152,
+      "name": "Klempka Ryszard, dr inż."
+    },
+    {
+      "id": 153,
+      "name": "Klimek Radosław, dr hab. inż."
+    },
+    {
+      "id": 154,
+      "name": "Kluza Krzysztof, dr inż."
+    },
+    {
+      "id": 155,
+      "name": "Kłeczek Paweł, mgr inż."
+    },
+    {
+      "id": 156,
+      "name": "Kłeczek Rafał, dr inż."
+    },
+    {
+      "id": 157,
+      "name": "Kmon Piotr, dr hab. inż."
+    },
+    {
+      "id": 158,
+      "name": "Knapik Dawid, mgr inż."
+    },
+    {
+      "id": 159,
+      "name": "Kochanowicz Konrad, mgr inż."
+    },
+    {
+      "id": 160,
+      "name": "Kocyłowski Grzegorz, mgr inż."
+    },
+    {
+      "id": 161,
+      "name": "Kołacz Anna"
+    },
+    {
+      "id": 162,
+      "name": "Kołek Krzysztof, dr inż."
+    },
+    {
+      "id": 163,
+      "name": "Komnata Konrad, mgr inż."
+    },
+    {
+      "id": 164,
+      "name": "Komnata Wojciech, dr inż."
+    },
+    {
+      "id": 165,
+      "name": "Kopieć Jadwiga, mgr"
+    },
+    {
+      "id": 166,
+      "name": "Koptyra Katarzyna, dr inż."
+    },
+    {
+      "id": 167,
+      "name": "Korytowski Adam, dr hab. inż."
+    },
+    {
+      "id": 168,
+      "name": "Kot Aleksander, dr inż."
+    },
+    {
+      "id": 169,
+      "name": "Kotulska Kamila, mgr"
+    },
+    {
+      "id": 170,
+      "name": "Kotulski Leszek, prof. dr hab."
+    },
+    {
+      "id": 171,
+      "name": "Kowalczyk Marcin, mgr inż."
+    },
+    {
+      "id": 172,
+      "name": "Kowalewski Adam, prof. dr hab. inż."
+    },
+    {
+      "id": 173,
+      "name": "Kowalik Bartosz, mgr inż."
+    },
+    {
+      "id": 174,
+      "name": "Kowalski Jakub, dr inż."
+    },
+    {
+      "id": 175,
+      "name": "Kozak Józef, prof."
+    },
+    {
+      "id": 176,
+      "name": "Kozik Jarosław, dr inż."
+    },
+    {
+      "id": 177,
+      "name": "Kozioł Anna, mgr inż."
+    },
+    {
+      "id": 178,
+      "name": "Kraszewska Marta, dr inż."
+    },
+    {
+      "id": 179,
+      "name": "Kraszewski Wojciech, dr inż."
+    },
+    {
+      "id": 180,
+      "name": "Krawczyk Grzegorz, inż."
+    },
+    {
+      "id": 181,
+      "name": "Krawczyk Krzysztof, mgr inż."
+    },
+    {
+      "id": 182,
+      "name": "Krawiec Henryk, dr inż."
+    },
+    {
+      "id": 183,
+      "name": "Kreft Wojciech, dr inż."
+    },
+    {
+      "id": 184,
+      "name": "Kryjak Tomasz, dr inż."
+    },
+    {
+      "id": 185,
+      "name": "Krzyżanowska Aleksandra, mgr"
+    },
+    {
+      "id": 186,
+      "name": "Kucharska Edyta, dr inż."
+    },
+    {
+      "id": 187,
+      "name": "Kucharski Dariusz, mgr inż."
+    },
+    {
+      "id": 188,
+      "name": "Kułakowski Konrad, dr hab."
+    },
+    {
+      "id": 189,
+      "name": "Kuniewski Maciej, dr inż."
+    },
+    {
+      "id": 190,
+      "name": "Kurgan Eugeniusz, dr hab. inż."
+    },
+    {
+      "id": 191,
+      "name": "Kutt Krzysztof, dr inż."
+    },
+    {
+      "id": 192,
+      "name": "Kwasnowski Paweł, mgr inż."
+    },
+    {
+      "id": 193,
+      "name": "Kwiecień Joanna, dr hab. inż."
+    },
+    {
+      "id": 194,
+      "name": "Lachman Ryszard"
+    },
+    {
+      "id": 195,
+      "name": "Latocha Andrzej, dr inż."
+    },
+    {
+      "id": 196,
+      "name": "Ledwoń Małgorzata, mgr"
+    },
+    {
+      "id": 197,
+      "name": "Lenart Marcin, mgr inż."
+    },
+    {
+      "id": 198,
+      "name": "Lerch Tomasz, dr inż."
+    },
+    {
+      "id": 199,
+      "name": "Leśniak Barbara"
+    },
+    {
+      "id": 200,
+      "name": "Leśniak Stanisław"
+    },
+    {
+      "id": 201,
+      "name": "Ligęza Antoni, prof. dr hab. inż."
+    },
+    {
+      "id": 202,
+      "name": "Litewka Marek, mgr inż."
+    },
+    {
+      "id": 203,
+      "name": "Litwin-Konopacka Katarzyna, mgr inż."
+    },
+    {
+      "id": 204,
+      "name": "Lubaś Robert, mgr inż."
+    },
+    {
+      "id": 205,
+      "name": "Ludwiczak Emilia, mgr"
+    },
+    {
+      "id": 206,
+      "name": "Łępicki Mateusz, mgr inż."
+    },
+    {
+      "id": 207,
+      "name": "Łysoń-Sypień Barbara, dr"
+    },
+    {
+      "id": 208,
+      "name": "Macioł Andrzej, dr inż."
+    },
+    {
+      "id": 209,
+      "name": "Maj Piotr, dr hab. inż."
+    },
+    {
+      "id": 210,
+      "name": "Majchrzyk Marek"
+    },
+    {
+      "id": 211,
+      "name": "Majerski Piotr, dr"
+    },
+    {
+      "id": 212,
+      "name": "Majkut Leszek, dr hab. inż."
+    },
+    {
+      "id": 213,
+      "name": "Makuch Andrzej, mgr inż."
+    },
+    {
+      "id": 214,
+      "name": "Malczak Jan, dr hab."
+    },
+    {
+      "id": 215,
+      "name": "Marchewka Dariusz, dr inż."
+    },
+    {
+      "id": 216,
+      "name": "Marszałek Zbigniew, dr inż."
+    },
+    {
+      "id": 217,
+      "name": "Matras Andrzej, dr inż."
+    },
+    {
+      "id": 218,
+      "name": "Matyasik Piotr, dr inż."
+    },
+    {
+      "id": 219,
+      "name": "Mikoś Zbigniew, dr inż."
+    },
+    {
+      "id": 220,
+      "name": "Mikrut Paweł, mgr inż."
+    },
+    {
+      "id": 221,
+      "name": "Mikrut Zbigniew, dr inż."
+    },
+    {
+      "id": 222,
+      "name": "Milej Waldemar, dr inż."
+    },
+    {
+      "id": 223,
+      "name": "Miller Janusz, dr inż."
+    },
+    {
+      "id": 224,
+      "name": "Misiak Piotr, mgr inż."
+    },
+    {
+      "id": 225,
+      "name": "Miśkowicz Marek, dr hab. inż."
+    },
+    {
+      "id": 226,
+      "name": "Mitkowski Stanisław, prof. dr hab. inż."
+    },
+    {
+      "id": 227,
+      "name": "Mitkowski Wojciech, prof. dr hab. inż."
+    },
+    {
+      "id": 228,
+      "name": "Mocniak Jerzy"
+    },
+    {
+      "id": 229,
+      "name": "Mondzik Andrzej, dr inż."
+    },
+    {
+      "id": 230,
+      "name": "Moskwa Szczepan, dr inż."
+    },
+    {
+      "id": 231,
+      "name": "Mrówka Rafał, dr inż."
+    },
+    {
+      "id": 232,
+      "name": "Nabagło Tomasz, dr inż."
+    },
+    {
+      "id": 233,
+      "name": "Nabielec Jerzy, dr inż."
+    },
+    {
+      "id": 234,
+      "name": "Nalepa Grzegorz Jacek, prof. dr hab. inż."
+    },
+    {
+      "id": 235,
+      "name": "Nalepa Jacek, dr inż."
+    },
+    {
+      "id": 236,
+      "name": "Noga Marian, prof. dr hab. inż."
+    },
+    {
+      "id": 237,
+      "name": "Nowaczyk Sławomir, dr inż."
+    },
+    {
+      "id": 238,
+      "name": "Nowak Wiesław, dr hab. inż."
+    },
+    {
+      "id": 239,
+      "name": "Ogiela Marek, prof. dr hab."
+    },
+    {
+      "id": 240,
+      "name": "Olko Jolanta, dr"
+    },
+    {
+      "id": 241,
+      "name": "Oprzędkiewicz Krzysztof, dr hab. inż."
+    },
+    {
+      "id": 242,
+      "name": "Orlewski Wacław, dr inż."
+    },
+    {
+      "id": 243,
+      "name": "Orzechowski Patryk, dr inż."
+    },
+    {
+      "id": 244,
+      "name": "Orzechowski Tadeusz, dr hab. inż."
+    },
+    {
+      "id": 245,
+      "name": "Orzechowski Tomasz Stanisław, dr inż."
+    },
+    {
+      "id": 246,
+      "name": "Otfinowski Piotr, dr inż."
+    },
+    {
+      "id": 247,
+      "name": "Ożadowicz Andrzej, dr inż."
+    },
+    {
+      "id": 248,
+      "name": "Pająk Piotr, dr inż."
+    },
+    {
+      "id": 249,
+      "name": "Pałka Dariusz, dr"
+    },
+    {
+      "id": 250,
+      "name": "Pańszczyk Artur, mgr inż."
+    },
+    {
+      "id": 251,
+      "name": "Pauluk Mariusz, dr inż."
+    },
+    {
+      "id": 252,
+      "name": "Pawlik Piotr, dr inż."
+    },
+    {
+      "id": 253,
+      "name": "Pawlik Rafał, mgr inż."
+    },
+    {
+      "id": 254,
+      "name": "Penczek Adam, dr hab. inż."
+    },
+    {
+      "id": 255,
+      "name": "Piątek Krzysztof, dr inż."
+    },
+    {
+      "id": 256,
+      "name": "Piątek Marcin, dr inż."
+    },
+    {
+      "id": 257,
+      "name": "Piątek Paweł, dr inż."
+    },
+    {
+      "id": 258,
+      "name": "Piech Krzysztof, mgr inż."
+    },
+    {
+      "id": 259,
+      "name": "Pietruszka Michał, mgr inż."
+    },
+    {
+      "id": 260,
+      "name": "Pięciak Tomasz, dr inż."
+    },
+    {
+      "id": 261,
+      "name": "Pięta Piotr, mgr inż."
+    },
+    {
+      "id": 262,
+      "name": "Pikus Michał, mgr inż."
+    },
+    {
+      "id": 263,
+      "name": "Piłat Adam, dr hab. inż."
+    },
+    {
+      "id": 264,
+      "name": "Piotr Janus, mgr inż"
+    },
+    {
+      "id": 265,
+      "name": "Piórkowski Adam, dr hab. inż."
+    },
+    {
+      "id": 266,
+      "name": "Piróg Stanisław, prof. dr hab. inż."
+    },
+    {
+      "id": 267,
+      "name": "Piskor-Ignatowicz Cezary, mgr"
+    },
+    {
+      "id": 268,
+      "name": "Piwowar Piotr, dr inż."
+    },
+    {
+      "id": 269,
+      "name": "Piwowarczyk Jacek, dr inż."
+    },
+    {
+      "id": 270,
+      "name": "Pławiak Paweł, mgr inż."
+    },
+    {
+      "id": 271,
+      "name": "Płuciennik Iwona, mgr"
+    },
+    {
+      "id": 272,
+      "name": "Pociask Elżbieta, mgr inż."
+    },
+    {
+      "id": 273,
+      "name": "Podolski Łukasz, mgr inż."
+    },
+    {
+      "id": 274,
+      "name": "Podsiadło Maciej, mgr inż."
+    },
+    {
+      "id": 275,
+      "name": "Porzycki Jakub, mgr inż."
+    },
+    {
+      "id": 276,
+      "name": "Pracuch Sebastian, mgr inż."
+    },
+    {
+      "id": 277,
+      "name": "Przewłocka Dominika, mgr inż."
+    },
+    {
+      "id": 278,
+      "name": "Przybycin Jolanta, dr"
+    },
+    {
+      "id": 279,
+      "name": "Przybyło Jaromir, dr inż."
+    },
+    {
+      "id": 280,
+      "name": "Pukocz Przemysław, dr inż."
+    },
+    {
+      "id": 281,
+      "name": "Rad Michał, dr inż."
+    },
+    {
+      "id": 282,
+      "name": "Rączka Krzysztof, mgr inż."
+    },
+    {
+      "id": 283,
+      "name": "Roehrich Józef, dr inż."
+    },
+    {
+      "id": 284,
+      "name": "Rogóż Mirosław"
+    },
+    {
+      "id": 285,
+      "name": "Rogus Grzegorz, dr inż."
+    },
+    {
+      "id": 286,
+      "name": "Rosół Maciej, dr inż."
+    },
+    {
+      "id": 287,
+      "name": "Rotter Paweł, dr hab. inż."
+    },
+    {
+      "id": 288,
+      "name": "Rudol Krzysztof, dr hab."
+    },
+    {
+      "id": 289,
+      "name": "Rzecki Krzysztof, dr inż."
+    },
+    {
+      "id": 290,
+      "name": "Schmidt Paweł, dr inż."
+    },
+    {
+      "id": 291,
+      "name": "Schneider Krystyna, dr inż."
+    },
+    {
+      "id": 292,
+      "name": "Senderski Andrzej, dr hab. inż."
+    },
+    {
+      "id": 293,
+      "name": "Serzysko Bartosz, mgr inż."
+    },
+    {
+      "id": 294,
+      "name": "Sędziwy Adam, dr hab."
+    },
+    {
+      "id": 295,
+      "name": "Sidor Tadeusz, dr hab. inż."
+    },
+    {
+      "id": 296,
+      "name": "Sieklucki Grzegorz, dr inż."
+    },
+    {
+      "id": 297,
+      "name": "Sikora Jerzy"
+    },
+    {
+      "id": 298,
+      "name": "Sikora Marcin, dr hab. inż."
+    },
+    {
+      "id": 299,
+      "name": "Siostrzonek Tomasz, dr inż."
+    },
+    {
+      "id": 300,
+      "name": "Skalski Andrzej, dr inż."
+    },
+    {
+      "id": 301,
+      "name": "Skała Aleksander, dr inż."
+    },
+    {
+      "id": 302,
+      "name": "Skotniczny Józef, inż."
+    },
+    {
+      "id": 303,
+      "name": "Skowron Mikołaj, dr inż."
+    },
+    {
+      "id": 304,
+      "name": "Skruch Paweł, dr hab. inż."
+    },
+    {
+      "id": 305,
+      "name": "Skrzyński Paweł, dr inż."
+    },
+    {
+      "id": 306,
+      "name": "Skulimowski Andrzej Maciej, prof. dr hab. inż."
+    },
+    {
+      "id": 307,
+      "name": "Skwarczyński Jerzy, dr hab. inż."
+    },
+    {
+      "id": 308,
+      "name": "Smoleń Magdalena, dr inż."
+    },
+    {
+      "id": 309,
+      "name": "Socha Mirosław, dr inż."
+    },
+    {
+      "id": 310,
+      "name": "Sośnicki Tomasz, mgr inż."
+    },
+    {
+      "id": 311,
+      "name": "Spyrka Bogusław"
+    },
+    {
+      "id": 312,
+      "name": "Sroka Ryszard, dr hab. inż."
+    },
+    {
+      "id": 313,
+      "name": "Stachura-Terlecka Bernadetta, mgr inż."
+    },
+    {
+      "id": 314,
+      "name": "Stala Robert, dr hab. inż."
+    },
+    {
+      "id": 315,
+      "name": "Stencel Marek, dr inż."
+    },
+    {
+      "id": 316,
+      "name": "Stęgowski Zdzisław, dr hab. inż."
+    },
+    {
+      "id": 317,
+      "name": "Stobiecki Andrzej, dr inż."
+    },
+    {
+      "id": 318,
+      "name": "Strug Barbara, dr hab."
+    },
+    {
+      "id": 319,
+      "name": "Strzelecka Halina"
+    },
+    {
+      "id": 320,
+      "name": "Swatowska Barbara, dr inż."
+    },
+    {
+      "id": 321,
+      "name": "Sykulski Rajmund, mgr inż."
+    },
+    {
+      "id": 322,
+      "name": "Syrek Przemysław, dr inż."
+    },
+    {
+      "id": 323,
+      "name": "Szafraniak Bartłomiej, mgr inż."
+    },
+    {
+      "id": 324,
+      "name": "Szczerbiński Marek, dr hab. inż."
+    },
+    {
+      "id": 325,
+      "name": "Szczerbowska-Boruchowska Magdalena, dr hab. inż."
+    },
+    {
+      "id": 326,
+      "name": "Szczygieł Robert, dr hab. inż."
+    },
+    {
+      "id": 327,
+      "name": "Szecówka-Wiśniewska Barbara, dr inż."
+    },
+    {
+      "id": 328,
+      "name": "Szmuc Tomasz, prof. dr hab. inż."
+    },
+    {
+      "id": 329,
+      "name": "Szmuc Wojciech, dr inż."
+    },
+    {
+      "id": 330,
+      "name": "Szpyra Waldemar, dr inż."
+    },
+    {
+      "id": 331,
+      "name": "Szpyrka Marcin, prof. dr hab."
+    },
+    {
+      "id": 332,
+      "name": "Szuba Tadeusz, dr hab. inż."
+    },
+    {
+      "id": 333,
+      "name": "Szwed Piotr, dr inż."
+    },
+    {
+      "id": 334,
+      "name": "Szymczyk Magdalena, dr inż."
+    },
+    {
+      "id": 335,
+      "name": "Szymczyk Piotr, dr hab. inż."
+    },
+    {
+      "id": 336,
+      "name": "Szymkat Maciej, dr inż."
+    },
+    {
+      "id": 337,
+      "name": "Szyper Michał, prof. dr hab. inż."
+    },
+    {
+      "id": 338,
+      "name": "Ślażyński Mateusz, mgr inż."
+    },
+    {
+      "id": 339,
+      "name": "Śmigielski Piotr, mgr inż."
+    },
+    {
+      "id": 340,
+      "name": "Środa Kamila"
+    },
+    {
+      "id": 341,
+      "name": "Świątek Bogusław, dr inż."
+    },
+    {
+      "id": 342,
+      "name": "Tabor Zbisław, prof dr hab."
+    },
+    {
+      "id": 343,
+      "name": "Tadeusiewicz Ryszard, prof. zw. dr hab. inż."
+    },
+    {
+      "id": 344,
+      "name": "Tarko Rafał, dr inż."
+    },
+    {
+      "id": 345,
+      "name": "Teneta Janusz, dr inż."
+    },
+    {
+      "id": 346,
+      "name": "Terlecka S."
+    },
+    {
+      "id": 347,
+      "name": "Tomczyński Mariusz"
+    },
+    {
+      "id": 348,
+      "name": "Trzupek Mirosław, mgr inż."
+    },
+    {
+      "id": 349,
+      "name": "Turcza Paweł, dr inż."
+    },
+    {
+      "id": 350,
+      "name": "Turek Michał, dr inż."
+    },
+    {
+      "id": 351,
+      "name": "Turnau Andrzej, prof. dr hab. inż."
+    },
+    {
+      "id": 352,
+      "name": "Tutaj Andrzej, dr inż."
+    },
+    {
+      "id": 353,
+      "name": "Wach-Michalik Anna, dr"
+    },
+    {
+      "id": 354,
+      "name": "Wajda Andrzej, mgr inż."
+    },
+    {
+      "id": 355,
+      "name": "Wajs Wiesław, prof. dr hab. inż."
+    },
+    {
+      "id": 356,
+      "name": "Wantuch Agnieszka, dr inż."
+    },
+    {
+      "id": 357,
+      "name": "Waradzyn Zbigniew, dr inż."
+    },
+    {
+      "id": 358,
+      "name": "Wasiewicz-Porębska Anna, dr inż."
+    },
+    {
+      "id": 359,
+      "name": "Wawro Marcin, mgr inż."
+    },
+    {
+      "id": 360,
+      "name": "Wąs Jarosław, dr hab. inż."
+    },
+    {
+      "id": 361,
+      "name": "Werewka Jan, dr hab. inż."
+    },
+    {
+      "id": 362,
+      "name": "Wetula Andrzej, dr inż."
+    },
+    {
+      "id": 363,
+      "name": "Wideł W., dr"
+    },
+    {
+      "id": 364,
+      "name": "Więckowski Łukasz, dr inż."
+    },
+    {
+      "id": 365,
+      "name": "Wiśniewski Bogusław, dr inż."
+    },
+    {
+      "id": 366,
+      "name": "Włodarczyk Katarzyna, mgr"
+    },
+    {
+      "id": 367,
+      "name": "Woch Wiesław Marek, dr hab."
+    },
+    {
+      "id": 368,
+      "name": "Wochlik Ireneusz, dr inż."
+    },
+    {
+      "id": 369,
+      "name": "Wodziński Marek, mgr inż."
+    },
+    {
+      "id": 370,
+      "name": "Wojnicki Igor, dr hab. inż."
+    },
+    {
+      "id": 371,
+      "name": "Wojszczyk Bartosz, dr"
+    },
+    {
+      "id": 372,
+      "name": "Wołoszyn Paweł, dr n. techn. lek. med."
+    },
+    {
+      "id": 373,
+      "name": "Wójcik M."
+    },
+    {
+      "id": 374,
+      "name": "Wróbel Grzegorz, dr inż."
+    },
+    {
+      "id": 375,
+      "name": "Wrześniak Marek, mgr inż."
+    },
+    {
+      "id": 376,
+      "name": "Wypych Michał, mgr inż."
+    },
+    {
+      "id": 377,
+      "name": "Wywijas Andrzej, inż."
+    },
+    {
+      "id": 378,
+      "name": "Zachara Marek, dr inż."
+    },
+    {
+      "id": 379,
+      "name": "Zaczyk Mieczysław, dr inż."
+    },
+    {
+      "id": 380,
+      "name": "Zagórowska Marta, mgr inż."
+    },
+    {
+      "id": 381,
+      "name": "Zagórski Paweł, dr inż."
+    },
+    {
+      "id": 382,
+      "name": "Zalas Jacek, dr inż."
+    },
+    {
+      "id": 383,
+      "name": "Zapała Włodzimierz, mgr inż."
+    },
+    {
+      "id": 384,
+      "name": "Zaręba-Czepiec Jolanta"
+    },
+    {
+      "id": 385,
+      "name": "Zatorski Andrzej, dr inż."
+    },
+    {
+      "id": 386,
+      "name": "Zaworski Konrad, mgr inż."
+    },
+    {
+      "id": 387,
+      "name": "Zdrojewski Antoni, dr inż."
+    },
+    {
+      "id": 388,
+      "name": "Zegarmistrz Piotr, dr inż."
+    },
+    {
+      "id": 389,
+      "name": "Zięciak Marzena, mgr"
+    },
+    {
+      "id": 390,
+      "name": "Zubrzycka Weronika, mgr inż."
+    },
+    {
+      "id": 391,
+      "name": "Zydroń Paweł, dr hab. inż."
+    },
+    {
+      "id": 392,
+      "name": "Żegleń Jakub, mgr inż."
+    },
+    {
+      "id": 393,
+      "name": "Żegleń Tadeusz, dr inż."
+    },
+    {
+      "id": 394,
+      "name": "Żołądź Mirosław, dr hab. inż."
+    },
+    {
+      "id": 395,
+      "name": "Nizioł Jacek, dr"
+    },
+    {
+      "id": 396,
+      "name": "Olszewski Ryszard, dr inż."
+    },
+    {
+      "id": 397,
+      "name": "Armatys Paweł, dr inż."
+    },
+    {
+      "id": 398,
+      "name": "Gorazd Łukasz, dr inż."
+    },
+    {
+      "id": 399,
+      "name": "Kłaczyński Maciej, dr inż."
     }
   ],
   "courses": [
@@ -850,176 +2246,436 @@
     {
       "id": 46,
       "name": "Informatyka 2"
-    },
-    {
-      "id": 47,
-      "name": "Elektronika w automatyce"
     }
   ],
   "rooms": [
     {
-      "id": 1,
-      "name": "B-1 316"
-    },
-    {
       "id": 2,
-      "name": "B-4 H113"
+      "name": "A-3/A-4 403 (lab) (15)"
     },
     {
       "id": 3,
-      "name": "C-3 14"
+      "name": "A-3/A-4 404 (lab) (20)"
     },
     {
       "id": 4,
-      "name": "B-1 010"
+      "name": "B-1 010 (50)"
     },
     {
       "id": 5,
-      "name": "C-3 101"
+      "name": "B-1 012 (lab) (15)"
     },
     {
       "id": 6,
-      "name": "B-1 111"
+      "name": "B-1 014 (58)"
     },
     {
       "id": 7,
-      "name": "B-1 110"
+      "name": "B-1 015 (24)"
     },
     {
       "id": 8,
-      "name": "B-1 317a"
+      "name": "B-1 016 (lab) (5)"
     },
     {
       "id": 9,
-      "name": "B-1 317b"
+      "name": "B-1 02 (lab) (4)"
     },
     {
       "id": 10,
-      "name": "C-3 201"
+      "name": "B-1 03 (lab) (18)"
     },
     {
       "id": 11,
-      "name": "B-5 212"
+      "name": "B-1 04 (lab) (15)"
     },
     {
       "id": 12,
-      "name": "C-3 217"
+      "name": "B-1 07a (pracownia badawcza) (2)"
     },
     {
       "id": 13,
-      "name": "C-2 431"
+      "name": "B-1 1 (sala konferencyjna) (18)"
     },
     {
       "id": 14,
-      "name": "B-4 H113"
+      "name": "B-1 102 (30)"
     },
     {
       "id": 15,
-      "name": "B-1 014"
+      "name": "B-1 110 (lab) (5)"
     },
     {
       "id": 16,
-      "name": "C-3 107"
+      "name": "B-1 111 (lab) (30)"
     },
     {
       "id": 17,
-      "name": "C-3 112"
+      "name": "B-1 112d-1 (lab) (15)"
     },
     {
       "id": 18,
-      "name": "A-3/A-4 403"
+      "name": "B-1 112d-2 (lab) (25)"
     },
     {
       "id": 19,
-      "name": "C-2 224"
+      "name": "B-1 113 (lab) (60)"
     },
     {
       "id": 20,
-      "name": "C-3 201a"
+      "name": "B-1 113u (lab) (30)"
     },
     {
       "id": 21,
-      "name": "D-10 B"
+      "name": "B-1 114 (lab) (30)"
     },
     {
       "id": 22,
-      "name": "B-1 121"
+      "name": "B-1 116 (lab) (10)"
     },
     {
       "id": 23,
-      "name": "D-8 502"
+      "name": "B-1 117d (sala konferencyjna) (10)"
     },
     {
       "id": 24,
-      "name": "D-10 319"
+      "name": "B-1 120c (lab) (15)"
     },
     {
       "id": 25,
-      "name": "D-8 526"
+      "name": "B-1 120d (pracownia badawcza) (3)"
     },
     {
       "id": 26,
-      "name": "D-1 119"
+      "name": "B-1 121 (150)"
     },
     {
       "id": 27,
-      "name": "B-2 320"
+      "name": "B-1 202 (lab) (28)"
     },
     {
       "id": 28,
-      "name": "B-2 322"
+      "name": "B-1 204 (pracownia badawcza) (1)"
     },
     {
       "id": 29,
-      "name": "D-8 402"
+      "name": "B-1 217 (lab) (12)"
     },
     {
       "id": 30,
-      "name": "D-10 108"
+      "name": "B-1 22 (sala konferencyjna) (12)"
     },
     {
       "id": 31,
-      "name": "D-8 429"
+      "name": "B-1 301 (lab) (10)"
     },
     {
       "id": 32,
-      "name": "B-2 123"
+      "name": "B-1 315 (lab) (10)"
     },
     {
       "id": 33,
-      "name": "B-1 102"
+      "name": "B-1 315a (lab) (60)"
     },
     {
       "id": 34,
-      "name": "B-1 H24"
+      "name": "B-1 316 (50)"
     },
     {
       "id": 35,
-      "name": "D-1 109"
+      "name": "B-1 317a (lab) (10)"
     },
     {
       "id": 36,
-      "name": "Centrum Dydaktyki U2"
+      "name": "B-1 317b (lab) (10)"
     },
     {
       "id": 37,
-      "name": "B-1 301"
+      "name": "B-1 317c (lab) (10)"
     },
     {
       "id": 38,
-      "name": "D-1 123"
+      "name": "B-1 317d (pracownia badawcza) (10)"
     },
     {
       "id": 39,
-      "name": "C-1 511b"
+      "name": "B-1 317e (pracownia badawcza) (3)"
     },
     {
       "id": 40,
-      "name": "B-1 317c"
+      "name": "B-1 4 (sala konferencyjna) (20)"
     },
     {
       "id": 41,
-      "name": "C-2 429"
+      "name": "B-1 H01 (lab) (15)"
+    },
+    {
+      "id": 42,
+      "name": "B-1 H03 (lab) (15)"
+    },
+    {
+      "id": 43,
+      "name": "B-1 H04 (lab) (10)"
+    },
+    {
+      "id": 44,
+      "name": "B-1 H05 (lab) (15)"
+    },
+    {
+      "id": 45,
+      "name": "B-1 H11 (lab) (20)"
+    },
+    {
+      "id": 46,
+      "name": "B-1 H112c (lab) (25)"
+    },
+    {
+      "id": 47,
+      "name": "B-1 H113a (lab) (30)"
+    },
+    {
+      "id": 48,
+      "name": "B-1 H113b (lab) (15)"
+    },
+    {
+      "id": 49,
+      "name": "B-1 H12 (lab) (10)"
+    },
+    {
+      "id": 50,
+      "name": "B-1 H16 (lab) (20)"
+    },
+    {
+      "id": 51,
+      "name": "B-1 H21 (15)"
+    },
+    {
+      "id": 52,
+      "name": "B-1 H24 (240)"
+    },
+    {
+      "id": 53,
+      "name": "B-2/B-3 (MM) (15)"
+    },
+    {
+      "id": 54,
+      "name": "B-3 111 (lab) (15)"
+    },
+    {
+      "id": 55,
+      "name": "B-3/B-4 014 (lab) (10)"
+    },
+    {
+      "id": 56,
+      "name": "B-3/B-4 017 (pracownia badawcza) (5)"
+    },
+    {
+      "id": 57,
+      "name": "B-3/B-4 04 (pracownia badawcza) (4)"
+    },
+    {
+      "id": 58,
+      "name": "B-3/B-4 09 (lab) (1)"
+    },
+    {
+      "id": 59,
+      "name": "B-4 H113 (50)"
+    },
+    {
+      "id": 60,
+      "name": "B-4 H116 (lab) (15)"
+    },
+    {
+      "id": 61,
+      "name": "B-5 101 (lab) (14)"
+    },
+    {
+      "id": 62,
+      "name": "B-5 107 (42)"
+    },
+    {
+      "id": 63,
+      "name": "B-5 210 (lab) (15)"
+    },
+    {
+      "id": 64,
+      "name": "B-5 212 (lab) (10)"
+    },
+    {
+      "id": 65,
+      "name": "B-5 214 (lab) (15)"
+    },
+    {
+      "id": 66,
+      "name": "B-5 215 (pracownia badawcza) (8)"
+    },
+    {
+      "id": 67,
+      "name": "C-1 509 (lab) (15)"
+    },
+    {
+      "id": 68,
+      "name": "C-1 510 (pracownia badawcza) (10)"
+    },
+    {
+      "id": 69,
+      "name": "C-2 017 (lab) (10)"
+    },
+    {
+      "id": 70,
+      "name": "C-2 05 (lab) (10)"
+    },
+    {
+      "id": 71,
+      "name": "C-2 208 (lab) (15)"
+    },
+    {
+      "id": 72,
+      "name": "C-2 210 (10)"
+    },
+    {
+      "id": 73,
+      "name": "C-2 214 (lab) (15)"
+    },
+    {
+      "id": 74,
+      "name": "C-2 216 (lab) (15)"
+    },
+    {
+      "id": 75,
+      "name": "C-2 224 (150)"
+    },
+    {
+      "id": 76,
+      "name": "C-2 313 (lab) (15)"
+    },
+    {
+      "id": 77,
+      "name": "C-2 315 (lab) (15)"
+    },
+    {
+      "id": 78,
+      "name": "C-2 316 (lab) (15)"
+    },
+    {
+      "id": 79,
+      "name": "C-2 428 (pracownia badawcza) (5)"
+    },
+    {
+      "id": 80,
+      "name": "C-2 429 (100)"
+    },
+    {
+      "id": 81,
+      "name": "C-2 431 (sala konferencyjna) (15)"
+    },
+    {
+      "id": 82,
+      "name": "C-2 518 (lab) (15)"
+    },
+    {
+      "id": 83,
+      "name": "C-2 520 (pracownia badawcza) (10)"
+    },
+    {
+      "id": 84,
+      "name": "C-3 1 (lab) (15)"
+    },
+    {
+      "id": 85,
+      "name": "C-3 101 (70)"
+    },
+    {
+      "id": 86,
+      "name": "C-3 107 (lab) (15)"
+    },
+    {
+      "id": 87,
+      "name": "C-3 110 (lab) (15)"
+    },
+    {
+      "id": 88,
+      "name": "C-3 111 (lab) (15)"
+    },
+    {
+      "id": 89,
+      "name": "C-3 112 (lab) (15)"
+    },
+    {
+      "id": 90,
+      "name": "C-3 114 (lab) (15)"
+    },
+    {
+      "id": 91,
+      "name": "C-3 12 (lab) (15)"
+    },
+    {
+      "id": 92,
+      "name": "C-3 13 (lab) (15)"
+    },
+    {
+      "id": 93,
+      "name": "C-3 14 (lab) (15)"
+    },
+    {
+      "id": 94,
+      "name": "C-3 1a (lab) (15)"
+    },
+    {
+      "id": 95,
+      "name": "C-3 2 (lab) (15)"
+    },
+    {
+      "id": 96,
+      "name": "C-3 201 (lab) (15)"
+    },
+    {
+      "id": 97,
+      "name": "C-3 201a (lab) (15)"
+    },
+    {
+      "id": 98,
+      "name": "C-3 215 (lab) (15)"
+    },
+    {
+      "id": 99,
+      "name": "C-3 217 (lab) (23)"
+    },
+    {
+      "id": 100,
+      "name": "C-3 3 (lab) (15)"
+    },
+    {
+      "id": 101,
+      "name": "C-3 7 (lab) (12)"
+    },
+    {
+      "id": 102,
+      "name": "C-3 8 (lab) (12)"
+    },
+    {
+      "id": 103,
+      "name": "C-5 107 (14)"
+    },
+    {
+      "id": 104,
+      "name": "C-6 107 (30)"
+    },
+    {
+      "id": 105,
+      "name": "D-8 402 (56)"
+    },
+    {
+      "id": 106,
+      "name": "D-8 429 (34)"
+    },
+    {
+      "id": 107,
+      "name": "D-8 502 (56)"
+    },
+    {
+      "id": 108,
+      "name": "D-8 526 (34)"
     }
   ]
 }
