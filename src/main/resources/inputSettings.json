@@ -1228,6 +1228,83 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 16,
+      "name": "Elektrotechnika - S3",
+      "auditoryGroupsPerLectureGroup": 5,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 105,
+          "teacherId": 312,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 106,
+          "teacherId": 49,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 38,
+          "teacherId": 13,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 107,
+          "teacherId": 123,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 108,
+          "teacherId": 87,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 109,
+          "teacherId": 391,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 108,
+          "teacherId": 87,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 107,
+          "teacherId": 289,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 106,
+          "teacherId": 303,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 108,
+          "teacherId": 55,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 105,
+          "teacherId": 385,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 109,
+          "teacherId": 189,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 38,
+          "teacherId": 13,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -3268,6 +3345,26 @@
     {
       "id": 104,
       "name": "Podstawy informatyki 1"
+    },
+    {
+      "id": 105,
+      "name": "Metrologia 1"
+    },
+    {
+      "id": 106,
+      "name": "Teoria pola elektromagnetycznego"
+    },
+    {
+      "id": 107,
+      "name": "Stochastyczne metody analizy danych"
+    },
+    {
+      "id": 108,
+      "name": "Teoria obwodów 2"
+    },
+    {
+      "id": 109,
+      "name": "Inżynieria materiałowa w elektrotechnice"
     }
   ],
   "rooms": [
