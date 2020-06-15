@@ -1484,6 +1484,88 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 19,
+      "name": "Elektrotechnika - Blok obieralny B - S5",
+      "auditoryGroupsPerLectureGroup": 1,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 124,
+          "teacherId": 198,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 125,
+          "teacherId": 73,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 126,
+          "teacherId": 92,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 127,
+          "teacherId": 349,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 128,
+          "teacherId": 16,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 129,
+          "teacherId": 344,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 124,
+          "teacherId": 198,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 129,
+          "teacherId": 168,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 129,
+          "teacherId": 85,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 125,
+          "teacherId": 229,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 126,
+          "teacherId": 92,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 127,
+          "teacherId": 349,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 124,
+          "teacherId": 71,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 128,
+          "teacherId": 16,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -3600,6 +3682,30 @@
     {
       "id": 123,
       "name": "Fundamentals of Electroheat"
+    },
+    {
+      "id": 124,
+      "name": "Maszyny elektryczne"
+    },
+    {
+      "id": 125,
+      "name": "Energoelektronika"
+    },
+    {
+      "id": 126,
+      "name": "Miernictwo przemysłowe"
+    },
+    {
+      "id": 127,
+      "name": "Teoria i przetwarzanie sygnałów"
+    },
+    {
+      "id": 128,
+      "name": "Elektronika przemysłowa"
+    },
+    {
+      "id": 129,
+      "name": "Urządzenia i sieci elektryczne"
     }
   ],
   "rooms": [
