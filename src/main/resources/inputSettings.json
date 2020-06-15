@@ -1305,6 +1305,103 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 17,
+      "name": "Elektrotechnika - Blok obieralny A - S5",
+      "auditoryGroupsPerLectureGroup": 2,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 110,
+          "teacherId": 198,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 111,
+          "teacherId": 22,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 112,
+          "teacherId": 168,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 113,
+          "teacherId": 314,
+          "timeUnits": 12
+        },
+        {
+          "courseId": 113,
+          "teacherId": 314,
+          "timeUnits": 12
+        },
+        {
+          "courseId": 114,
+          "teacherId": 19,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 115,
+          "teacherId": 344,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 110,
+          "teacherId": 198,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 112,
+          "teacherId": 83,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 113,
+          "teacherId": 254,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 114,
+          "teacherId": 19,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 115,
+          "teacherId": 85,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 112,
+          "teacherId": 83,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 115,
+          "teacherId": 85,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 110,
+          "teacherId": 198,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 113,
+          "teacherId": 229,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 111,
+          "teacherId": 13,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -3365,6 +3462,30 @@
     {
       "id": 109,
       "name": "Inżynieria materiałowa w elektrotechnice"
+    },
+    {
+      "id": 110,
+      "name": "Maszyny elektryczne w energetyce"
+    },
+    {
+      "id": 111,
+      "name": "Pomiary w energetyce"
+    },
+    {
+      "id": 112,
+      "name": "Sieci elektryczne"
+    },
+    {
+      "id": 113,
+      "name": "Napęd elektryczny i energoelektronika"
+    },
+    {
+      "id": 114,
+      "name": "Niezawodność zasilania energią elektryczną"
+    },
+    {
+      "id": 115,
+      "name": "Urządzenia i rozdzielnie elektroenergetyczne"
     }
   ],
   "rooms": [
