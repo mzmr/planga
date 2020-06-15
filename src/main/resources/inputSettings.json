@@ -641,7 +641,7 @@
       "id": 9,
       "name": "Computer Science - S1",
       "auditoryGroupsPerLectureGroup": 1,
-      "laboratoryGroupsPerAuditoryGroup": 1,
+      "laboratoryGroupsPerAuditoryGroup": 2,
       "lectures": [
         {
           "courseId": 63,
@@ -715,6 +715,93 @@
         {
           "courseId": 68,
           "teacherId": 121,
+          "timeUnits": 6
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Elektrotechnika - Automatyka przemysłowa i automatyka budynków - S2",
+      "auditoryGroupsPerLectureGroup": 1,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 69,
+          "teacherId": 290,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 70,
+          "teacherId": 247,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 71,
+          "teacherId": 344,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 72,
+          "teacherId": 374,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 73,
+          "teacherId": 192,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 74,
+          "teacherId": 192,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 75,
+          "teacherId": 219,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 73,
+          "teacherId": 192,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 74,
+          "teacherId": 125,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 73,
+          "teacherId": 192,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 71,
+          "teacherId": 85,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 69,
+          "teacherId": 290,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 75,
+          "teacherId": 219,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 72,
+          "teacherId": 374,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 70,
+          "teacherId": 247,
           "timeUnits": 6
         }
       ]
@@ -2598,6 +2685,34 @@
     {
       "id": 68,
       "name": "Introduction to Computer Science"
+    },
+    {
+      "id": 69,
+      "name": "Project Managment in Industry"
+    },
+    {
+      "id": 70,
+      "name": "Automatyka budynkowa - implementacja w sieciach inteligentnych"
+    },
+    {
+      "id": 71,
+      "name": "Zakłócenia w układach elektroenergetycznych"
+    },
+    {
+      "id": 72,
+      "name": "Sieci informatyczne w automatyce budynków i w przemyśle"
+    },
+    {
+      "id": 73,
+      "name": "Automatyzacja procesów technologicznych"
+    },
+    {
+      "id": 74,
+      "name": "Programowalne systemy sterowania przemysłowego"
+    },
+    {
+      "id": 75,
+      "name": "Nowoczesne mikrokontrolery w zastosowaniach przemysłowych"
     }
   ],
   "rooms": [
