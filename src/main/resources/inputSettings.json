@@ -544,6 +544,98 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 8,
+      "name": "Automatyka i Robotyka - S7",
+      "auditoryGroupsPerLectureGroup": 5,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 54,
+          "teacherId": 286,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 55,
+          "teacherId": 241,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 56,
+          "teacherId": 9,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 57,
+          "teacherId": 12,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 58,
+          "teacherId": 241,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 59,
+          "teacherId": 162,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 60,
+          "teacherId": 124,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 61,
+          "teacherId": 123,
+          "timeUnits": 9
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 55,
+          "teacherId": 74,
+          "timeUnits": 9
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 57,
+          "teacherId": 12,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 62,
+          "teacherId": 100,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 56,
+          "teacherId": 9,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 60,
+          "teacherId": 124,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 58,
+          "teacherId": 195,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 59,
+          "teacherId": 183,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 54,
+          "teacherId": 158,
+          "timeUnits": 9
+        }
+      ]
     }
   ],
   "teachers": [
@@ -2356,6 +2448,42 @@
     {
       "id": 53,
       "name": "Technika mikroprocesorowa 2"
+    },
+    {
+      "id": 54,
+      "name": "Prototypowanie układów elekronicznych"
+    },
+    {
+      "id": 55,
+      "name": "Hardware and software of control systems"
+    },
+    {
+      "id": 56,
+      "name": "Identyfikacja procesów technologicznych"
+    },
+    {
+      "id": 57,
+      "name": "Analiza i bazy danych"
+    },
+    {
+      "id": 58,
+      "name": "Logic and functional controllers"
+    },
+    {
+      "id": 59,
+      "name": "Podstawy komputerowych systemów sterowania"
+    },
+    {
+      "id": 60,
+      "name": "Sztuczna inteligencja i sensoryka"
+    },
+    {
+      "id": 61,
+      "name": "Systemy głosowe"
+    },
+    {
+      "id": 62,
+      "name": "Pracownia inżynierska dyplomowa"
     }
   ],
   "rooms": [
