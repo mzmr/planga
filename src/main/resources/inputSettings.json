@@ -1797,6 +1797,83 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 23,
+      "name": "Informatyka - Grafika komputerowa - S2",
+      "auditoryGroupsPerLectureGroup": 1,
+      "laboratoryGroupsPerAuditoryGroup": 1,
+      "lectures": [
+        {
+          "courseId": 137,
+          "teacherId": 21,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 138,
+          "teacherId": 239,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 139,
+          "teacherId": 86,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 140,
+          "teacherId": 21,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 141,
+          "teacherId": 332,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 142,
+          "teacherId": 285,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 139,
+          "teacherId": 86,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 143,
+          "teacherId": 41,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 142,
+          "teacherId": 285,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 144,
+          "teacherId": 41,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 143,
+          "teacherId": 41,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 137,
+          "teacherId": 294,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 142,
+          "teacherId": 285,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -3969,6 +4046,38 @@
     {
       "id": 136,
       "name": "Komputerowe wspomaganie procesów projektowych z wykorzystaniem oprogramowania CAD"
+    },
+    {
+      "id": 137,
+      "name": "Zaawansowane alg. i struktury danych"
+    },
+    {
+      "id": 138,
+      "name": "Kryptografia i bezpieczeństwo systemów informatycznych"
+    },
+    {
+      "id": 139,
+      "name": "Systemy programowania w grafice"
+    },
+    {
+      "id": 140,
+      "name": "Metody matematyczne w grafice komputerowej"
+    },
+    {
+      "id": 141,
+      "name": "Zastosowania grafiki komputerowej"
+    },
+    {
+      "id": 142,
+      "name": "Grafika dla potrzeb Internetu"
+    },
+    {
+      "id": 143,
+      "name": "Animated 3D graphics"
+    },
+    {
+      "id": 144,
+      "name": "Programowanie procesorów graficznych"
     }
   ],
   "rooms": [
