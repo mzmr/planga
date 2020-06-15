@@ -462,6 +462,88 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 7,
+      "name": "Automatyka i Robotyka - S5",
+      "auditoryGroupsPerLectureGroup": 5,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 47,
+          "teacherId": 44,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 48,
+          "teacherId": 315,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 49,
+          "teacherId": 227,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 50,
+          "teacherId": 379,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 51,
+          "teacherId": 350,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 52,
+          "teacherId": 109,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 52,
+          "teacherId": 106,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 49,
+          "teacherId": 106,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 47,
+          "teacherId": 138,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 48,
+          "teacherId": 119,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 50,
+          "teacherId": 89,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 51,
+          "teacherId": 350,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 47,
+          "teacherId": 193,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 53,
+          "teacherId": 251,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -2246,6 +2328,34 @@
     {
       "id": 46,
       "name": "Informatyka 2"
+    },
+    {
+      "id": 47,
+      "name": "Matematyczne metody wspomagania decyzji"
+    },
+    {
+      "id": 48,
+      "name": "Systemy pomiarowe"
+    },
+    {
+      "id": 49,
+      "name": "Teoria sterowania 1"
+    },
+    {
+      "id": 50,
+      "name": "Podstawy robotyki"
+    },
+    {
+      "id": 51,
+      "name": "Sieci komputerowe"
+    },
+    {
+      "id": 52,
+      "name": "Teoria optymalizacji"
+    },
+    {
+      "id": 53,
+      "name": "Technika mikroprocesorowa 2"
     }
   ],
   "rooms": [
