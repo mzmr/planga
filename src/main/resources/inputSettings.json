@@ -1743,7 +1743,7 @@
           "timeUnits": 6
         },
         {
-          "courseId": 136,
+          "courseId": 221,
           "teacherId": 299,
           "timeUnits": 6
         },
@@ -1777,7 +1777,7 @@
           "timeUnits": 6
         },
         {
-          "courseId": 136,
+          "courseId": 221,
           "teacherId": 299,
           "timeUnits": 6
         },
@@ -2897,6 +2897,83 @@
           "courseId": 217,
           "teacherId": 439,
           "timeUnits": 6
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "Inżynieria Biomedyczna - S7",
+      "auditoryGroupsPerLectureGroup": 3,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 222,
+          "teacherId": 441,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 223,
+          "teacherId": 84,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 224,
+          "teacherId": 265,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 225,
+          "teacherId": 432,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 226,
+          "teacherId": 442,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 227,
+          "teacherId": 440,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 227,
+          "teacherId": 440,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 122,
+          "teacherId": 440,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 226,
+          "teacherId": 442,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 224,
+          "teacherId": 265,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 227,
+          "teacherId": 440,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 223,
+          "teacherId": 119,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 225,
+          "teacherId": 432,
+          "timeUnits": 12
         }
       ]
     }
@@ -4661,6 +4738,14 @@
     {
       "id": 440,
       "name": "Iwaniec Marek, dr hab. inż."
+    },
+    {
+      "id": 441,
+      "name": "Stark Katarzyna, dr"
+    },
+    {
+      "id": 442,
+      "name": "Pawlak-Mihułka Justyna, mgr inż."
     }
   ],
   "courses": [
@@ -5209,10 +5294,6 @@
       "name": "Urządzenia i sieci elektroenergetyczne"
     },
     {
-      "id": 136,
-      "name": "Komputerowe wspomaganie procesów projektowych z wykorzystaniem oprogramowania CAD"
-    },
-    {
       "id": 137,
       "name": "Zaawansowane alg. i struktury danych"
     },
@@ -5547,6 +5628,34 @@
     {
       "id": 220,
       "name": "Biomechanika inżynierska"
+    },
+    {
+      "id": 221,
+      "name": "Komputerowe wspomaganie procesów projektowych z wykorzystaniem oprogramowania CAD"
+    },
+    {
+      "id": 222,
+      "name": "Wprowadzenie do filozofii"
+    },
+    {
+      "id": 223,
+      "name": "Biopomiary"
+    },
+    {
+      "id": 224,
+      "name": "Bazy danych w Biologii I Medycynie"
+    },
+    {
+      "id": 225,
+      "name": "Wprowadzenie do diagnostyki medycznej z użyciem promieniowania jonizującego"
+    },
+    {
+      "id": 226,
+      "name": "Efektywna komunikacja w biznesie - prezentacje i wystąpienia publiczne"
+    },
+    {
+      "id": 227,
+      "name": "Internet of Things for Ambient Intelligence"
     }
   ],
   "rooms": [
