@@ -2100,6 +2100,82 @@
           "timeUnits": 9
         }
       ]
+    },
+    {
+      "id": 27,
+      "name": "Informatyka - S3",
+      "auditoryGroupsPerLectureGroup": 5,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 38,
+          "teacherId": 12,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 160,
+          "teacherId": 227,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 161,
+          "teacherId": 331,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 162,
+          "teacherId": 126,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 163,
+          "teacherId": 201,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 164,
+          "teacherId": 370,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 165,
+          "teacherId": 333,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 166,
+          "teacherId": 325,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [],
+      "laboratoryClasses": [
+        {
+          "courseId": 164,
+          "teacherId": 126,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 165,
+          "teacherId": 26,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 161,
+          "teacherId": 386,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 166,
+          "teacherId": 325,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 160,
+          "teacherId": 74,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -4400,6 +4476,34 @@
     {
       "id": 159,
       "name": "Matematyka dyskretna"
+    },
+    {
+      "id": 160,
+      "name": "Systemy dynamiczne"
+    },
+    {
+      "id": 161,
+      "name": "Bazy danych"
+    },
+    {
+      "id": 162,
+      "name": "Architektury komputerów"
+    },
+    {
+      "id": 163,
+      "name": "Programowanie w logice"
+    },
+    {
+      "id": 164,
+      "name": "Języki i technologie webowe"
+    },
+    {
+      "id": 165,
+      "name": "Programowanie obiektowe"
+    },
+    {
+      "id": 166,
+      "name": "Fizyka 2"
     }
   ],
   "rooms": [
