@@ -1941,6 +1941,83 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 25,
+      "name": "Informatyka - Modelowanie systemów i analiza danych - S2",
+      "auditoryGroupsPerLectureGroup": 2,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 150,
+          "teacherId": 378,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 151,
+          "teacherId": 331,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 152,
+          "teacherId": 132,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 153,
+          "teacherId": 234,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 154,
+          "teacherId": 406,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 155,
+          "teacherId": 239,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 152,
+          "teacherId": 132,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 156,
+          "teacherId": 360,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 156,
+          "teacherId": 360,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 153,
+          "teacherId": 154,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 156,
+          "teacherId": 275,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 151,
+          "teacherId": 132,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 154,
+          "teacherId": 406,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -3563,6 +3640,10 @@
     {
       "id": 405,
       "name": "Wegert Adam, mgr"
+    },
+    {
+      "id": 406,
+      "name": "Byrski Aleksander, dr hab. inż."
     }
   ],
   "courses": [
@@ -4165,6 +4246,34 @@
     {
       "id": 149,
       "name": "Studio projektowe 2"
+    },
+    {
+      "id": 150,
+      "name": "Cybersecurity"
+    },
+    {
+      "id": 151,
+      "name": "Data Mining"
+    },
+    {
+      "id": 152,
+      "name": "Introduction to category theory"
+    },
+    {
+      "id": 153,
+      "name": "Decision Support Systems"
+    },
+    {
+      "id": 154,
+      "name": "Evolutionary Algorithms"
+    },
+    {
+      "id": 155,
+      "name": "Cryptography and Security"
+    },
+    {
+      "id": 156,
+      "name": "Agent Based Modelling"
     }
   ],
   "rooms": [
