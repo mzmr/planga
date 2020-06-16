@@ -2727,7 +2727,7 @@
       ]
     },
     {
-      "id": 34,
+      "id": 35,
       "name": "Inżynieria Biomedyczna - S3",
       "auditoryGroupsPerLectureGroup": 4,
       "laboratoryGroupsPerAuditoryGroup": 2,
@@ -2810,6 +2810,93 @@
           "courseId": 207,
           "teacherId": 268,
           "timeUnits": 9
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "Inżynieria Biomedyczna - S5",
+      "auditoryGroupsPerLectureGroup": 3,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 214,
+          "teacherId": 309,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 215,
+          "teacherId": 142,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 165,
+          "teacherId": 142,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 216,
+          "teacherId": 156,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 217,
+          "teacherId": 439,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 218,
+          "teacherId": 432,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 219,
+          "teacherId": 209,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 220,
+          "teacherId": 440,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 218,
+          "teacherId": 432,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 216,
+          "teacherId": 327,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 219,
+          "teacherId": 209,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 215,
+          "teacherId": 142,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 220,
+          "teacherId": 440,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 218,
+          "teacherId": 432,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 217,
+          "teacherId": 439,
+          "timeUnits": 6
         }
       ]
     }
@@ -4566,6 +4653,14 @@
     {
       "id": 438,
       "name": "Korbel Adam, dr inż."
+    },
+    {
+      "id": 439,
+      "name": "Nawrocka Agata, dr inż."
+    },
+    {
+      "id": 440,
+      "name": "Iwaniec Marek, dr hab. inż."
     }
   ],
   "courses": [
@@ -5424,6 +5519,34 @@
     {
       "id": 213,
       "name": "Laboratorium z fizyki"
+    },
+    {
+      "id": 214,
+      "name": "Wizualizacja danych medycznych"
+    },
+    {
+      "id": 215,
+      "name": "Podstawy programowania obiektowego"
+    },
+    {
+      "id": 216,
+      "name": "Mikroelektronika"
+    },
+    {
+      "id": 217,
+      "name": "Automatyka i robotyka"
+    },
+    {
+      "id": 218,
+      "name": "Fizyka medyczna"
+    },
+    {
+      "id": 219,
+      "name": "Podstawy graficznych języków programowania"
+    },
+    {
+      "id": 220,
+      "name": "Biomechanika inżynierska"
     }
   ],
   "rooms": [
