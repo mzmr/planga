@@ -2561,6 +2561,78 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 33,
+      "name": "Inżynieria Biomedyczna - Inżynieria biomateriałów - S2",
+      "auditoryGroupsPerLectureGroup": 1,
+      "laboratoryGroupsPerAuditoryGroup": 1,
+      "lectures": [
+        {
+          "courseId": 196,
+          "teacherId": 423,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 190,
+          "teacherId": 421,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 197,
+          "teacherId": 424,
+          "timeUnits": 18
+        },
+        {
+          "courseId": 198,
+          "teacherId": 425,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 187,
+          "teacherId": 418,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 198,
+          "teacherId": 426,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 197,
+          "teacherId": 424,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 199,
+          "teacherId": 427,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 196,
+          "teacherId": 423,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 197,
+          "teacherId": 424,
+          "timeUnits": 18
+        },
+        {
+          "courseId": 198,
+          "teacherId": 425,
+          "timeUnits": 12
+        },
+        {
+          "courseId": 190,
+          "teacherId": 421,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -4251,6 +4323,26 @@
     {
       "id": 422,
       "name": "Ryniewicz Anna, dr hab. inż."
+    },
+    {
+      "id": 423,
+      "name": "Skrypek Stanisław, prof. dr hab. inż."
+    },
+    {
+      "id": 424,
+      "name": "Stodolak-Zych Ewa, dr inż."
+    },
+    {
+      "id": 425,
+      "name": "Szaraniec Barbara, dr inż."
+    },
+    {
+      "id": 426,
+      "name": "Nowicka Katarzyna, dr inż."
+    },
+    {
+      "id": 427,
+      "name": "Pamuła Elżbieta, prof. dr hab. inż."
     }
   ],
   "courses": [
@@ -5037,6 +5129,22 @@
     {
       "id": 195,
       "name": "Interfejsy multimodalne"
+    },
+    {
+      "id": 196,
+      "name": "Biomateriały metaliczne"
+    },
+    {
+      "id": 197,
+      "name": "Design and manufacture of biomaterials"
+    },
+    {
+      "id": 198,
+      "name": "Biomateriały kompozytowe"
+    },
+    {
+      "id": 199,
+      "name": "Seminarium magisterskie"
     }
   ],
   "rooms": [
