@@ -1874,6 +1874,73 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 24,
+      "name": "Informatyka - Inżynieria oprogramowania i systemów - S2",
+      "auditoryGroupsPerLectureGroup": 3,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 145,
+          "teacherId": 305,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 137,
+          "teacherId": 21,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 138,
+          "teacherId": 239,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 146,
+          "teacherId": 285,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 147,
+          "teacherId": 285,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 148,
+          "teacherId": 76,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 149,
+          "teacherId": 188,
+          "timeUnits": 9
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 137,
+          "teacherId": 126,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 148,
+          "teacherId": 76,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 145,
+          "teacherId": 305,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 146,
+          "teacherId": 285,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -4077,7 +4144,27 @@
     },
     {
       "id": 144,
-      "name": "Programowanie procesorów graficznych"
+      "name": "Programowanie procesorów graficznych"
+    },
+    {
+      "id": 145,
+      "name": "Zaawansowane systemy mobilne"
+    },
+    {
+      "id": 146,
+      "name": "Zaawansowane programowanie webowe"
+    },
+    {
+      "id": 147,
+      "name": "Testowanie oprogramowania"
+    },
+    {
+      "id": 148,
+      "name": "Zaawansowane technologie bazodanowe"
+    },
+    {
+      "id": 149,
+      "name": "Studio projektowe 2"
     }
   ],
   "rooms": [
