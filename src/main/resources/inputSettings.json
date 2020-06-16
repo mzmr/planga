@@ -3294,6 +3294,68 @@
           "timeUnits": 9
         }
       ]
+    },
+    {
+      "id": 42,
+      "name": "Mikroelektronika w technice i medycynie - II stopień - S2",
+      "auditoryGroupsPerLectureGroup": 1,
+      "laboratoryGroupsPerAuditoryGroup": 1,
+      "lectures": [
+        {
+          "courseId": 255,
+          "teacherId": 112,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 256,
+          "teacherId": 66,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 257,
+          "teacherId": 246,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 258,
+          "teacherId": 326,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 259,
+          "teacherId": 362,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 259,
+          "teacherId": 362,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 255,
+          "teacherId": 135,
+          "timeUnits": 9
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 259,
+          "teacherId": 362,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 257,
+          "teacherId": 246,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 258,
+          "teacherId": 326,
+          "timeUnits": 9
+        }
+      ]
     }
   ],
   "teachers": [
@@ -6098,6 +6160,26 @@
     {
       "id": 254,
       "name": "Testing and measurements of integrated circuits"
+    },
+    {
+      "id": 255,
+      "name": "Projektowanie VLSI układów RF"
+    },
+    {
+      "id": 256,
+      "name": "Zastosowanie teorii sygnałów w medycynie i technice"
+    },
+    {
+      "id": 257,
+      "name": "Projektowanie zaawansowanych bloków cyfrowych i cyfrowo-analogowych VLSI"
+    },
+    {
+      "id": 258,
+      "name": "Projektowanie VLSI dla System on Chip"
+    },
+    {
+      "id": 259,
+      "name": "Programowanie systemów elektroniki samochodowej"
     }
   ],
   "rooms": [
