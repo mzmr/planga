@@ -2725,6 +2725,93 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 34,
+      "name": "Inżynieria Biomedyczna - S3",
+      "auditoryGroupsPerLectureGroup": 4,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 207,
+          "teacherId": 312,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 38,
+          "teacherId": 12,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 208,
+          "teacherId": 433,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 209,
+          "teacherId": 434,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 210,
+          "teacherId": 435,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 211,
+          "teacherId": 436,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 212,
+          "teacherId": 437,
+          "timeUnits": 9
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 208,
+          "teacherId": 426,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 211,
+          "teacherId": 436,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 212,
+          "teacherId": 437,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 209,
+          "teacherId": 438,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 213,
+          "teacherId": 431,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 208,
+          "teacherId": 433,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 38,
+          "teacherId": 94,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 207,
+          "teacherId": 268,
+          "timeUnits": 9
+        }
+      ]
     }
   ],
   "teachers": [
@@ -4455,6 +4542,30 @@
     {
       "id": 432,
       "name": "Jung Aleksandra, dr inż."
+    },
+    {
+      "id": 433,
+      "name": "Chłopek Jan, prof. dr hab. inż."
+    },
+    {
+      "id": 434,
+      "name": "Machniewicz Tomasz, dr hab. inż."
+    },
+    {
+      "id": 435,
+      "name": "Lipski Marcin, dr"
+    },
+    {
+      "id": 436,
+      "name": "Krzysiek-Mączka Gracjana, dr"
+    },
+    {
+      "id": 437,
+      "name": "Kapica Rafał, dr hab."
+    },
+    {
+      "id": 438,
+      "name": "Korbel Adam, dr inż."
     }
   ],
   "courses": [
@@ -5285,6 +5396,34 @@
     {
       "id": 206,
       "name": "Propedeutyka nauk medycznych"
+    },
+    {
+      "id": 207,
+      "name": "Podstawy metrologii"
+    },
+    {
+      "id": 208,
+      "name": "Materiałoznawstwo"
+    },
+    {
+      "id": 209,
+      "name": "Mechanika i wytrzymałość"
+    },
+    {
+      "id": 210,
+      "name": "Zarys anatomii"
+    },
+    {
+      "id": 211,
+      "name": "Podstawy fizjologii"
+    },
+    {
+      "id": 212,
+      "name": "Matematyka III"
+    },
+    {
+      "id": 213,
+      "name": "Laboratorium z fizyki"
     }
   ],
   "rooms": [
