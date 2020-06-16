@@ -2976,6 +2976,78 @@
           "timeUnits": 12
         }
       ]
+    },
+    {
+      "id": 38,
+      "name": "Mikroelektronika w technice i medycynie - S1",
+      "auditoryGroupsPerLectureGroup": 2,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 31,
+          "teacherId": 316,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 228,
+          "teacherId": 388,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 100,
+          "teacherId": 443,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 229,
+          "teacherId": 225,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 103,
+          "teacherId": 437,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 230,
+          "teacherId": 145,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 231,
+          "teacherId": 216,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 228,
+          "teacherId": 388,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 100,
+          "teacherId": 443,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 103,
+          "teacherId": 444,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 31,
+          "teacherId": 316,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 231,
+          "teacherId": 216,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -4746,6 +4818,14 @@
     {
       "id": 442,
       "name": "Pawlak-Mihułka Justyna, mgr inż."
+    },
+    {
+      "id": 443,
+      "name": "Ciepliński Krzysztof, dr hab."
+    },
+    {
+      "id": 444,
+      "name": "Krech Grażyna, dr"
     }
   ],
   "courses": [
@@ -5656,6 +5736,22 @@
     {
       "id": 227,
       "name": "Internet of Things for Ambient Intelligence"
+    },
+    {
+      "id": 228,
+      "name": "Teoria obwodów"
+    },
+    {
+      "id": 229,
+      "name": "Ochrona własności intelektualnej"
+    },
+    {
+      "id": 230,
+      "name": "Ergonomia i BHP"
+    },
+    {
+      "id": 231,
+      "name": "Wprowadzenie do programowania"
     }
   ],
   "rooms": [
