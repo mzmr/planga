@@ -2288,6 +2288,63 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 29,
+      "name": "Informatyka - S7",
+      "auditoryGroupsPerLectureGroup": 5,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 178,
+          "teacherId": 249,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 179,
+          "teacherId": 305,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 180,
+          "teacherId": 26,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 181,
+          "teacherId": 186,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 149,
+          "teacherId": 153,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 181,
+          "teacherId": 111,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 180,
+          "teacherId": 313,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 179,
+          "teacherId": 305,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 178,
+          "teacherId": 249,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -4660,6 +4717,22 @@
     {
       "id": 177,
       "name": "Design Patterns"
+    },
+    {
+      "id": 178,
+      "name": "Multimedia i transmisje multimedialne"
+    },
+    {
+      "id": 179,
+      "name": "Wprowadzenie do technologii mobilnych"
+    },
+    {
+      "id": 180,
+      "name": "Systemy i technologie wirtualizacji"
+    },
+    {
+      "id": 181,
+      "name": "Systemy informatyczne ERP"
     }
   ],
   "rooms": [
