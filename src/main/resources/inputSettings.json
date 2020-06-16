@@ -2407,6 +2407,78 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 31,
+      "name": "Inżynieria Biomedyczna - Biomechanika i robotyka - S2",
+      "auditoryGroupsPerLectureGroup": 1,
+      "laboratoryGroupsPerAuditoryGroup": 1,
+      "lectures": [
+        {
+          "courseId": 185,
+          "teacherId": 416,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 186,
+          "teacherId": 417,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 187,
+          "teacherId": 418,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 188,
+          "teacherId": 419,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 189,
+          "teacherId": 245,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 187,
+          "teacherId": 420,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 189,
+          "teacherId": 245,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 185,
+          "teacherId": 416,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 186,
+          "teacherId": 399,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 190,
+          "teacherId": 421,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 188,
+          "teacherId": 419,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 187,
+          "teacherId": 420,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -4069,6 +4141,30 @@
     {
       "id": 415,
       "name": "Myśliwiec, dr"
+    },
+    {
+      "id": 416,
+      "name": "Kasprzak Cezary, dr inż."
+    },
+    {
+      "id": 417,
+      "name": "Wszołek Wiesław, dr hab. inż."
+    },
+    {
+      "id": 418,
+      "name": "Cieślik Jacek, dr hab. inż."
+    },
+    {
+      "id": 419,
+      "name": "Rączka Waldemar, dr inż."
+    },
+    {
+      "id": 420,
+      "name": "Gibiec Mariusz, dr inż."
+    },
+    {
+      "id": 421,
+      "name": "Kot Andrzej, dr inż."
     }
   ],
   "courses": [
@@ -4811,6 +4907,30 @@
     {
       "id": 184,
       "name": "Seminarium badawczo-rozwojowe 2"
+    },
+    {
+      "id": 185,
+      "name": "Ergonomia"
+    },
+    {
+      "id": 186,
+      "name": "Diagnostyka akustyczna"
+    },
+    {
+      "id": 187,
+      "name": "Telechirurgia i robotyka medyczna"
+    },
+    {
+      "id": 188,
+      "name": "Materiały i struktury inteligentne"
+    },
+    {
+      "id": 189,
+      "name": "Analiza aktywności ruchowej człowieka"
+    },
+    {
+      "id": 190,
+      "name": "Inżynieria rehabilitacji ruchowej"
     }
   ],
   "rooms": [
