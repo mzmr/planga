@@ -3048,6 +3048,78 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 39,
+      "name": "Mikroelektronika w technice i medycynie - S3",
+      "auditoryGroupsPerLectureGroup": 2,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 203,
+          "teacherId": 123,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 232,
+          "teacherId": 112,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 233,
+          "teacherId": 326,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 219,
+          "teacherId": 209,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 234,
+          "teacherId": 66,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 232,
+          "teacherId": 157,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 203,
+          "teacherId": 342,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 232,
+          "teacherId": 156,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 219,
+          "teacherId": 209,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 235,
+          "teacherId": 135,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 233,
+          "teacherId": 390,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 234,
+          "teacherId": 66,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -5752,6 +5824,22 @@
     {
       "id": 231,
       "name": "Wprowadzenie do programowania"
+    },
+    {
+      "id": 232,
+      "name": "Układy elektroniki analogowej 1"
+    },
+    {
+      "id": 233,
+      "name": "Układy elektroniki cyfrowej 1"
+    },
+    {
+      "id": 234,
+      "name": "Teoria sygnałów"
+    },
+    {
+      "id": 235,
+      "name": "Programowanie niskopoziomowe"
     }
   ],
   "rooms": [
