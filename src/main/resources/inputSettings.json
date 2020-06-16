@@ -2633,6 +2633,98 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 34,
+      "name": "Inżynieria Biomedyczna - S1",
+      "auditoryGroupsPerLectureGroup": 5,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 200,
+          "teacherId": 428,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 201,
+          "teacherId": 429,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 202,
+          "teacherId": 343,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 203,
+          "teacherId": 123,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 204,
+          "teacherId": 430,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 200,
+          "teacherId": 428,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 31,
+          "teacherId": 431,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 205,
+          "teacherId": 334,
+          "timeUnits": 3
+        },
+        {
+          "courseId": 206,
+          "teacherId": 432,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 200,
+          "teacherId": 428,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 31,
+          "teacherId": 431,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 200,
+          "teacherId": 428,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 203,
+          "teacherId": 272,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 204,
+          "teacherId": 430,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 201,
+          "teacherId": 429,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 205,
+          "teacherId": 334,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -4343,6 +4435,26 @@
     {
       "id": 427,
       "name": "Pamuła Elżbieta, prof. dr hab. inż."
+    },
+    {
+      "id": 428,
+      "name": "Zabawa Tomasz, dr"
+    },
+    {
+      "id": 429,
+      "name": "Radecka Marta, prof. dr hab. inż."
+    },
+    {
+      "id": 430,
+      "name": "Suder Piotr, dr hab."
+    },
+    {
+      "id": 431,
+      "name": "Toboła Janusz, prof. dr hab. inż."
+    },
+    {
+      "id": 432,
+      "name": "Jung Aleksandra, dr inż."
     }
   ],
   "courses": [
@@ -5145,6 +5257,34 @@
     {
       "id": 199,
       "name": "Seminarium magisterskie"
+    },
+    {
+      "id": 200,
+      "name": "Matematyka 1"
+    },
+    {
+      "id": 201,
+      "name": "Chemia"
+    },
+    {
+      "id": 202,
+      "name": "Biocybernetyka"
+    },
+    {
+      "id": 203,
+      "name": "Statystyka i rachunek prawdopodobieństwa"
+    },
+    {
+      "id": 204,
+      "name": "Biologia i genetyka"
+    },
+    {
+      "id": 205,
+      "name": "Programowanie komputerów"
+    },
+    {
+      "id": 206,
+      "name": "Propedeutyka nauk medycznych"
     }
   ],
   "rooms": [
