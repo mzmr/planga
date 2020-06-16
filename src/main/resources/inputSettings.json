@@ -2018,6 +2018,88 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 26,
+      "name": "Informatyka - S1",
+      "auditoryGroupsPerLectureGroup": 4,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 37,
+          "teacherId": 407,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 157,
+          "teacherId": 408,
+          "timeUnits": 12
+        },
+        {
+          "courseId": 158,
+          "teacherId": 409,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 103,
+          "teacherId": 410,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 100,
+          "teacherId": 411,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 159,
+          "teacherId": 412,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 100,
+          "teacherId": 411,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 103,
+          "teacherId": 410,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 157,
+          "teacherId": 408,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 100,
+          "teacherId": 413,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 37,
+          "teacherId": 275,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 103,
+          "teacherId": 211,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 159,
+          "teacherId": 414,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 158,
+          "teacherId": 313,
+          "timeUnits": 9
+        }
+      ]
     }
   ],
   "teachers": [
@@ -3644,6 +3726,38 @@
     {
       "id": 406,
       "name": "Byrski Aleksander, dr hab. inż."
+    },
+    {
+      "id": 407,
+      "name": "Gajęcki Marek, dr inż."
+    },
+    {
+      "id": 408,
+      "name": "Kompetencje interpersonalne - prowadzący"
+    },
+    {
+      "id": 409,
+      "name": "Boryczko"
+    },
+    {
+      "id": 410,
+      "name": "Frydrych Wacław, dr"
+    },
+    {
+      "id": 411,
+      "name": "Przybyło Jakub, dr hab. prof. n"
+    },
+    {
+      "id": 412,
+      "name": "Meszka Mariusz, dr hab. prof. n"
+    },
+    {
+      "id": 413,
+      "name": "Kwaśny Jakub"
+    },
+    {
+      "id": 414,
+      "name": "Bochacik Tomasz, mgr"
     }
   ],
   "courses": [
@@ -4274,6 +4388,18 @@
     {
       "id": 156,
       "name": "Agent Based Modelling"
+    },
+    {
+      "id": 157,
+      "name": "Kompetencje interpersonalne"
+    },
+    {
+      "id": 158,
+      "name": "Wprowadzenie do systemu UNIX"
+    },
+    {
+      "id": 159,
+      "name": "Matematyka dyskretna"
     }
   ],
   "rooms": [
