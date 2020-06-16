@@ -2345,6 +2345,68 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 30,
+      "name": "Informatyka - Systemy inteligentne - S2",
+      "auditoryGroupsPerLectureGroup": 1,
+      "laboratoryGroupsPerAuditoryGroup": 1,
+      "lectures": [
+        {
+          "courseId": 182,
+          "teacherId": 26,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 137,
+          "teacherId": 21,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 183,
+          "teacherId": 234,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 153,
+          "teacherId": 154,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 138,
+          "teacherId": 239,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 184,
+          "teacherId": 415,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 182,
+          "teacherId": 26,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 153,
+          "teacherId": 154,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 183,
+          "teacherId": 191,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 137,
+          "teacherId": 294,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -4003,6 +4065,10 @@
     {
       "id": 414,
       "name": "Bochacik Tomasz, mgr"
+    },
+    {
+      "id": 415,
+      "name": "Myśliwiec, dr"
     }
   ],
   "courses": [
@@ -4733,6 +4799,18 @@
     {
       "id": 181,
       "name": "Systemy informatyczne ERP"
+    },
+    {
+      "id": 182,
+      "name": "Inteligentne technologie mobilne"
+    },
+    {
+      "id": 183,
+      "name": "Technologie sieci semantycznej"
+    },
+    {
+      "id": 184,
+      "name": "Seminarium badawczo-rozwojowe 2"
     }
   ],
   "rooms": [
