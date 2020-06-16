@@ -3227,6 +3227,73 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 41,
+      "name": "Mikroelektronika w technice i medycynie - S7",
+      "auditoryGroupsPerLectureGroup": 2,
+      "laboratoryGroupsPerAuditoryGroup": 1,
+      "lectures": [
+        {
+          "courseId": 249,
+          "teacherId": 350,
+          "timeUnits": 9
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 248,
+          "teacherId": 446,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 250,
+          "teacherId": 185,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 251,
+          "teacherId": 225,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 252,
+          "teacherId": 112,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 251,
+          "teacherId": 110,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 248,
+          "teacherId": 146,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 253,
+          "teacherId": 246,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 254,
+          "teacherId": 209,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 250,
+          "teacherId": 185,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 249,
+          "teacherId": 350,
+          "timeUnits": 9
+        }
+      ]
     }
   ],
   "teachers": [
@@ -5009,6 +5076,10 @@
     {
       "id": 445,
       "name": "Kościelnik Dariusz, dr inż."
+    },
+    {
+      "id": 446,
+      "name": "Giżycka Barbara, mgr"
     }
   ],
   "courses": [
@@ -5999,6 +6070,34 @@
     {
       "id": 247,
       "name": "Aplikacje mikrokontrolerów"
+    },
+    {
+      "id": 248,
+      "name": "Skład dokumentów w środowisku LaTeX"
+    },
+    {
+      "id": 249,
+      "name": "Computer networks"
+    },
+    {
+      "id": 250,
+      "name": "Wybrane zagadnienia matematyki stosowanej"
+    },
+    {
+      "id": 251,
+      "name": "Technologie telekomunikacyjne"
+    },
+    {
+      "id": 252,
+      "name": "Seminarium dyplomowe inżynierskie"
+    },
+    {
+      "id": 253,
+      "name": "Koło naukowe"
+    },
+    {
+      "id": 254,
+      "name": "Testing and measurements of integrated circuits"
     }
   ],
   "rooms": [
