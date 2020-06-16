@@ -3120,6 +3120,113 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 40,
+      "name": "Mikroelektronika w technice i medycynie - S5",
+      "auditoryGroupsPerLectureGroup": 2,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 236,
+          "teacherId": 5,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 237,
+          "teacherId": 147,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 238,
+          "teacherId": 209,
+          "timeUnits": 12
+        },
+        {
+          "courseId": 239,
+          "teacherId": 445,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 240,
+          "teacherId": 112,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 241,
+          "teacherId": 157,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 242,
+          "teacherId": 365,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 243,
+          "teacherId": 112,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 244,
+          "teacherId": 225,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 245,
+          "teacherId": 394,
+          "timeUnits": 3
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 246,
+          "teacherId": 157,
+          "timeUnits": 12
+        },
+        {
+          "courseId": 247,
+          "teacherId": 365,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 236,
+          "teacherId": 147,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 242,
+          "teacherId": 365,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 237,
+          "teacherId": 390,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 241,
+          "teacherId": 137,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 239,
+          "teacherId": 394,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 238,
+          "teacherId": 246,
+          "timeUnits": 9
+        },
+        {
+          "courseId": 245,
+          "teacherId": 394,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -4898,6 +5005,10 @@
     {
       "id": 444,
       "name": "Krech Grażyna, dr"
+    },
+    {
+      "id": 445,
+      "name": "Kościelnik Dariusz, dr inż."
     }
   ],
   "courses": [
@@ -5840,6 +5951,54 @@
     {
       "id": 235,
       "name": "Programowanie niskopoziomowe"
+    },
+    {
+      "id": 236,
+      "name": "Elektroniczna aparatura medyczna"
+    },
+    {
+      "id": 237,
+      "name": "Programowalne układy logiczne"
+    },
+    {
+      "id": 238,
+      "name": "Programowanie systemów kontrolno-pomiarowych"
+    },
+    {
+      "id": 239,
+      "name": "Standardy komunikacji międzyukładowej w systemach wbudowanych"
+    },
+    {
+      "id": 240,
+      "name": "Wprowadzenie do nieliniowych układów analogowych"
+    },
+    {
+      "id": 241,
+      "name": "Podstawy projektowania analogowych układów VLSI"
+    },
+    {
+      "id": 242,
+      "name": "Systemy mikroprocesorowe"
+    },
+    {
+      "id": 243,
+      "name": "Czujniki w technologiach MEMS"
+    },
+    {
+      "id": 244,
+      "name": "Podstawy telekomunikacji"
+    },
+    {
+      "id": 245,
+      "name": "Programowanie w języku w Python"
+    },
+    {
+      "id": 246,
+      "name": "Optoelektronika i technika światłowodowa"
+    },
+    {
+      "id": 247,
+      "name": "Aplikacje mikrokontrolerów"
     }
   ],
   "rooms": [
