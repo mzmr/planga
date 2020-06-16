@@ -2176,6 +2176,118 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 28,
+      "name": "Informatyka - S5",
+      "auditoryGroupsPerLectureGroup": 5,
+      "laboratoryGroupsPerAuditoryGroup": 2,
+      "lectures": [
+        {
+          "courseId": 167,
+          "teacherId": 186,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 168,
+          "teacherId": 100,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 169,
+          "teacherId": 3,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 170,
+          "teacherId": 153,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 171,
+          "teacherId": 234,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 172,
+          "teacherId": 285,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 173,
+          "teacherId": 146,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 174,
+          "teacherId": 247,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 175,
+          "teacherId": 154,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 175,
+          "teacherId": 154,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 176,
+          "teacherId": 153,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 177,
+          "teacherId": 231,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 172,
+          "teacherId": 153,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 177,
+          "teacherId": 231,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 167,
+          "teacherId": 111,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 171,
+          "teacherId": 191,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 168,
+          "teacherId": 166,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 169,
+          "teacherId": 3,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 174,
+          "teacherId": 327,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 173,
+          "teacherId": 146,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -4504,6 +4616,50 @@
     {
       "id": 166,
       "name": "Fizyka 2"
+    },
+    {
+      "id": 167,
+      "name": "Wprowadzenie do systemów ERP"
+    },
+    {
+      "id": 168,
+      "name": "Przetwarzanie obrazów cyfrowych"
+    },
+    {
+      "id": 169,
+      "name": "Badania operacyjne i komputerowe wspomaganie decyzji"
+    },
+    {
+      "id": 170,
+      "name": "Lingwistyka formalna i automaty"
+    },
+    {
+      "id": 171,
+      "name": "Podstawy sztucznej inteligencji"
+    },
+    {
+      "id": 172,
+      "name": "Inżynieria oprogramowania"
+    },
+    {
+      "id": 173,
+      "name": "Programowanie współbieżne i rozproszone"
+    },
+    {
+      "id": 174,
+      "name": "Podstawy elektroniki cyfrowej"
+    },
+    {
+      "id": 175,
+      "name": "Entrepreneurship And Startups For Technical Students"
+    },
+    {
+      "id": 176,
+      "name": "Analiza i modelowanie oprogramowania"
+    },
+    {
+      "id": 177,
+      "name": "Design Patterns"
     }
   ],
   "rooms": [
