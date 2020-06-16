@@ -2479,6 +2479,88 @@
           "timeUnits": 6
         }
       ]
+    },
+    {
+      "id": 32,
+      "name": "Inżynieria Biomedyczna - Informatyka i elektronika medyczna - S2",
+      "auditoryGroupsPerLectureGroup": 2,
+      "laboratoryGroupsPerAuditoryGroup": 1,
+      "lectures": [
+        {
+          "courseId": 191,
+          "teacherId": 5,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 190,
+          "teacherId": 421,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 192,
+          "teacherId": 422,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 193,
+          "teacherId": 239,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 187,
+          "teacherId": 418,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 194,
+          "teacherId": 245,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 195,
+          "teacherId": 279,
+          "timeUnits": 6
+        }
+      ],
+      "auditoryClasses": [
+        {
+          "courseId": 193,
+          "teacherId": 166,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 194,
+          "teacherId": 245,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 191,
+          "teacherId": 260,
+          "timeUnits": 6
+        }
+      ],
+      "laboratoryClasses": [
+        {
+          "courseId": 190,
+          "teacherId": 421,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 191,
+          "teacherId": 260,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 187,
+          "teacherId": 418,
+          "timeUnits": 6
+        },
+        {
+          "courseId": 195,
+          "teacherId": 279,
+          "timeUnits": 6
+        }
+      ]
     }
   ],
   "teachers": [
@@ -4165,6 +4247,10 @@
     {
       "id": 421,
       "name": "Kot Andrzej, dr inż."
+    },
+    {
+      "id": 422,
+      "name": "Ryniewicz Anna, dr hab. inż."
     }
   ],
   "courses": [
@@ -4931,6 +5017,26 @@
     {
       "id": 190,
       "name": "Inżynieria rehabilitacji ruchowej"
+    },
+    {
+      "id": 191,
+      "name": "Dedykowane algorytmy diagnostyki medycznej"
+    },
+    {
+      "id": 192,
+      "name": "Badania biomateriałów i tkanek"
+    },
+    {
+      "id": 193,
+      "name": "Systemy obrazowej diagnostyki medycznej"
+    },
+    {
+      "id": 194,
+      "name": "Inżynieria oprogramowania w obszarze systemów Big Data"
+    },
+    {
+      "id": 195,
+      "name": "Interfejsy multimodalne"
     }
   ],
   "rooms": [
